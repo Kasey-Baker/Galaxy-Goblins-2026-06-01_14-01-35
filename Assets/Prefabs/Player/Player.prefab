@@ -105,8 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b529677cfa3014eb9129d10d5e07cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
+  healthCurr: 10
   control: {fileID: 6606985642317740798}
   moveSpeed: 20
+  slowSpeedMod: 0.4
 --- !u!143 &6606985642317740798
 CharacterController:
   m_ObjectHideFlags: 0
