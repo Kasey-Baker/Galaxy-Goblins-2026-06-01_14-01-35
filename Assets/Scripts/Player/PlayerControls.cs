@@ -41,8 +41,11 @@ public class PlayerControls : MonoBehaviour, IDamage
 
     void ShootBasic(GameObject bullet, float angleMod)
     {
-        Instantiate(bullet, transform.position, Quaternion.Euler(0f, angleMod, 0f));
-        fireWait = 0;
+        if (Input.GetButton("Fire1"))
+        {
+            Instantiate(bullet, transform.position, Quaternion.Euler(0f, angleMod, 0f));
+            fireWait = 0;
+        }
     }
 
     void Movement()
