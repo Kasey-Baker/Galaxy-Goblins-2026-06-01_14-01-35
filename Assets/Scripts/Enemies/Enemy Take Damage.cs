@@ -1,0 +1,125 @@
+using UnityEngine;
+using System.Collections;
+using UnityEngine.AI;
+using System.Linq;
+
+//HOW TO USE:
+/*
+ * set currHealth serialize field to the HP value you want the enemy to have. This script should be added on to enemies.
+ * 
+ */
+public class EnemyTakeDamage : MonoBehaviour, IDamage
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [Header("----- Setup -----")]
+    [SerializeField] float currHealth;
+    [SerializeField] Renderer rend;
+   
+
+    [Header("----- Spawn Effects -----")]
+    [SerializeField] GameObject spawnObj;
+    [SerializeField] int numToSpawnStart;
+
+    [Header("----- Hit Effects -----")]
+    [SerializeField] GameObject spawnedObj;
+    [SerializeField] int numToSpawnHit;
+    [SerializeField] int numToSpawnDeath;
+
+    Color colorOrig;
+
+    Renderer[] allRenders;
+    Color[] allColors;
+    void Start()
+    {
+
+
+        MakeGuts(numToSpawnStart, spawnObj);
+        colorOrig = rend.material.color;
+        //gameManager.instance.updateEnemyCount(1);
+        allRenders = GetComponentsInChildren<Renderer>();
+        allColors = new Color[allRenders.Length];
+        for (int i = 0; i < allRenders.Length; i++)
+            {
+                allColors[i] = (allRenders[i].material.color);
+            }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void takeDamage(float amount)
+    {
+
+        
+        currHealth -= amount;
+        MakeGuts(numToSpawnHit);
+        if(currHealth <= 0)
+        {
+
+            MakeGuts(numToSpawnDeath);
+            Destroy(gameObject);
+
+        }
+        else
+        {
+            StartCoroutine(flashRed());
+        }
+    }
+
+    IEnumerator flashRed()
+    {
+        if (rend != null)
+        {
+            rend.material.color = Color.red;
+        }
+        for(int i = 0; i < allRenders.Length; i++)
+        {
+            if (allRenders[i] != null)
+            {
+                allRenders[i].material.color = Color.red;
+            }
+        }
+        yield return new WaitForSeconds(0.1f);
+        rend.material.color = colorOrig;
+        for(int i = 0; i < allRenders.Length; i++)
+        {
+            if (allRenders[i] != null)
+            {
+                allRenders[i].material.color = allColors[i];
+            }
+        }
+        
+    }
+
+    private void OnDestroy()
+    {
+
+    }
+    public void MakeGuts(int amount)
+    {
+        if (spawnedObj != null)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                Instantiate(spawnedObj, transform.position, transform.rotation);
+            }
+        }
+        
+    }
+
+    public void MakeGuts(int amount, GameObject gutball)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            Instantiate(gutball, transform.position, transform.rotation);
+        }
+
+    }
+
+
+}
