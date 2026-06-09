@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 1132291632621063428}
   - component: {fileID: 8910590542587545908}
   - component: {fileID: 7478087444282068921}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall (H) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5436480750753480441}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 4627562250228380099}
   - component: {fileID: 2185048748128355451}
   - component: {fileID: 8258449077356331159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall (H)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5587190903329993889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 8184042195452987128}
   - component: {fileID: 8254877462983732174}
   - component: {fileID: 1153960362080869227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall (V)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 8180132192216467525}
   - component: {fileID: 4082859967515189191}
   - component: {fileID: 8352412018853927586}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall (V) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

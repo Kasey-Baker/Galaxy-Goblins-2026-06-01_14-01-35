@@ -15,6 +15,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     [Header("----- Setup -----")]
     [SerializeField] float currHealth;
     [SerializeField] Renderer rend;
+    [SerializeField] float pointsOnDeath;
    
 
     [Header("----- Spawn Effects -----")]
@@ -98,7 +99,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
 
     private void OnDestroy()
     {
-
+        //When the game manager is set up, add pointsOnDeath to gamemanager points value
     }
     public void MakeGuts(int amount)
     {
