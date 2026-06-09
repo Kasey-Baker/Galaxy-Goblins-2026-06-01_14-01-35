@@ -7,7 +7,7 @@ public class WaveSpawner : MonoBehaviour
 
     enum SpawnSide { Left, Right, CenterLeft, CenterRight}
 
-    [Header ("Spawn Type")]
+    [Header ("Spawn Pattern Options")]
     [SerializeField] SpawnPattern spawnType;
     [SerializeField] SpawnSide spawnOnSide;
     [Range(0.01f, 1f)] [SerializeField] float spawnAreaCoverage;
@@ -45,7 +45,15 @@ public class WaveSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+
+
         //Sets up spawning locations. Right now leftBoundObj and rightBoundObj are drag-ons, but should be integrated with gamemanager once gamemanager is set up.
+
+        leftBoundObj = GameObject.FindWithTag("leftSpawnBound");
+        rightBoundObj = GameObject.FindWithTag("rightSpawnBound");
+
+
         leftBound = leftBoundObj.transform.position;
         leftBoundX = leftBound.x;
 

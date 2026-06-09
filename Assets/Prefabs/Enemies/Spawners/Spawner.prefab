@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d71586b653f6af4fa8254ece9319c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveSpawner
-  spawnType: 2
-  spawnOnSide: 1
-  spawnAreaCoverage: 0.497
-  timeBetweenSpawns: 0.3
+  spawnType: 1
+  spawnOnSide: 0
+  spawnAreaCoverage: 1
+  timeBetweenSpawns: 0.5
   enemyToSpawn: {fileID: 7315140745424281354, guid: 3ff49abf374fc394e90e50a9570a4105, type: 3}
-  spawnNumber: 20
+  spawnNumber: 10
   layerWithBounds:
     serializedVersion: 2
     m_Bits: 64

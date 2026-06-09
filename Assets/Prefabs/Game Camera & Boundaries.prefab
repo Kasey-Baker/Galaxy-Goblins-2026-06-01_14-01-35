@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8967377106524591125}
   m_Layer: 6
   m_Name: leftBound
-  m_TagString: Untagged
+  m_TagString: leftSpawnBound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 2583826116448784059}
   m_Layer: 6
   m_Name: rightBound
-  m_TagString: Untagged
+  m_TagString: rightSpawnBound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
