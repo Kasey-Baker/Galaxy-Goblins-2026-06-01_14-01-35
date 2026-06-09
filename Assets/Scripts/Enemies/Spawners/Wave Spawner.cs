@@ -24,7 +24,9 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField] GameObject leftBoundObj;
     [SerializeField] GameObject rightBoundObj;
+    [SerializeField] bool randomizeLocation;
 
+   
     Vector3 leftBound;
     Vector3 rightBound;
 
@@ -40,6 +42,7 @@ public class WaveSpawner : MonoBehaviour
     float distPerSpawn;
 
     int numSpawned;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -96,6 +99,10 @@ public class WaveSpawner : MonoBehaviour
         
 
  
+        if(randomizeLocation)
+        {
+            transform.position = new Vector3(Random.Range(leftBoundX, rightBoundX), transform.position.y, transform.position.z);
+        }
 
     
 

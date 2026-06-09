@@ -8,6 +8,7 @@ TagManager:
   - PlayerBounding
   - leftSpawnBound
   - rightSpawnBound
+  - waveSpawnSpot
   layers:
   - Default
   - TransparentFX
