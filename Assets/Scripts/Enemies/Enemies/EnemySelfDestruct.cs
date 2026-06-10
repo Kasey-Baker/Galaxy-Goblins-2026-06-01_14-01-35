@@ -5,6 +5,7 @@ using static UnityEngine.Rendering.DebugUI.Table;
 public class EnemySelfDestruct : MonoBehaviour
 {
     [SerializeField] GameObject objectToTarget;
+    [SerializeField] GameObject myDeathEffect;
     [SerializeField] Vector3 pointDir;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,5 +21,10 @@ public class EnemySelfDestruct : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(myDeathEffect, transform.position, Quaternion.identity);
     }
 }
