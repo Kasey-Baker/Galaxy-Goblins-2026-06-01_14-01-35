@@ -949,6 +949,7 @@ MonoBehaviour:
   menuLose: {fileID: 5614638758150671360}
   playerHPBar: {fileID: 6097764866318550941}
   Points: 0
+  pointsText: {fileID: 4411747959886431231}
   checkPointPopup: {fileID: 0}
   gameGoalCountText: {fileID: 0}
   enemyCountText: {fileID: 0}
@@ -2270,7 +2271,7 @@ GameObject:
   - component: {fileID: 8159874522066369498}
   - component: {fileID: 4411747959886431231}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: points counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
