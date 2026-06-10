@@ -100,6 +100,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     private void OnDestroy()
     {
         //When the game manager is set up, add pointsOnDeath to gamemanager points value
+        GameManager.instance.Points += pointsOnDeath;
     }
     public void MakeGuts(int amount)
     {
