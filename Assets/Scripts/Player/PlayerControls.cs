@@ -69,6 +69,7 @@ public class PlayerControls : MonoBehaviour, IDamage
     public void takeDamage(float amount)
     {
         healthCurr -= amount;
+        updatePlayerUI();
     }
 
     public void updatePlayerUI()
