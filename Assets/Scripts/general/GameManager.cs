@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject menuLose;
     public Image playerHPBar;
     public float Points;
+    public TMP_Text pointsText;
 
     public GameObject checkPointPopup;
     public TMP_Text gameGoalCountText;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pointsText.text = Points.ToString("F0");
         if (Input.GetButtonDown("Cancel"))
         {
             if (menuActive == null)

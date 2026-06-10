@@ -70,6 +70,10 @@ public class PlayerControls : MonoBehaviour, IDamage
     {
         healthCurr -= amount;
         updatePlayerUI();
+        if (healthCurr <= 0)
+        {
+            GameManager.instance.YouLose();
+        }
     }
 
     public void updatePlayerUI()
