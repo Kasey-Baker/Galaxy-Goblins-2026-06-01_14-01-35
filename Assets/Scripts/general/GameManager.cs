@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
     public Image playerHPBar;
+    public float Points;
 
     public GameObject checkPointPopup;
     public TMP_Text gameGoalCountText;
