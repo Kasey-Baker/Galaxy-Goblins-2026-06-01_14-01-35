@@ -1,9 +1,12 @@
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossPart : MonoBehaviour
 {
     [SerializeField] GameObject owner;
+    [SerializeField] AudioSource myAudio;
+    [SerializeField] AudioClip[] deathSounds;
     public int difficultyMod;
 
     public bool attackingRightNow;
@@ -45,6 +48,8 @@ public class BossPart : MonoBehaviour
 
             }
         }
+
+        AudioSource.PlayClipAtPoint(deathSounds[Random.Range(0, deathSounds.Length)], transform.position);
     }
 
     public void AttackActivate()
@@ -61,5 +66,7 @@ public class BossPart : MonoBehaviour
     {
         return owner;
     }
+
+   
 
 }
