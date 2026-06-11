@@ -90,4 +90,29 @@ public class PlayerControls : MonoBehaviour, IDamage
         }
     */
 
+   public void ApplyEffects(ItemData item)
+    {
+        if (item.healthBonus != 0)
+        {
+            healthMax += item.healthBonus;
+            healthCurr += item.healthBonus;
+            updatePlayerUI();
+        }
+        if (item.speedBonus != 0)
+        {
+            moveSpeed += item.speedBonus;
+        }
+        if (item.speedMultiplier != 0)
+        {
+            moveSpeed *= item.speedMultiplier;
+        }
+        if (item.firerateMultiplier != 0)
+        {
+            firerate /= item.firerateMultiplier;
+        }
+    }
+
+
+
+
 }

@@ -39,6 +39,11 @@ public class ItemPickups : MonoBehaviour
         {
             Debug.Log($"{itemData.itemName} Picked Up");
 
+            PlayerControls Player = player.GetComponent<PlayerControls>();
+            if (Player != null)
+            {
+                Player.ApplyEffects(itemData);
+            }
             Destroy(gameObject);
         }
     }
