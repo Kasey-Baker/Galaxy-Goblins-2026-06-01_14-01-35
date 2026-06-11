@@ -69,5 +69,25 @@ public class PlayerControls : MonoBehaviour, IDamage
     public void takeDamage(float amount)
     {
         healthCurr -= amount;
+        updatePlayerUI();
+        if (healthCurr <= 0)
+        {
+            GameManager.instance.YouLose();
+        }
     }
+
+    public void updatePlayerUI()
+    {
+        GameManager.instance.playerHPBar.fillAmount = healthCurr / healthMax;
+    }
+    /*
+        public void changePlayerPos()
+        {
+            control.transform.position = GameManager.instance.playerStartPos.transform.position;
+            Physics.SyncTransforms();
+            healthCurr = healthMax;
+            updatePlayerUI();
+        }
+    */
+
 }

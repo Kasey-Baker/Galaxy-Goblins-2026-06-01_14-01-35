@@ -1,4 +1,4 @@
-using UnityEditor.UI;
+
 using UnityEngine;
 
 public class EnemyBasicBehavior : MonoBehaviour
@@ -13,7 +13,7 @@ public class EnemyBasicBehavior : MonoBehaviour
     void Start()
     {
 
-        player = GameObject.FindWithTag("Player"); //Replace this with gamemanager player when gamemanager implemented
+        player = GameManager.instance.player; //Replace this with gamemanager player when gamemanager implemented
     }
 
     // Update is called once per frame
