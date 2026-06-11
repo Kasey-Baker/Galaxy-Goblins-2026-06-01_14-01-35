@@ -17,6 +17,8 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] bool bossSpawned;
 
+    [SerializeField] GameObject[] itemSpots;
+    [SerializeField] GameObject[] itemList;
     [SerializeField] bool itemsPresented;
     public bool itemChosen;
 
@@ -101,6 +103,10 @@ public class WaveManager : MonoBehaviour
     void CreateItems()
     {
         //Should create random items for the player to pick from after the end of a section. This is dependent on the item functionality and the game manager so cannot yet be completed
+        for(int i = 0; i < itemSpots.Length; i++)
+        {
+            Instantiate(itemList[Random.Range(0, itemList.Length)], itemSpots[i].transform.position, Quaternion.identity);
+        }
     }
 
     
