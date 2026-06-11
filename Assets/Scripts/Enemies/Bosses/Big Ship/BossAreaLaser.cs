@@ -61,8 +61,6 @@ public class AreaLaser : MonoBehaviour
 
         
 
-        //Quaternion rot = Quaternion.LookRotation(new Vector3(pointDir.x, 0, pointDir.z));
-        //transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * laserSpeed);
         Vector3 newDir = Vector3.RotateTowards(transform.forward, pointDir, Time.deltaTime * laserSpeed, 0.0f);
         transform.rotation = Quaternion.LookRotation(newDir);
     }

@@ -18,4 +18,14 @@ public class EnemyDashingShip : MonoBehaviour
         moveDir = transform.forward * moveSpeed;
         controller.Move(moveDir * Time.deltaTime);
     }
+
+    public void SetMoveSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+    }
+
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
 }
