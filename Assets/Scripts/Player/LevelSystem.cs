@@ -143,6 +143,7 @@ public class LevelSystem : MonoBehaviour
                 bulletPrefab = list[index];
             }
 
+
         }
     }
 }
