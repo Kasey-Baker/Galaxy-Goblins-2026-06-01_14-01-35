@@ -13,7 +13,6 @@ public class LevelSystem : MonoBehaviour
     {
         currentScore += points;
 
-        CheckForLevelUp();
 
     }
     private void CheckForLevelUp()
