@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8fcf1f6783b8ef4a9563cde91e9f81f, type: 3}
   m_Name: HealthBoost
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: 
+  itemName: HealthBoost
   price: 0
-  modelPrefab: {fileID: 0}
+  modelPrefab: {fileID: 7307769563023003953, guid: 7df2f9e1d3535ba488fe6ed0b8293277, type: 3}
   icon: {fileID: 0}
   damageMultiplier: 0
   speedMultiplier: 0
   firerateMultiplier: 0
-  healthBonus: 0
+  healthBonus: 10
   damageBonus: 0
   speedBonus: 0
