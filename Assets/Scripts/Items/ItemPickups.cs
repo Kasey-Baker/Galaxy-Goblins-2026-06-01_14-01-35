@@ -1,3 +1,4 @@
+using UnityEditor.Build;
 using UnityEngine;
 
 public class ItemPickups : MonoBehaviour
@@ -6,6 +7,7 @@ public class ItemPickups : MonoBehaviour
 
     [SerializeField] private ItemData itemData;
     private GameObject Model;
+    private bool isCollected;
 
     private void Start()
     {
@@ -15,7 +17,7 @@ public class ItemPickups : MonoBehaviour
     public void InitializeItem()
     {
         if (itemData == null) return;
-        if (Model == null) Destroy(Model);
+        if (Model != null) Destroy(Model);
         if(itemData.modelPrefab != null)
         {
             Model = Instantiate(itemData.modelPrefab, transform.position, transform.rotation, transform);
@@ -23,17 +25,22 @@ public class ItemPickups : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (isCollected) return;
         if (other.CompareTag("Player"))
         {
+            isCollected = true;
             OnPickup(other.gameObject);
         }
     }
 
     protected virtual void OnPickup (GameObject player)
     {
-        Debug.Log($"{itemData.itemName} Picked Up");
+        if (itemData != null)
+        {
+            Debug.Log($"{itemData.itemName} Picked Up");
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
     }
 
 }
