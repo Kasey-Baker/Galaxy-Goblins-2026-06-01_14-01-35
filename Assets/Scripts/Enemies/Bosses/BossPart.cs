@@ -4,18 +4,20 @@ using UnityEngine;
 public class BossPart : MonoBehaviour
 {
     [SerializeField] GameObject owner;
-    [SerializeField] int difficultyMod;
-    [SerializeField] Component attackToActivate;
+    public int difficultyMod;
 
     public bool attackingRightNow;
 
 
-
+    private void Awake()
+    {
+        difficultyMod = owner.GetComponent<BossManager>().difficultyModifer;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         attackingRightNow = false;
-        difficultyMod = owner.GetComponent<BossManager>().difficultyModifer;
+      
     }
 
     // Update is called once per frame
@@ -53,6 +55,11 @@ public class BossPart : MonoBehaviour
     public void AttackDisable()
     {
         attackingRightNow = false;
+    }
+
+    public GameObject GetOwner()
+    {
+        return owner;
     }
 
 }
