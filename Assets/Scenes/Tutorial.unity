@@ -184,18 +184,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 381588697790939566, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 381588697790939566, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 381588697790939566, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
     - target: {fileID: 7350393062591520126, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: m_Name
       value: UI
@@ -298,8 +286,20 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.198814
+      value: 33.198822
       objectReference: {fileID: 0}
     - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_LocalPosition.y
@@ -315,15 +315,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -533,5 +533,5 @@ SceneRoots:
   - {fileID: 855956499}
   - {fileID: 1817108730}
   - {fileID: 1599569532}
-  - {fileID: 1539633081}
   - {fileID: 716417431}
+  - {fileID: 1539633081}
