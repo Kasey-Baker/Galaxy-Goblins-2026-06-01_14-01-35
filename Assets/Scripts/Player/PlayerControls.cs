@@ -74,6 +74,11 @@ public class PlayerControls : MonoBehaviour, IDamage
         {
             GameManager.instance.YouLose();
         }
+
+        if(healthCurr > healthMax)
+        {
+            healthCurr = healthMax;
+        }
     }
 
     public void updatePlayerUI()
@@ -89,5 +94,30 @@ public class PlayerControls : MonoBehaviour, IDamage
             updatePlayerUI();
         }
     */
+
+   public void ApplyEffects(ItemData item)
+    {
+        if (item.healthBonus != 0)
+        {
+            healthMax += item.healthBonus;
+            healthCurr += item.healthBonus;
+            updatePlayerUI();
+        }
+        if (item.speedBonus != 0)
+        {
+            moveSpeed += item.speedBonus;
+        }
+        if (item.speedMultiplier != 0)
+        {
+            moveSpeed *= item.speedMultiplier;
+        }
+        if (item.firerateMultiplier != 0)
+        {
+            firerate /= item.firerateMultiplier;
+        }
+    }
+
+
+
 
 }

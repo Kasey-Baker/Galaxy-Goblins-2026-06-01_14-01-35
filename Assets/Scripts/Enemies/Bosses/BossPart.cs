@@ -1,21 +1,26 @@
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossPart : MonoBehaviour
 {
     [SerializeField] GameObject owner;
-    [SerializeField] int difficultyMod;
-    [SerializeField] Component attackToActivate;
+    [SerializeField] AudioSource myAudio;
+    [SerializeField] AudioClip[] deathSounds;
+    public int difficultyMod;
 
     public bool attackingRightNow;
 
 
-
+    private void Awake()
+    {
+        difficultyMod = owner.GetComponent<BossManager>().difficultyModifer;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         attackingRightNow = false;
-        difficultyMod = owner.GetComponent<BossManager>().difficultyModifer;
+      
     }
 
     // Update is called once per frame
@@ -43,6 +48,8 @@ public class BossPart : MonoBehaviour
 
             }
         }
+
+        AudioSource.PlayClipAtPoint(deathSounds[Random.Range(0, deathSounds.Length)], transform.position);
     }
 
     public void AttackActivate()
@@ -54,5 +61,12 @@ public class BossPart : MonoBehaviour
     {
         attackingRightNow = false;
     }
+
+    public GameObject GetOwner()
+    {
+        return owner;
+    }
+
+   
 
 }

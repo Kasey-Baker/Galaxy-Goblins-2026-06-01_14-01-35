@@ -61,7 +61,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         MakeGuts(numToSpawnHit);
         if(currHealth <= 0)
         {
-
+            GameManager.instance.Points += pointsOnDeath;
             MakeGuts(numToSpawnDeath);
             Destroy(gameObject);
 
@@ -100,7 +100,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     private void OnDestroy()
     {
         //When the game manager is set up, add pointsOnDeath to gamemanager points value
-        GameManager.instance.Points += pointsOnDeath;
+
     }
     public void MakeGuts(int amount)
     {
