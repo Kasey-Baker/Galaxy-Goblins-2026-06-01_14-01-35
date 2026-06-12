@@ -121,6 +121,9 @@ MonoBehaviour:
   myAudio: {fileID: -7986118209847767482}
   soundsOnHit:
   - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}
+  deathSoundMaker: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: cac351a8251ff804c8a1ad871c15c94f, type: 3}
 --- !u!114 &5930036305460173310
 MonoBehaviour:
   m_ObjectHideFlags: 0
