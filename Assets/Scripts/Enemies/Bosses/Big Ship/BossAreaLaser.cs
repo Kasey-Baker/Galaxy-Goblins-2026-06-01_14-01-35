@@ -7,6 +7,7 @@ public class AreaLaser : MonoBehaviour
     [SerializeField] int difficultyMod;
     [SerializeField] AudioSource myAudio;
     [SerializeField] AudioClip[] mySounds;
+    [SerializeField] AudioClip laserFire;
     [SerializeField] float laserAttackLength;
     [SerializeField] float laserSpeed;
     [SerializeField] Vector3 pointDir;
@@ -19,6 +20,7 @@ public class AreaLaser : MonoBehaviour
 
     public bool isActive;
 
+    bool soundPlaying;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +28,7 @@ public class AreaLaser : MonoBehaviour
         baseLaserAttackLength = laserAttackLength;
         baseLaserSpeed = laserSpeed;
         ResetValues();
+        soundPlaying = false;
 
         player = GameManager.instance.player;
     }
@@ -43,6 +46,10 @@ public class AreaLaser : MonoBehaviour
 
     void LaserBeam()
     {
+        if(!soundPlaying)
+        {
+            myAudio.PlayOneShot(laserFire);
+        }
         if (currAttackDuration < laserAttackLength)
         {
             FaceTarget();
@@ -87,6 +94,7 @@ public class AreaLaser : MonoBehaviour
         myLaser.GetComponent<Laser>().IsFiring = false;
         isActive = false;
         ResetValues();
+        myAudio.Stop();
     }
 
     void ResetValues()

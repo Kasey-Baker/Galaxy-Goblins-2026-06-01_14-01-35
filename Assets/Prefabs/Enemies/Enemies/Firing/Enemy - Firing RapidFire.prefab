@@ -222,7 +222,7 @@ MonoBehaviour:
   damageAmount: 1
   damageRate: 0
   bulletSpeed: 0
-  bulletDestroyTime: 0
+  bulletDestroyTime: 5
   hitEffect: {fileID: 0}
   playerHitSound: {fileID: 0}
   otherHitSound: {fileID: 0}
