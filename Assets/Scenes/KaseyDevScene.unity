@@ -1029,13 +1029,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135805238336356428, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+      propertyPath: m_Volume
+      value: 0.006
+      objectReference: {fileID: 0}
     - target: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_Name
       value: BossManagement
       objectReference: {fileID: 0}
     - target: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6326402787713022627, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1077,6 +1081,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7352307348381152268, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+      propertyPath: laserFire
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dc01b9b13636f54ea96e5e6bef049d3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
