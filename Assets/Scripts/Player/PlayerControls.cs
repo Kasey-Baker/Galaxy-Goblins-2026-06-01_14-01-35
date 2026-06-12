@@ -30,12 +30,14 @@ public class PlayerControls : MonoBehaviour, IDamage
     {
         Movement();
 
+        /*
         fireWait += Time.deltaTime;
 
         if(fireWait >= firerate && bulletList[currBullet] != null)
         {
             ShootBasic(bulletList[currBullet], 0);
         }
+        */
 
     }
 

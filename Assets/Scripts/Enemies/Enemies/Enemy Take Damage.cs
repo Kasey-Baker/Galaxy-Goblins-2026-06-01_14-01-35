@@ -37,7 +37,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
 
         MakeGuts(numToSpawnStart, spawnObj);
         colorOrig = rend.material.color;
-        //gameManager.instance.updateEnemyCount(1);
+        GameManager.instance.updateEnemyCount(1);
         allRenders = GetComponentsInChildren<Renderer>();
         allColors = new Color[allRenders.Length];
         for (int i = 0; i < allRenders.Length; i++)
@@ -61,7 +61,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         MakeGuts(numToSpawnHit);
         if(currHealth <= 0)
         {
-            GameManager.instance.Points += pointsOnDeath;
+            GameManager.instance.AddPoints(pointsOnDeath);
             MakeGuts(numToSpawnDeath);
             Destroy(gameObject);
 
@@ -100,6 +100,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     private void OnDestroy()
     {
         //When the game manager is set up, add pointsOnDeath to gamemanager points value
+        GameManager.instance.updateEnemyCount(-1);
 
     }
     public void MakeGuts(int amount)

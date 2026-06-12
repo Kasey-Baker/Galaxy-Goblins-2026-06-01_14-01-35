@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
    // public GameObject playerStartPos;
 
     int gameGoalCount;
-    //int enemyCount;
+    int enemyCount;
     //int keyGoalCount;
 
     float timeScaleOrig;
@@ -72,18 +72,18 @@ public class GameManager : MonoBehaviour
         menuActive.SetActive(false);
         menuActive = null;
     }
-/*
+
     public void updateEnemyCount(int amount)
     {
         enemyCount += amount;
-        enemyCountText.text = enemyCount.ToString("F0");
-        if (enemyCount <= 0)
-        {
+        //enemyCountText.text = enemyCount.ToString("F0");
+        //if (enemyCount <= 0)
+        //{
             // start next wave
-        }
+        //}
 
     }
-
+    /*
     public void updateGameGoal(int amount)
     {
         gameGoalCount += amount;
@@ -97,16 +97,21 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
+    */
     public int getEnemyCount()
     {
         return enemyCount;
     }
-*/
     public void YouLose()
     {
         statePause();
         menuActive = menuLose;
         menuActive.SetActive(true);
+    }
+
+    public void AddPoints(float amount)
+    {
+        Points += amount;
+        GameManager.instance.player.GetComponent<LevelSystem>().CheckForLevelUp();
     }
 }

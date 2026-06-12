@@ -22,10 +22,10 @@ public class LevelSystem : MonoBehaviour
     [SerializeField] float coneAngle = 15f;
 
     
-    private PlayerControls playerControls;
-    private float fireWait;
-    private float fireRate;
-    private GameObject bulletPrefab;
+    [SerializeField] PlayerControls playerControls;
+    [SerializeField] float fireWait;
+    [SerializeField] float fireRate;
+    [SerializeField] GameObject bulletPrefab;
 
     void Start()
     {
@@ -96,13 +96,13 @@ public class LevelSystem : MonoBehaviour
         CheckForLevelUp();
     }
 
-    private void CheckForLevelUp()
+    public void CheckForLevelUp()
     {
         if (currentLevel - 1 >= scoreThresholds.Length) return;
 
         int requiredScore = scoreThresholds[currentLevel - 1];
 
-        if (currentScore >= requiredScore)
+        if (GameManager.instance.Points >= requiredScore)
         {
             LevelUp();
             CheckForLevelUp();

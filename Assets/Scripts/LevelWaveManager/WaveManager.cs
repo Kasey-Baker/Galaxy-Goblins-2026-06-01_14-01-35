@@ -37,6 +37,8 @@ public class WaveManager : MonoBehaviour
     int waveRangeMin;
     [SerializeField] int waveRangeMax;
 
+    [SerializeField] GameObject helpfulText;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -49,6 +51,7 @@ public class WaveManager : MonoBehaviour
         itemsPresented = false;
         spawningActive = false;
         itemChosen = false;
+        itemsPresented = false;
         bossSpawned = false;
     }
 
@@ -62,6 +65,7 @@ public class WaveManager : MonoBehaviour
         }
         else
         {
+            AreEnemiesGone();
             CheckNextSection();
         }
 
@@ -78,6 +82,16 @@ public class WaveManager : MonoBehaviour
         CheckSectionOver();
     }
 
+    void AreEnemiesGone()
+    {
+        if(GameManager.instance.getEnemyCount() <= 0 && itemsPresented == false && spawningActive == false)
+        {
+            CreateItems();
+            itemsPresented = true;
+            helpfulText.SetActive(true);
+        }
+    }
+
     void CheckSectionOver()
     {
         if(currWavesSpawned >= numOfWavesPerSequence)
@@ -85,7 +99,7 @@ public class WaveManager : MonoBehaviour
             totalSectionsCleared += 1;
             spawningActive = false;
 
-            CreateItems();
+         
         }
     }
 
@@ -93,6 +107,8 @@ public class WaveManager : MonoBehaviour
     {
         if(Input.GetButton("NextWave") && spawningActive == false)
         {
+            helpfulText.SetActive(false);
+            itemsPresented = false;
             if (totalSectionsCleared >= numOfLargeSequences && bossSpawned == false)
             {
                 SummonBoss();
