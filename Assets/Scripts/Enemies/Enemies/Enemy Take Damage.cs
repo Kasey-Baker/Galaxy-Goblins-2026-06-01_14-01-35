@@ -26,6 +26,12 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     [SerializeField] GameObject spawnedObj;
     [SerializeField] int numToSpawnHit;
     [SerializeField] int numToSpawnDeath;
+    [SerializeField] AudioSource myAudio;
+    [SerializeField] AudioClip[] soundsOnHit;
+
+    [Header("----- Death Behavior -----")]
+    [SerializeField] GameObject deathSoundMaker;
+    [SerializeField] AudioClip[] deathSounds;
 
     Color colorOrig;
 
@@ -59,6 +65,10 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         
         currHealth -= amount;
         MakeGuts(numToSpawnHit);
+        if (soundsOnHit.Length > 0)
+        {
+            myAudio.PlayOneShot(soundsOnHit[Random.Range(0, soundsOnHit.Length)]);
+        }
         if(currHealth <= 0)
         {
             GameManager.instance.AddPoints(pointsOnDeath);
@@ -101,7 +111,10 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     {
         //When the game manager is set up, add pointsOnDeath to gamemanager points value
         GameManager.instance.updateEnemyCount(-1);
-
+        if (deathSounds.Length > 0)
+        {
+            SetupDeathSound();
+        }
     }
     public void MakeGuts(int amount)
     {
@@ -124,5 +137,9 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
 
     }
 
-
+    void SetupDeathSound()
+    {
+        GameObject myNoise = Instantiate(deathSoundMaker, transform.position, Quaternion.identity);
+        myNoise.GetComponent<PlayDeathSound>().SetSound(deathSounds[Random.Range(0, deathSounds.Length)], myAudio.volume);
+    }
 }

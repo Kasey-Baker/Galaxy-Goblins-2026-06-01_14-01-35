@@ -3,13 +3,22 @@ using UnityEngine.EventSystems;
 
 public class PlayerControls : MonoBehaviour, IDamage
 {
-    [SerializeField] float healthCurr;
+    [Header("Player Config")]
     [SerializeField] CharacterController control;
+
+    [Header("Player Stats")]
+    [SerializeField] float healthCurr;
     [SerializeField] float moveSpeed;
     [SerializeField] float slowSpeedMod;
-
     [SerializeField] float firerate;
+
+    [Header("Player Bullets")]
     [SerializeField] GameObject[] bulletList;
+
+    [Header("Audio")]
+    [SerializeField] AudioSource myAudio;
+    [SerializeField] AudioClip[] myHitSounds;
+
     Vector3 moveDirection;
 
     float healthMax;
@@ -71,6 +80,10 @@ public class PlayerControls : MonoBehaviour, IDamage
     public void takeDamage(float amount)
     {
         healthCurr -= amount;
+        if(myHitSounds.Length > 0)
+        {
+            myAudio.PlayOneShot(myHitSounds[Random.Range(0, myHitSounds.Length)]);
+        }
         updatePlayerUI();
         if (healthCurr <= 0)
         {

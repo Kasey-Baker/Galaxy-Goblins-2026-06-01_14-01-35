@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: e3e42a3467378a64791959c3f60b4fd9
   - enabled: 1
+    path: Assets/Scenes/Grass Level.unity
+    guid: 163f2b7ec47774d49a9c88ce72e35a86
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: f9b1197e1a0aed746addb4d8274b2f2a
   - enabled: 1

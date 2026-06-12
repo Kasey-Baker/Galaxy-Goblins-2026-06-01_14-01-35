@@ -49,7 +49,6 @@ public class BossPart : MonoBehaviour
             }
         }
 
-        AudioSource.PlayClipAtPoint(deathSounds[Random.Range(0, deathSounds.Length)], transform.position);
     }
 
     public void AttackActivate()
