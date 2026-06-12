@@ -679,6 +679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera & Boundaries
       objectReference: {fileID: 0}
+    - target: {fileID: 3110178432950886387, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6167493279605755819, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9662304
