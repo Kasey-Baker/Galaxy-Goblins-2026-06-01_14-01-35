@@ -13,7 +13,7 @@ public class LevelSystem : MonoBehaviour
     public int[] scoreThresholds = { 1000, 2500, 5000 };
 
     [Header("Player Stats")]
-    public int bulletDamage = 10;
+    public float bulletDamage = 10;
     public int bulletAmount = 1;
     public ShotPattern currentPattern = ShotPattern.SingleForward;
 
@@ -27,9 +27,11 @@ public class LevelSystem : MonoBehaviour
     [SerializeField] float fireRate;
     [SerializeField] GameObject bulletPrefab;
 
+    float baseBulletDamage;
+
     void Start()
     {
-
+        baseBulletDamage = bulletDamage;
         playerControls = GetComponent<PlayerControls>();
 
         if (playerControls != null)
@@ -112,7 +114,7 @@ public class LevelSystem : MonoBehaviour
     private void LevelUp()
     {
         currentLevel++;
-        bulletDamage += 5;
+        bulletDamage += baseBulletDamage/2;
         bulletAmount += 1;
 
         UpdateShotPattern();
