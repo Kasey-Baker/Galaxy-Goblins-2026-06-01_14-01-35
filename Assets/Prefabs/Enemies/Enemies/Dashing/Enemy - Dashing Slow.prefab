@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7007590605562032198}
   - component: {fileID: 4556530152524475106}
   - component: {fileID: 2523889466940935615}
-  - component: {fileID: 5106623276620740627}
+  - component: {fileID: -234425712642045386}
   m_Layer: 0
   m_Name: Enemy - Dashing Slow
   m_TagString: Enemy
@@ -188,7 +188,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5106623276620740627
+--- !u!114 &-234425712642045386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7315140745424281354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaa3f2f99778cd47ae0b251419930ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::damage
   type: 1

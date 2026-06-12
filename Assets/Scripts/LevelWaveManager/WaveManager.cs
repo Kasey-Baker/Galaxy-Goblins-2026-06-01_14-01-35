@@ -5,6 +5,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] int numOfLargeSequences;
     [SerializeField] int numOfWavesPerSequence;
     [SerializeField] float timeBetweenWaves;
+    public int difficultyMod;
 
     [SerializeField] GameObject[] waveOptions;
 
@@ -16,6 +17,11 @@ public class WaveManager : MonoBehaviour
     [SerializeField] bool spawningActive;
 
     [SerializeField] bool bossSpawned;
+    [SerializeField] bool bossDefeated;
+
+    [SerializeField] GameObject[] portalSpots;
+    [SerializeField] GameObject[] portals;
+
 
     [SerializeField] GameObject[] itemSpots;
     [SerializeField] GameObject[] itemList;
@@ -89,8 +95,7 @@ public class WaveManager : MonoBehaviour
         {
             if (totalSectionsCleared >= numOfLargeSequences && bossSpawned == false)
             {
-                Instantiate(bossToSpawn);
-                bossSpawned = true;
+                SummonBoss();
             }
             else
             {
@@ -98,6 +103,13 @@ public class WaveManager : MonoBehaviour
                 currWavesSpawned = 0;
             }
         }
+    }
+
+    void SummonBoss()
+    {
+        GameObject myBoss = Instantiate(bossToSpawn);
+        myBoss.GetComponent<BossManager>().SetWaveManager(gameObject);
+        bossSpawned = true;
     }
 
     void CreateItems()
@@ -109,6 +121,18 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    void CreatePortals()
+    {
+        for(int i = 0; i < portals.Length; i++)
+        {
+            Instantiate(portals[i], portalSpots[i].transform.position, Quaternion.identity);
+        }
+    }
     
+    public void OnBossDeath()
+    {
+        bossDefeated = true;
+        CreatePortals();
+    }
 
 }
