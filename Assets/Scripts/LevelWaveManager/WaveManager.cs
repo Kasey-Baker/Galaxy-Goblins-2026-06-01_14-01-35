@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] GameObject[] waveOptions;
 
     [SerializeField] GameObject bossToSpawn;
+    [SerializeField] GameObject bossSpawnSpot;
 
     [SerializeField] GameObject waveSpawnSpot; //Where to spawn the wave objects from
 
@@ -130,7 +131,7 @@ public class WaveManager : MonoBehaviour
 
     void SummonBoss()
     {
-        GameObject myBoss = Instantiate(bossToSpawn);
+        GameObject myBoss = Instantiate(bossToSpawn, bossSpawnSpot.transform.position, Quaternion.identity);
         myBoss.GetComponent<BossManager>().SetWaveManager(gameObject);
         bossSpawned = true;
     }
