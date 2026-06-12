@@ -1,16 +1,43 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonFunctions : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void resume()
     {
-        
+        GameManager.instance.stateUnpaused();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void restart()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.instance.stateUnpaused();
+    }
+
+    public void quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+    }
+
+    public void playerRespawn()
+    {
+       // GameManager.instance.playercontrols.changePlayerPos();
+        GameManager.instance.stateUnpaused();
+    }
+
+    public void loadLevel(int lvl)
+    {
+        SceneManager.LoadScene(lvl);
+        GameManager.instance.stateUnpaused();
+    }
+
+    public void MainMenu(int lvl)
+    {
+        SceneManager.LoadScene(lvl);
+        GameManager.instance.stateUnpaused();
     }
 }

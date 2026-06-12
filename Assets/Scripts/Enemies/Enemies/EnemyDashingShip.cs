@@ -15,6 +15,7 @@ public class EnemyDashingShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        moveDir = transform.forward * moveSpeed;
         controller.Move(moveDir * Time.deltaTime);
     }
 }
