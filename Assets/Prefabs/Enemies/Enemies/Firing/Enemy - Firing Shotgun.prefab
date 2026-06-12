@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 236210862301350264}
   - component: {fileID: 4391179260227929043}
   - component: {fileID: 3750119164403548722}
-  - component: {fileID: 7724245864843489886}
+  - component: {fileID: 2121019000005787636}
   m_Layer: 0
   m_Name: Enemy - Firing Shotgun
   m_TagString: Enemy
@@ -205,7 +205,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7724245864843489886
+--- !u!114 &2121019000005787636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6860295985810186111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaa3f2f99778cd47ae0b251419930ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::damage
   type: 1

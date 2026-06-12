@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8949670791175916902}
   - component: {fileID: 6843432935480285175}
   - component: {fileID: 5413571270256884636}
-  - component: {fileID: 5261399978236208351}
+  - component: {fileID: -2724335735608803027}
   m_Layer: 0
   m_Name: Enemy - Firing Pistol
   m_TagString: Enemy
@@ -205,7 +205,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5261399978236208351
+--- !u!114 &-2724335735608803027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5217961511792224960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaa3f2f99778cd47ae0b251419930ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::damage
   type: 1

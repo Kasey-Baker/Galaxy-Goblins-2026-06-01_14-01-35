@@ -5,6 +5,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] int numOfLargeSequences;
     [SerializeField] int numOfWavesPerSequence;
     [SerializeField] float timeBetweenWaves;
+    public int difficultyMod;
 
     [SerializeField] GameObject[] waveOptions;
 
@@ -16,7 +17,14 @@ public class WaveManager : MonoBehaviour
     [SerializeField] bool spawningActive;
 
     [SerializeField] bool bossSpawned;
+    [SerializeField] bool bossDefeated;
 
+    [SerializeField] GameObject[] portalSpots;
+    [SerializeField] GameObject[] portals;
+
+
+    [SerializeField] GameObject[] itemSpots;
+    [SerializeField] GameObject[] itemList;
     [SerializeField] bool itemsPresented;
     public bool itemChosen;
 
@@ -87,8 +95,7 @@ public class WaveManager : MonoBehaviour
         {
             if (totalSectionsCleared >= numOfLargeSequences && bossSpawned == false)
             {
-                Instantiate(bossToSpawn);
-                bossSpawned = true;
+                SummonBoss();
             }
             else
             {
@@ -98,11 +105,34 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    void SummonBoss()
+    {
+        GameObject myBoss = Instantiate(bossToSpawn);
+        myBoss.GetComponent<BossManager>().SetWaveManager(gameObject);
+        bossSpawned = true;
+    }
+
     void CreateItems()
     {
         //Should create random items for the player to pick from after the end of a section. This is dependent on the item functionality and the game manager so cannot yet be completed
+        for(int i = 0; i < itemSpots.Length; i++)
+        {
+            Instantiate(itemList[Random.Range(0, itemList.Length)], itemSpots[i].transform.position, Quaternion.identity);
+        }
     }
 
+    void CreatePortals()
+    {
+        for(int i = 0; i < portals.Length; i++)
+        {
+            Instantiate(portals[i], portalSpots[i].transform.position, Quaternion.identity);
+        }
+    }
     
+    public void OnBossDeath()
+    {
+        bossDefeated = true;
+        CreatePortals();
+    }
 
 }

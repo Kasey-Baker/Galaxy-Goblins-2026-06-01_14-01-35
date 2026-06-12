@@ -7,6 +7,7 @@ public class BossManager : MonoBehaviour
     public int difficultyModifer;
     [SerializeField] float timeBetweenAttacksBase;
     [SerializeField] float timeBetweenAttacksMod;
+    [SerializeField] GameObject waveManager;
 
     float waitTime;
 
@@ -39,4 +40,25 @@ public class BossManager : MonoBehaviour
     {
         timeBetweenAttacksMod *= amount;
     }
+
+    public void SetWaveManager(GameObject manager)
+    {
+        waveManager = manager;
+    }
+
+    public void GetManagerData()
+    {
+        difficultyModifer = waveManager.GetComponent<WaveManager>().difficultyMod;
+    }
+
+    void TellManagerBossDied()
+    {
+        waveManager.GetComponent<WaveManager>().OnBossDeath();
+    }
+
+    private void OnDestroy()
+    {
+        TellManagerBossDied();
+    }
+
 }

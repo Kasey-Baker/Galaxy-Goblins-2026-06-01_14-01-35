@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 787547314344886573}
   - component: {fileID: 6333054879087635809}
   - component: {fileID: 3380557424482518408}
-  - component: {fileID: 5044461142066741930}
   - component: {fileID: -7693960216543849142}
+  - component: {fileID: 9083802135575817496}
   m_Layer: 0
   m_Name: Enemy Self Destruct Explosion
   m_TagString: Untagged
@@ -114,29 +114,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5044461142066741930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8785673792354651433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaa3f2f99778cd47ae0b251419930ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::damage
-  type: 1
-  rb: {fileID: 0}
-  damageAmount: 1
-  damageRate: 0
-  bulletSpeed: 30
-  bulletDestroyTime: 3
-  hitEffect: {fileID: 0}
-  playerHitSound: {fileID: 0}
-  otherHitSound: {fileID: 0}
-  ignoredObject: {fileID: 0}
-  tagToIgnore: Enemy
 --- !u!114 &-7693960216543849142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +127,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroySelfAfterTime
   lifetime: 0.1
+--- !u!114 &9083802135575817496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785673792354651433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::damage
+  type: 1
+  rb: {fileID: 0}
+  damageAmount: 1
+  damageRate: 0
+  bulletSpeed: 0
+  bulletDestroyTime: 0
+  hitEffect: {fileID: 0}
+  playerHitSound: {fileID: 0}
+  otherHitSound: {fileID: 0}
+  ignoredObject: {fileID: 0}
+  tagToIgnore: 

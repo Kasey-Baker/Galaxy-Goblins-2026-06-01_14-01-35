@@ -74,6 +74,11 @@ public class PlayerControls : MonoBehaviour, IDamage
         {
             GameManager.instance.YouLose();
         }
+
+        if(healthCurr > healthMax)
+        {
+            healthCurr = healthMax;
+        }
     }
 
     public void updatePlayerUI()

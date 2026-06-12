@@ -9,7 +9,7 @@ public class damage : MonoBehaviour
     public float damageAmount;
     [SerializeField] float damageRate;
     public float bulletSpeed;
-    public float bulletDestroyTime;
+    public int bulletDestroyTime;
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] AudioClip playerHitSound;
     [SerializeField] AudioClip otherHitSound;
@@ -17,10 +17,11 @@ public class damage : MonoBehaviour
     [SerializeField] string tagToIgnore;
     bool isDamaging;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (type == damageType.bullet )
+        if (type == damageType.bullet)
         {
             rb.linearVelocity = transform.forward * bulletSpeed;
 
@@ -69,11 +70,11 @@ public class damage : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.isTrigger) 
+        if (other.isTrigger)
             return;
 
         IDamage dmg = other.GetComponent<IDamage>();
-        if(dmg != null && type == damageType.DOT && !isDamaging)
+        if (dmg != null && type == damageType.DOT && !isDamaging)
         {
             StartCoroutine(damageOther(dmg));
         }
