@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7259466309336412053}
+  - component: {fileID: -2311288193109133368}
   - component: {fileID: 8696295164779324191}
   - component: {fileID: 919676670468278789}
   - component: {fileID: 2325687511771093492}
@@ -39,6 +40,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2311288193109133368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996281823504814499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff32c346d95be0d4b9f9b9815abbacba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersistentObjectHandler
+  targetSceneName: Main Menu
 --- !u!33 &8696295164779324191
 MeshFilter:
   m_ObjectHideFlags: 0

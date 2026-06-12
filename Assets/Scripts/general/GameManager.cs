@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager instance { get; private set; }
 
     [Header("Persistent Objects")]
     public GameObject[] persistentObjects;
@@ -24,7 +25,8 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     public GameObject player;
     public PlayerControls playercontrols;
-   // public GameObject playerStartPos;
+    // public GameObject playerStartPos;
+    public PlayerData playerStats = new PlayerData();
 
     int gameGoalCount;
     int enemyCount;
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     float timeScaleOrig;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+
     void Awake()
     {
         if (instance != null)
@@ -39,16 +43,14 @@ public class GameManager : MonoBehaviour
             CleanUpAndDestroy();
             return;
         }
-        else
-        {
-            instance = this;
-            timeScaleOrig = Time.timeScale;
-            player = GameObject.FindWithTag("Player");
-            playercontrols = player.GetComponent<PlayerControls>();
-            // playerStartPos = GameObject.FindWithTag("playerStartPos");
-            DontDestroyOnLoad(gameObject);
-            MarkPersistentObjects();
-        }
+        instance = this;
+        timeScaleOrig = Time.timeScale;
+        player = GameObject.FindWithTag("Player");
+        playercontrols = player.GetComponent<PlayerControls>();
+        // playerStartPos = GameObject.FindWithTag("playerStartPos");
+        DontDestroyOnLoad(gameObject);
+        MarkPersistentObjects();
+        
             
     }
 
@@ -152,5 +154,35 @@ public class GameManager : MonoBehaviour
         GameManager.instance.player.GetComponent<LevelSystem>().CheckForLevelUp();
     }
 
-    
+    private string SavePath => Path.Combine(Application.persistentDataPath, "savegame.json");
+
+    public void SaveGame()
+    {
+        // 1. Convert the data object to a JSON string representation
+        string json = JsonUtility.ToJson(playerStats, true);
+
+        // 2. Write that string onto the user's hard drive 
+        File.WriteAllText(SavePath, json);
+        Debug.Log($"Game Saved to: {SavePath}");
+    }
+
+    public void LoadGame()
+    {
+        // Check if a save file actually exists before trying to read it
+        if (File.Exists(SavePath))
+        {
+            // 1. Read the raw text from the file
+            string json = File.ReadAllText(SavePath);
+
+            // 2. Overwrite the runtime object with the saved values
+            JsonUtility.FromJsonOverwrite(json, playerStats);
+            Debug.Log("Game Loaded Successfully!");
+        }
+        else
+        {
+            Debug.LogWarning("No save file found. Starting fresh!");
+        }
+    }
+
+
 }
