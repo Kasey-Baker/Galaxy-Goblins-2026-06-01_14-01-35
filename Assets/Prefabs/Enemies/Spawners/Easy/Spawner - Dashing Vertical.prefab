@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2497095149790567865}
   - component: {fileID: 8167839485412284242}
   m_Layer: 0
-  m_Name: Spawner 2
+  m_Name: Spawner - Dashing Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   spawnType: 0
   spawnOnSide: 1
   spawnAreaCoverage: 1
-  timeBetweenSpawns: 0.5
+  timeBetweenSpawns: 0.7
   enemyToSpawn: {fileID: 7315140745424281354, guid: 3ff49abf374fc394e90e50a9570a4105, type: 3}
   spawnNumber: 4
   layerWithBounds:
@@ -55,4 +55,4 @@ MonoBehaviour:
     m_Bits: 64
   leftBoundObj: {fileID: 0}
   rightBoundObj: {fileID: 0}
-  randomizeLocation: 0
+  randomizeLocation: 1
