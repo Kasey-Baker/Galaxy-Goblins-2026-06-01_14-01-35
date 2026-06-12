@@ -26,6 +26,8 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     [SerializeField] GameObject spawnedObj;
     [SerializeField] int numToSpawnHit;
     [SerializeField] int numToSpawnDeath;
+    [SerializeField] AudioSource myAudio;
+    [SerializeField] AudioClip[] soundsOnHit;
 
     Color colorOrig;
 
@@ -59,6 +61,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         
         currHealth -= amount;
         MakeGuts(numToSpawnHit);
+        myAudio.PlayOneShot(soundsOnHit[Random.Range(0, soundsOnHit.Length)]);
         if(currHealth <= 0)
         {
             GameManager.instance.AddPoints(pointsOnDeath);

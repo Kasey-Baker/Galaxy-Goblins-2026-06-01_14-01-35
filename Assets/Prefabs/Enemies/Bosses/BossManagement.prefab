@@ -5153,6 +5153,8 @@ MonoBehaviour:
   spawnedObj: {fileID: 0}
   numToSpawnHit: 0
   numToSpawnDeath: 0
+  myAudio: {fileID: 0}
+  soundsOnHit: []
 --- !u!114 &3879450323449968008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5208,7 +5210,7 @@ AudioSource:
   m_GameObject: {fileID: 2660794237037336740}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3026072702410797236, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -5766,6 +5768,8 @@ MonoBehaviour:
   spawnedObj: {fileID: 0}
   numToSpawnHit: 0
   numToSpawnDeath: 0
+  myAudio: {fileID: 0}
+  soundsOnHit: []
 --- !u!114 &5128313218337075633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5823,7 +5827,7 @@ AudioSource:
   m_GameObject: {fileID: 3347876429689615427}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3026072702410797236, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -6735,6 +6739,8 @@ MonoBehaviour:
   spawnedObj: {fileID: 0}
   numToSpawnHit: 0
   numToSpawnDeath: 0
+  myAudio: {fileID: 0}
+  soundsOnHit: []
 --- !u!114 &8833563241633831276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6788,7 +6794,7 @@ AudioSource:
   m_GameObject: {fileID: 8812268668990507735}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3026072702410797236, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
