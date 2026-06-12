@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
         timeScaleOrig = Time.timeScale;
         player = GameObject.FindWithTag("Player");
         playercontrols = player.GetComponent<PlayerControls>();
-       // playerStartPos = GameObject.FindWithTag("playerStartPos");
+        // playerStartPos = GameObject.FindWithTag("playerStartPos");
+        DontDestroyOnLoad(GameManager.instance);
     }
 
     // Update is called once per frame
@@ -114,4 +115,6 @@ public class GameManager : MonoBehaviour
         Points += amount;
         GameManager.instance.player.GetComponent<LevelSystem>().CheckForLevelUp();
     }
+
+    
 }

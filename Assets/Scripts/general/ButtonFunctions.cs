@@ -35,6 +35,12 @@ public class ButtonFunctions : MonoBehaviour
         GameManager.instance.stateUnpaused();
     }
 
+    public void LoadLevelName(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+        GameManager.instance.stateUnpaused();
+    }
+
     public void MainMenu(int lvl)
     {
         SceneManager.LoadScene(lvl);
