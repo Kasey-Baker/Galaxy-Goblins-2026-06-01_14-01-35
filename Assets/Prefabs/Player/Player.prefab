@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8696295164779324191}
   - component: {fileID: 919676670468278789}
   - component: {fileID: 2325687511771093492}
+  - component: {fileID: -4333097180302294556}
   - component: {fileID: 6606985642317740798}
   - component: {fileID: 2460488256713008769}
   m_Layer: 0
@@ -112,6 +113,19 @@ MonoBehaviour:
   firerate: 0.08
   bulletList:
   - {fileID: 8785673792354651433, guid: 121e2be84a7f3784eac212f53d2bff25, type: 3}
+--- !u!114 &-4333097180302294556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996281823504814499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff32c346d95be0d4b9f9b9815abbacba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersistentObjectHandler
+  targetSceneName: Main Menu
 --- !u!143 &6606985642317740798
 CharacterController:
   m_ObjectHideFlags: 0

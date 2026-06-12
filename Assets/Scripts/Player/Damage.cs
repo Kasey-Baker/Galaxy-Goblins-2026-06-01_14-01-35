@@ -9,7 +9,7 @@ public class damage : MonoBehaviour
     public float damageAmount;
     [SerializeField] float damageRate;
     public float bulletSpeed;
-    public int bulletDestroyTime;
+    public float bulletDestroyTime;
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] AudioClip playerHitSound;
     [SerializeField] AudioClip otherHitSound;

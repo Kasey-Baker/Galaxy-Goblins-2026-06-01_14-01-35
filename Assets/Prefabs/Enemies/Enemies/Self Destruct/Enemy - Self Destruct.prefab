@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1378647667205571927}
   - component: {fileID: 7485843418953554592}
   - component: {fileID: 1897324731898370026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body A (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1654003522468297580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 5160261999103990799}
   - component: {fileID: 4458820177860702832}
   - component: {fileID: -83454611437555331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy - Self Destruct
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -314,7 +314,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -341,7 +341,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDashingShip
   controller: {fileID: 8334573309960636315}
-  moveSpeed: 10
+  moveSpeed: 15
 --- !u!114 &4458820177860702832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   damageAmount: 3
   damageRate: 0
   bulletSpeed: 0
-  bulletDestroyTime: 0
+  bulletDestroyTime: 3
   hitEffect: {fileID: 0}
   playerHitSound: {fileID: 0}
   otherHitSound: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 6300787058339911726}
   - component: {fileID: 2800811856117814440}
   - component: {fileID: 7357181385182247544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body A
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2497095149790567865}
   - component: {fileID: 8167839485412284242}
   m_Layer: 0
-  m_Name: Spawner 1
+  m_Name: Spawner - Dash Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d71586b653f6af4fa8254ece9319c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveSpawner
-  spawnType: 2
+  spawnType: 1
   spawnOnSide: 0
   spawnAreaCoverage: 1
-  timeBetweenSpawns: 0.5
-  enemyToSpawn: {fileID: 7315140745424281354, guid: 3ff49abf374fc394e90e50a9570a4105, type: 3}
-  spawnNumber: 3
+  timeBetweenSpawns: 0.7
+  enemyToSpawn: {fileID: 7315140745424281354, guid: e9d12e0be305cb34baf9d0cf583450db, type: 3}
+  spawnNumber: 20
   layerWithBounds:
     serializedVersion: 2
     m_Bits: 64

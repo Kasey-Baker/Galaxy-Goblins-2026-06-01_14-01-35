@@ -42,7 +42,7 @@ public class EnemyFiring : MonoBehaviour
 
             myBullet.GetComponent<damage>().damageAmount = gunList[gunListPosition].shootDamage;
             myBullet.GetComponent<damage>().bulletSpeed = Random.Range(gunList[gunListPosition].bulletSpeedMin, gunList[gunListPosition].bulletSpeedMax);
-            myBullet.GetComponent<damage>().bulletDestroyTime = (int)gunList[gunListPosition].bulletLifetime;
+            myBullet.GetComponent<damage>().bulletDestroyTime = (float)gunList[gunListPosition].bulletLifetime;
            
 
             myBullet.transform.Rotate(Random.Range(-(gunList[gunListPosition].spreadVert), gunList[gunListPosition].spreadVert), Random.Range(-(gunList[gunListPosition].spreadHoriz), gunList[gunListPosition].spreadHoriz), 0);

@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Persistent Objects")]
+    public GameObject[] persistentObjects;
+
     [SerializeField] GameObject menuActive;
     [SerializeField] GameObject menuPause;
     [SerializeField] GameObject menuWin;
@@ -31,11 +34,45 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        instance = this;
-        timeScaleOrig = Time.timeScale;
-        player = GameObject.FindWithTag("Player");
-        playercontrols = player.GetComponent<PlayerControls>();
-       // playerStartPos = GameObject.FindWithTag("playerStartPos");
+        if (instance != null)
+        {
+            CleanUpAndDestroy();
+            return;
+        }
+        else
+        {
+            instance = this;
+            timeScaleOrig = Time.timeScale;
+            player = GameObject.FindWithTag("Player");
+            playercontrols = player.GetComponent<PlayerControls>();
+            // playerStartPos = GameObject.FindWithTag("playerStartPos");
+            DontDestroyOnLoad(gameObject);
+            MarkPersistentObjects();
+        }
+            
+    }
+
+    private void MarkPersistentObjects()
+    {
+        foreach (GameObject obj in persistentObjects)
+        {
+           if (obj != null)
+            {
+                DontDestroyOnLoad(obj);
+            }
+        }
+    }
+
+    private void CleanUpAndDestroy()
+    {
+        foreach (GameObject obj in persistentObjects)
+        {
+            if (obj != null)
+            {
+                Destroy(obj);
+            }
+        }
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -114,4 +151,6 @@ public class GameManager : MonoBehaviour
         Points += amount;
         GameManager.instance.player.GetComponent<LevelSystem>().CheckForLevelUp();
     }
+
+    
 }

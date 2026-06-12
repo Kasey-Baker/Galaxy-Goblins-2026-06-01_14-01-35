@@ -943,6 +943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac28f5274f6bb542bfb26f7ff11eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  persistentObjects:
+  - {fileID: 7350393062591520126}
+  - {fileID: 0}
   menuActive: {fileID: 0}
   menuPause: {fileID: 9135586772575000860}
   menuWin: {fileID: 6286981482622193366}
@@ -1080,7 +1083,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1411286771326384861}
         m_TargetAssemblyTypeName: ButtonFunctions, Assembly-CSharp
         m_MethodName: MainMenu
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1346,7 +1349,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 87674857464891753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1411286771326384861}
+        m_TargetAssemblyTypeName: ButtonFunctions, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5614638758150671360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,6 +2746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7701188714332630846}
+  - component: {fileID: 805807443153487292}
   - component: {fileID: 3088930016469390835}
   - component: {fileID: 381588697790939566}
   - component: {fileID: 4939809823369081651}
@@ -2768,6 +2784,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &805807443153487292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7350393062591520126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff32c346d95be0d4b9f9b9815abbacba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersistentObjectHandler
+  targetSceneName: Main Menu
 --- !u!223 &3088930016469390835
 Canvas:
   m_ObjectHideFlags: 0
