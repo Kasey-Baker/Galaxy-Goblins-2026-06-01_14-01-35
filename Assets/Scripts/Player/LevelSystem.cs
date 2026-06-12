@@ -7,6 +7,11 @@ public class LevelSystem : MonoBehaviour
         SingleForward, DualSideBySide, ThreeShotCone
     }
 
+    [Header("Audio Setup")]
+    [SerializeField] AudioSource myAudio;
+    [SerializeField] AudioClip[] myShotSounds;
+
+
     [Header("Level Progress")]
     public int currentScore = 0;
     public int currentLevel = 1;
@@ -76,6 +81,9 @@ public class LevelSystem : MonoBehaviour
                 SpawnAndConfigureBullet(transform.position, coneAngle);  
                 break;
         }
+
+        myAudio.PlayOneShot(myShotSounds[Random.Range(0, myShotSounds.Length)]);
+
     }
 
     private void SpawnAndConfigureBullet(Vector3 position, float angleY)

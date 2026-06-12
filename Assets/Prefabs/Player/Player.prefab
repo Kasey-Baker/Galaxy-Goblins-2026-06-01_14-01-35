@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: -4333097180302294556}
   - component: {fileID: 6606985642317740798}
   - component: {fileID: 2460488256713008769}
+  - component: {fileID: 3922277316534940466}
+  - component: {fileID: 6334858315247252571}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -106,13 +108,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b529677cfa3014eb9129d10d5e07cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
-  healthCurr: 10
   control: {fileID: 6606985642317740798}
+  healthCurr: 10
   moveSpeed: 20
   slowSpeedMod: 0.4
   firerate: 0.08
   bulletList:
   - {fileID: 8785673792354651433, guid: 121e2be84a7f3784eac212f53d2bff25, type: 3}
+  myAudio: {fileID: 6334858315247252571}
+  myHitSounds:
+  - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}
 --- !u!114 &-4333097180302294556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +179,127 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3922277316534940466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996281823504814499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4df0a35e9db796468e6fe8bb2be4032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSystem
+  myAudio: {fileID: 6334858315247252571}
+  myShotSounds:
+  - {fileID: 8300000, guid: b8533974e6ae63f4f9c657570fc95bb9, type: 3}
+  currentScore: 0
+  currentLevel: 1
+  scoreThresholds: e8030000c409000088130000
+  bulletDamage: 1
+  bulletAmount: 1
+  currentPattern: 0
+  dualShotOffset: 0.3
+  coneAngle: 15
+  playerControls: {fileID: 0}
+  fireWait: 0
+  fireRate: 0.1
+  bulletPrefab: {fileID: 0}
+--- !u!82 &6334858315247252571
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996281823504814499}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -3026072702410797236, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.023
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

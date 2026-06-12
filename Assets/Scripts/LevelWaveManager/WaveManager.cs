@@ -111,7 +111,14 @@ public class WaveManager : MonoBehaviour
             itemsPresented = false;
             if (totalSectionsCleared >= numOfLargeSequences && bossSpawned == false)
             {
-                SummonBoss();
+                if (bossToSpawn != null)
+                {
+                    SummonBoss();
+                }
+                else
+                {
+                    CreatePortals();
+                }
             }
             else
             {
