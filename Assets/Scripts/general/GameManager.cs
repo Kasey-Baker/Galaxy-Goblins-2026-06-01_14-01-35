@@ -49,11 +49,14 @@ public class GameManager : MonoBehaviour
         instance = this;
         timeScaleOrig = Time.timeScale;
         player = GameObject.FindWithTag("Player");
-        playercontrols = player.GetComponent<PlayerControls>();
+        if (player != null)
+        {
+            playercontrols = player.GetComponent<PlayerControls>();
+        }
         // playerStartPos = GameObject.FindWithTag("playerStartPos");
         DontDestroyOnLoad(gameObject);
         MarkPersistentObjects();
-        
+        menuActive = null;
             
     }
 
@@ -113,7 +116,10 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = timeScaleOrig;
-        menuActive.SetActive(false);
+        if (menuActive != null)
+        {
+            menuActive.SetActive(false);
+        }
         menuActive = null;
     }
 
