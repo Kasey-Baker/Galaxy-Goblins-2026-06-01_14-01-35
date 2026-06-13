@@ -21,4 +21,10 @@ public class ItemData : ScriptableObject
     public int damageBonus;
     public int speedBonus;
 
+    public enum uniqueEffects
+    { 
+        None,BulletCircle,BulletSize,BulletSpeed,DamageShield,EnemySlowDown,PassiveRegen,RandomBuffs,ShipSpike,StationaryFireRate
+    }
+    public uniqueEffects ItemEffect;
+
 }

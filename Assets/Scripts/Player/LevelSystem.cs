@@ -135,7 +135,7 @@ public class LevelSystem : MonoBehaviour
         else currentPattern = ShotPattern.ThreeShotCone;
     }
 
-    private void FetchVariables()
+    public void FetchVariables()
     {
         // Fetches other variables from other scripts.
         System.Reflection.FieldInfo rateField = typeof(PlayerControls).GetField("firerate", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);

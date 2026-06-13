@@ -40,9 +40,11 @@ public class ItemPickups : MonoBehaviour
             Debug.Log($"{itemData.itemName} Picked Up");
 
             PlayerControls Player = player.GetComponent<PlayerControls>();
+            LevelSystem PlayerGun = player.GetComponent<LevelSystem>();
             if (Player != null)
             {
                 Player.ApplyEffects(itemData);
+                PlayerGun.FetchVariables();
             }
             Destroy(gameObject);
         }

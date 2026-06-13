@@ -6,6 +6,8 @@ public class EnemyDashingShip : MonoBehaviour
     [SerializeField] CharacterController controller;
     [SerializeField] float moveSpeed;
     Vector3 moveDir;
+
+    public bool isSlowed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

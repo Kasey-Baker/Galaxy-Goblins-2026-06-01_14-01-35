@@ -14,6 +14,9 @@ public class PlayerControls : MonoBehaviour, IDamage
 
     [Header("Player Bullets")]
     [SerializeField] GameObject[] bulletList;
+    [SerializeField] GameObject bigBullet;
+    [SerializeField] GameObject FastBullet;
+    [SerializeField] GameObject FastBigBullet;
 
     [Header("Audio")]
     [SerializeField] AudioSource myAudio;
@@ -27,6 +30,11 @@ public class PlayerControls : MonoBehaviour, IDamage
 
     int currBullet;
 
+    bool bigState;
+    bool fastState;
+    bool passiveRegenState;
+    float regentimer;
+    bool enemySlow;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,7 +46,8 @@ public class PlayerControls : MonoBehaviour, IDamage
     void Update()
     {
         Movement();
-
+        passiveRegen();
+        enemySlowdown();
         /*
         fireWait += Time.deltaTime;
 
@@ -111,7 +120,7 @@ public class PlayerControls : MonoBehaviour, IDamage
     */
 
    public void ApplyEffects(ItemData item)
-    {
+   {
         if (item.healthBonus != 0)
         {
             healthMax += item.healthBonus;
@@ -130,9 +139,82 @@ public class PlayerControls : MonoBehaviour, IDamage
         {
             firerate /= item.firerateMultiplier;
         }
+        if (item.ItemEffect != ItemData.uniqueEffects.None)
+        {
+            if (item.ItemEffect == ItemData.uniqueEffects.BulletSize)
+            {
+                if (fastState)
+                {
+                    bulletList[0] = FastBigBullet;
+                }
+                else 
+                { 
+                    bulletList[0] = bigBullet; 
+                }
+                bigState = true;
+            }
+            if (item.ItemEffect == ItemData.uniqueEffects.PassiveRegen)
+            {
+                passiveRegenState = true;
+            }
+            if (item.ItemEffect == ItemData.uniqueEffects.BulletSpeed)
+            {
+                if (bigState)
+                {
+                    bulletList[0] = FastBigBullet;
+                }
+                else
+                {
+                    bulletList[0] = FastBullet;
+                }
+                fastState = true;
+            }
+            if (item.ItemEffect == ItemData.uniqueEffects.EnemySlowDown)
+            {
+                enemySlow = true;
+            }
+        }
+
     }
 
+    private void passiveRegen()
+    {
+        if(passiveRegenState == true)
+        {
+            regentimer += Time.deltaTime;
+            if (regentimer >= 5f)
+            {
+                healthCurr += (healthMax / 10f);
+                regentimer = 0;
 
+                if (healthCurr > healthMax)
+                {
+                    healthCurr = healthMax;
+                }
+                updatePlayerUI();
+            }
+            
+        }
+    }
+
+    private void enemySlowdown()
+    {
+        if (enemySlow)
+        {
+            EnemyDashingShip[] Enemies = Object.FindObjectsByType<EnemyDashingShip>();
+
+            foreach (EnemyDashingShip enemy in Enemies)
+            {
+                if (!enemy.isSlowed)
+                {
+                    float speed = enemy.GetMoveSpeed();
+                    enemy.SetMoveSpeed(speed / 1.2f);
+
+                    enemy.isSlowed = true;
+                }
+            }
+        }
+    }
 
 
 }

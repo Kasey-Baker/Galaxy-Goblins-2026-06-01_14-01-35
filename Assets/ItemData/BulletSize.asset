@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8fcf1f6783b8ef4a9563cde91e9f81f, type: 3}
-  m_Name: SpeedBoost
+  m_Name: BulletSize
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: SpeedBoost
-  price: 10
+  itemName: BulletSizeBooster
+  price: 0
   modelPrefab: {fileID: 7307769563023003953, guid: 7df2f9e1d3535ba488fe6ed0b8293277, type: 3}
   icon: {fileID: 0}
   damageMultiplier: 0
-  speedMultiplier: 2
+  speedMultiplier: 0
   firerateMultiplier: 0
   healthBonus: 0
   damageBonus: 0
   speedBonus: 0
-  ItemEffect: 0
+  ItemEffect: 2
