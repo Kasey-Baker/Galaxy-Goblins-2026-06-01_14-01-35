@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public Image playerHPBar;
     public float Points;
     public TMP_Text pointsText;
+    public TMP_Text finalPointsText;
 
     public GameObject checkPointPopup;
     public TMP_Text gameGoalCountText;
@@ -90,6 +91,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         pointsText.text = Points.ToString("F0");
+        finalPointsText.text = Points.ToString("F0");
         if (Input.GetButtonDown("Cancel"))
         {
             if (menuActive == null)
