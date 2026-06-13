@@ -1,5 +1,5 @@
 using UnityEngine;
-using static UnityEditor.Rendering.InspectorCurveEditor;
+
 
 public class WaveSpawner : MonoBehaviour
 {

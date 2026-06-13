@@ -19,6 +19,7 @@ MonoBehaviour:
   damageMultiplier: 0
   speedMultiplier: 0
   firerateMultiplier: 0
-  healthBonus: 10
+  healthBonus: 5
   damageBonus: 0
   speedBonus: 0
+  ItemEffect: 0

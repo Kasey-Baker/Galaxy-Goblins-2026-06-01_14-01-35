@@ -5146,7 +5146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca5aaee8c7b6fc4a843ab07b1a471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTakeDamage
-  currHealth: 50
+  currHealth: 200
   rend: {fileID: 7365640842610292014}
   pointsOnDeath: 1000
   spawnObj: {fileID: 0}
@@ -5769,7 +5769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca5aaee8c7b6fc4a843ab07b1a471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTakeDamage
-  currHealth: 50
+  currHealth: 200
   rend: {fileID: 8916338375166008434}
   pointsOnDeath: 1000
   spawnObj: {fileID: 0}
@@ -6748,7 +6748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca5aaee8c7b6fc4a843ab07b1a471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTakeDamage
-  currHealth: 50
+  currHealth: 200
   rend: {fileID: 1007862434768693087}
   pointsOnDeath: 1000
   spawnObj: {fileID: 0}
