@@ -10,7 +10,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Tutorial");
         GameManager.instance.stateUnpaused();
         if(GameManager.instance.player != null)
         {

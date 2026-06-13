@@ -37,9 +37,12 @@ public class PlayerControls : MonoBehaviour, IDamage
     bool enemySlow;
     private void Awake()
     {
-        if (GameManager.instance.player == null)
+        if (GameManager.instance != null)
         {
-            GameManager.instance.player = gameObject;
+            if (GameManager.instance.player == null)
+            {
+                GameManager.instance.player = gameObject;
+            }
         }
     }
 
