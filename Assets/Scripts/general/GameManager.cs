@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,8 +35,10 @@ public class GameManager : MonoBehaviour
 
     float timeScaleOrig;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
 
+    [SerializeField] GameObject pauseButtonSelect;
+    [SerializeField] GameObject winButtonSelect;
+    [SerializeField] GameObject loseButtonSelect;
     void Awake()
     {
         if (instance != null)
@@ -102,6 +105,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(pauseButtonSelect);
     }
 
     public void stateUnpaused()
@@ -133,6 +138,8 @@ public class GameManager : MonoBehaviour
             statePause();
             menuActive = menuWin;
             menuActive.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(winButtonSelect);
         }
 
     }
@@ -146,6 +153,8 @@ public class GameManager : MonoBehaviour
         statePause();
         menuActive = menuLose;
         menuActive.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(loseButtonSelect);
     }
 
     public void AddPoints(float amount)
