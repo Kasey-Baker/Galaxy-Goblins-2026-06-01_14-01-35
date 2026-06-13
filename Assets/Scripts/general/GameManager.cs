@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject pauseButtonSelect;
     [SerializeField] GameObject winButtonSelect;
     [SerializeField] GameObject loseButtonSelect;
+    [SerializeField] GameObject mainMenuButtonSelect;
     void Awake()
     {
         if (instance != null)
@@ -57,7 +58,9 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         MarkPersistentObjects();
         menuActive = null;
-            
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(mainMenuButtonSelect);
+
     }
 
     private void MarkPersistentObjects()
