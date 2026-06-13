@@ -12,15 +12,15 @@ public class OptionsManager : MonoBehaviour
 
     public void ChangeMasterVolume()
     {
-       audioMixer.SetFloat("MasterVol", MasterVol.value);
+       audioMixer.SetFloat("MasterVol", Mathf.Log10(MasterVol.value) * 20);
     }
     public void ChangeMusicVolume()
     {
-       audioMixer.SetFloat("MusicVol", MusicVol.value);
+       audioMixer.SetFloat("MusicVol", Mathf.Log10(MusicVol.value) * 20);
     }
     public void ChangeSFXVolume()
     {
-       audioMixer.SetFloat("SFXVol", SFXVol.value);
+       audioMixer.SetFloat("SFXVol", Mathf.Log10(SFXVol.value) * 20);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

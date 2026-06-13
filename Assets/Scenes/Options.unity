@@ -527,7 +527,7 @@ AudioSource:
   m_GameObject: {fileID: 222062348}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
+  OutputAudioMixerGroup: {fileID: -3026072702410797236, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
   m_PlayOnAwake: 0
@@ -1363,7 +1363,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.4745098, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1383,10 +1383,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1888531410}
   m_HandleRect: {fileID: 412048751}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1539,9 +1539,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.4745098, a: 1}
     m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.4745098, a: 1}
     m_DisabledColor: {r: 0.54088044, g: 0.54088044, b: 0.54088044, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1561,10 +1561,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1522692157}
   m_HandleRect: {fileID: 448550899}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
-  m_WholeNumbers: 1
-  m_Value: 0
+  m_MinValue: 0.001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.0012
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2122,7 +2122,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.4745098, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2142,10 +2142,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2044100253}
   m_HandleRect: {fileID: 1744353682}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2652,7 +2652,7 @@ AudioSource:
   m_GameObject: {fileID: 1849303903}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
+  OutputAudioMixerGroup: {fileID: -3449920462708090191, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 8bc1b99bb8d813145bd65cda7d7b776f, type: 3}
   m_PlayOnAwake: 1
