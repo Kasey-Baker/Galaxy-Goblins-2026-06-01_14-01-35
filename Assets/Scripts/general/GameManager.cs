@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public PlayerControls playercontrols;
     // public GameObject playerStartPos;
-    public PlayerData playerStats = new PlayerData();
+    public 
 
     int gameGoalCount;
     int enemyCount;
@@ -144,17 +144,6 @@ public class GameManager : MonoBehaviour
 
     }
     */
-
-    public void GameWon()
-    {
-            // you win!
-            statePause();
-            menuActive = menuWin;
-            menuActive.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(winButtonSelect);
-    }
-
     public int getEnemyCount()
     {
         return enemyCount;
@@ -176,8 +165,14 @@ public class GameManager : MonoBehaviour
 
     private string SavePath => Path.Combine(Application.persistentDataPath, "savegame.json");
 
-    public void SaveGame()
+    public void SaveGame(float score, float health, Vector3 pos)
     {
+        PlayerData playerStats = new PlayerData
+        {
+            playerHealth = health,
+            playerScore = score,
+            playerPos = pos
+        };
         // 1. Convert the data object to a JSON string representation
         string json = JsonUtility.ToJson(playerStats, true);
 
@@ -186,7 +181,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Game Saved to: {SavePath}");
     }
 
-    public void LoadGame()
+    public PlayerData LoadGame()
     {
         // Check if a save file actually exists before trying to read it
         if (File.Exists(SavePath))
@@ -195,12 +190,14 @@ public class GameManager : MonoBehaviour
             string json = File.ReadAllText(SavePath);
 
             // 2. Overwrite the runtime object with the saved values
-            JsonUtility.FromJsonOverwrite(json, playerStats);
+            PlayerData playerStats = JsonUtility.FromJson<PlayerData>(json);
             Debug.Log("Game Loaded Successfully!");
+            return playerStats;
         }
         else
         {
             Debug.LogWarning("No save file found. Starting fresh!");
+            return new PlayerData { playerHealth = 100f, playerScore = 0f, playerPos = Vector3.zero };
         }
     }
 
