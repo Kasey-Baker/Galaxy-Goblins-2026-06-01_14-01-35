@@ -22,6 +22,7 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] GameObject[] portalSpots;
     [SerializeField] GameObject[] portals;
+    [SerializeField] bool portalsCreated;
 
 
     [SerializeField] GameObject[] itemSpots;
@@ -54,6 +55,7 @@ public class WaveManager : MonoBehaviour
         itemChosen = false;
         itemsPresented = false;
         bossSpawned = false;
+        portalsCreated = false;
     }
 
     // Update is called once per frame
@@ -106,7 +108,7 @@ public class WaveManager : MonoBehaviour
 
     void CheckNextSection()
     {
-        if(Input.GetButton("NextWave") && spawningActive == false)
+        if (Input.GetButton("NextWave") && spawningActive == false && portalsCreated == false)
         {
             helpfulText.SetActive(false);
             itemsPresented = false;
@@ -116,7 +118,7 @@ public class WaveManager : MonoBehaviour
                 {
                     SummonBoss();
                 }
-                else
+                else if (portalsCreated == false)
                 {
                     CreatePortals();
                 }
@@ -151,6 +153,7 @@ public class WaveManager : MonoBehaviour
         {
             Instantiate(portals[i], portalSpots[i].transform.position, Quaternion.identity);
         }
+        portalsCreated = true;
     }
     
     public void OnBossDeath()
