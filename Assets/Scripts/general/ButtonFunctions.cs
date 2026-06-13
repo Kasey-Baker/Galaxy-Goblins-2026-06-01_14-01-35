@@ -42,7 +42,10 @@ public class ButtonFunctions : MonoBehaviour
     public void LoadLevelName(string levelName)
     {
         SceneManager.LoadScene(levelName);
-        GameManager.instance.stateUnpaused();
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.stateUnpaused();
+        }
     }
 
     public void MainMenu(int lvl)
