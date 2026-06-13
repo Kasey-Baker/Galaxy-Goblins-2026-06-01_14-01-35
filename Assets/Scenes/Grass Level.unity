@@ -202,11 +202,11 @@ PrefabInstance:
       objectReference: {fileID: 1200295950}
     - target: {fileID: 5539600259629944725, guid: bb059e56fdedf0e49ad710ce7b9a4db6, type: 3}
       propertyPath: numOfLargeSequences
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5539600259629944725, guid: bb059e56fdedf0e49ad710ce7b9a4db6, type: 3}
       propertyPath: numOfWavesPerSequence
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5598021231295422556, guid: bb059e56fdedf0e49ad710ce7b9a4db6, type: 3}
       propertyPath: m_LocalPosition.x
