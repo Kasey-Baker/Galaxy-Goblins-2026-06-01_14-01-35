@@ -228,5 +228,16 @@ public class PlayerControls : MonoBehaviour, IDamage
         }
     }
 
+    public void GoToSpawn()
+    {
+        if(GameObject.FindWithTag("PlayerSpawn") != null)
+        {
+            control.enabled = false;
+            transform.position = GameObject.FindWithTag("PlayerSpawn").transform.position;
+            control.enabled = true;
+        }
+    }
+    
+
 
 }

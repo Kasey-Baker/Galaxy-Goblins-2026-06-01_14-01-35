@@ -10,6 +10,7 @@ TagManager:
   - rightSpawnBound
   - waveSpawnSpot
   - mainBoss
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
