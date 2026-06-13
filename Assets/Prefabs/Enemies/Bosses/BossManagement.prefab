@@ -56,6 +56,7 @@ MonoBehaviour:
   timeBetweenAttacksBase: 5
   timeBetweenAttacksMod: 1
   waveManager: {fileID: 0}
+  isFinalBoss: 1
 --- !u!1 &1979911548854709395
 GameObject:
   m_ObjectHideFlags: 0
