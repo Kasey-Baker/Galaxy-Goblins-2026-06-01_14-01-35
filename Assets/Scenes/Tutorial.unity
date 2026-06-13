@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2097393060882351431, guid: a5498970b05765d4d9c94ea31b8804c0, type: 3}
       propertyPath: m_Name
-      value: Grass Planet
+      value: Grass Planet Portal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

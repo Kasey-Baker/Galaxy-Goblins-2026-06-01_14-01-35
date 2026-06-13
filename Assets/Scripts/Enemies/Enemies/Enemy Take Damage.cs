@@ -74,6 +74,10 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
             GameManager.instance.AddPoints(pointsOnDeath);
             MakeGuts(numToSpawnDeath);
             Destroy(gameObject);
+            if (deathSounds.Length > 0)
+            {
+                SetupDeathSound();
+            }
 
         }
         else
@@ -111,10 +115,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     {
         //When the game manager is set up, add pointsOnDeath to gamemanager points value
         GameManager.instance.updateEnemyCount(-1);
-        if (deathSounds.Length > 0)
-        {
-            SetupDeathSound();
-        }
+
     }
     public void MakeGuts(int amount)
     {

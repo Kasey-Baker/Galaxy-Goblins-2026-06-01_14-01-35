@@ -4,7 +4,10 @@ using UnityEngine.SceneManagement;
 public class PersistentObjectHandler : MonoBehaviour
 {
     [SerializeField] private string targetSceneName = "Main Menu";
-
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void OnEnable()
     {
         // Subscribe to the sceneLoaded event when the object becomes active

@@ -8,7 +8,7 @@ public class BossManager : MonoBehaviour
     [SerializeField] float timeBetweenAttacksBase;
     [SerializeField] float timeBetweenAttacksMod;
     [SerializeField] GameObject waveManager;
-
+    [SerializeField] bool isFinalBoss;
     float waitTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,12 +53,19 @@ public class BossManager : MonoBehaviour
 
     void TellManagerBossDied()
     {
-        waveManager.GetComponent<WaveManager>().OnBossDeath();
+        if (waveManager != null)
+        {
+            waveManager.GetComponent<WaveManager>().OnBossDeath();
+        }
     }
 
     private void OnDestroy()
     {
         TellManagerBossDied();
+        if(isFinalBoss)
+        {
+            GameManager.instance.GameWon();
+        }
     }
 
 }

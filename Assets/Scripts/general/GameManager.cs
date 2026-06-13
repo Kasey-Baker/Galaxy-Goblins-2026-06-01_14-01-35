@@ -144,6 +144,17 @@ public class GameManager : MonoBehaviour
 
     }
     */
+
+    public void GameWon()
+    {
+            // you win!
+            statePause();
+            menuActive = menuWin;
+            menuActive.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(winButtonSelect);
+    }
+
     public int getEnemyCount()
     {
         return enemyCount;

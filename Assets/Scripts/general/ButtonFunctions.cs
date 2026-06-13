@@ -12,6 +12,10 @@ public class ButtonFunctions : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameManager.instance.stateUnpaused();
+        if(GameManager.instance.player != null)
+        {
+            Destroy(GameManager.instance.player);
+        }
     }
 
     public void quit()

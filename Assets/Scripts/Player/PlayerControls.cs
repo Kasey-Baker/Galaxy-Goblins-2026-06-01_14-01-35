@@ -35,6 +35,15 @@ public class PlayerControls : MonoBehaviour, IDamage
     bool passiveRegenState;
     float regentimer;
     bool enemySlow;
+    private void Awake()
+    {
+        if (GameManager.instance.player == null)
+        {
+            GameManager.instance.player = gameObject;
+        }
+    }
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

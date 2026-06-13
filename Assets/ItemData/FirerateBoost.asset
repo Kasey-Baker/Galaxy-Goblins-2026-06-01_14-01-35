@@ -18,7 +18,8 @@ MonoBehaviour:
   icon: {fileID: 0}
   damageMultiplier: 0
   speedMultiplier: 0
-  firerateMultiplier: 2
+  firerateMultiplier: 1.1
   healthBonus: 0
   damageBonus: 0
   speedBonus: 0
+  ItemEffect: 0
