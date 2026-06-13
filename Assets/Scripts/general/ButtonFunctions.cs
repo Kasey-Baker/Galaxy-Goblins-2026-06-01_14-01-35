@@ -53,4 +53,21 @@ public class ButtonFunctions : MonoBehaviour
         SceneManager.LoadScene(lvl);
         GameManager.instance.stateUnpaused();
     }
+
+    public void LoadGame()
+    {
+        if(SaveSystem.instance != null)
+        {
+            SaveSystem.instance.LoadGame();
+        }
+    }
+
+    public void SaveGame()
+    {
+        if(SaveSystem.instance != null)
+        {
+            SaveSystem.instance.SaveGame();
+        }
+    }
+
 }
