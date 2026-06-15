@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SaveSystem : MonoBehaviour
+public class SaveSystemB : MonoBehaviour
 {
-    public static SaveSystem instance;
+    public static SaveSystemB instance;
 
     [Header("UI Reference")]
     [SerializeField] private GameObject savePromptMenu;
@@ -43,7 +43,7 @@ public class SaveSystem : MonoBehaviour
         {
             PlayerPrefs.SetInt("SavedLevel", levelSystem.currentLevel);
             PlayerPrefs.SetInt("SavedScore", levelSystem.currentScore);
-            PlayerPrefs.SetInt("SavedDamage", levelSystem.bulletDamage);
+            PlayerPrefs.SetFloat("SavedDamage", levelSystem.bulletDamage);
         }
 
         if (GameManager.instance.playercontrols != null)
