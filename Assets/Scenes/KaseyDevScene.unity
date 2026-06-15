@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4485407201328000859, guid: 0a29990afd7312d419899e15e13b3d4f, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0deb75968ab505f45adc2df0b8ca0ed4, type: 2}
     - target: {fileID: 6065149705253776975, guid: 0a29990afd7312d419899e15e13b3d4f, type: 3}
       propertyPath: m_Name
       value: Regen Item
