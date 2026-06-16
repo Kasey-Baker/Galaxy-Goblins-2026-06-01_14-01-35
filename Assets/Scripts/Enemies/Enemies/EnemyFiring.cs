@@ -38,7 +38,7 @@ public class EnemyFiring : MonoBehaviour
         shootTimer = 0;
         for (int i = 0; i < gunList[gunListPosition].bulletsPerShot; i++)
         {
-            GameObject myBullet = Instantiate(gunList[gunListPosition].bullet, shootPosition.position, transform.rotation);
+            GameObject myBullet = Instantiate(gunList[gunListPosition].bullet, shootPosition.position, shootPosition.rotation);
 
             myBullet.GetComponent<damage>().damageAmount = gunList[gunListPosition].shootDamage;
             myBullet.GetComponent<damage>().bulletSpeed = Random.Range(gunList[gunListPosition].bulletSpeedMin, gunList[gunListPosition].bulletSpeedMax);

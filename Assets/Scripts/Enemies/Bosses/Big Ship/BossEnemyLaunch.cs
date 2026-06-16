@@ -15,10 +15,13 @@ public class BossEnemyLaunch : MonoBehaviour
     [SerializeField] int numToSpawn;
     [SerializeField] int spawnReps;
     [SerializeField] float timeBetweenReps;
+    [SerializeField] bool onlySpawnIfNoneLeft;
+    public int childrenAlive;
 
     //Spawn location finding stuff
     [Header ("Spawn Location Bounding")]
-    [SerializeField] float distInFrontTargetZ; 
+    [SerializeField] float distInFrontTargetZ;
+    [SerializeField] float distInFrontTargetZMod;
     [SerializeField] GameObject leftBoundObj;
     [SerializeField] GameObject rightBoundObj;
     [Range(0.01f, 1)][SerializeField] float spawnAreaCoverage;
@@ -44,11 +47,14 @@ public class BossEnemyLaunch : MonoBehaviour
 
     float waitTime;
 
+  
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         baseNumToSpawn = numToSpawn;
         baseSpawnReps = spawnReps;
+        
 
 
         leftBoundObj = GameObject.FindWithTag("leftSpawnBound");
@@ -93,17 +99,20 @@ public class BossEnemyLaunch : MonoBehaviour
             myMinion.GetComponent<DashToPoint>().SetPoint(currPoint);
             myMinion.GetComponent<DashToPoint>().TargetPoint();
             myMinion.GetComponent<DashToPoint>().SetFinalDirection(gameObject.transform.rotation);
+            myMinion.GetComponent<DashToPoint>().myCreator = gameObject;
             //
             //
 
             currPoint.x += distPerSpawn;
            
+
         }
         waitTime = 0;
-
+        currPoint.z += distInFrontTargetZMod;
         currWavesSpawned += 1;
-        ResetSpawnLocation();
+        ResetSpawnLocationX();
         IsAttackDone();
+  
 
     }
 
@@ -111,7 +120,14 @@ public class BossEnemyLaunch : MonoBehaviour
     {
         if (gameObject.GetComponent<BossPart>().attackingRightNow == true)
         {
-            isActive = true;
+            if (onlySpawnIfNoneLeft == false || childrenAlive <= 0)
+            {
+                isActive = true;
+            }
+            else
+            {
+                EndAttack();
+            }
         }
     }
 
@@ -167,6 +183,11 @@ public class BossEnemyLaunch : MonoBehaviour
     void ResetSpawnLocation()
     {
         currPoint = new Vector3(leftBoundX, transform.position.y, transform.position.z + distInFrontTargetZ);
+    }
+
+    void ResetSpawnLocationX()
+    {
+        currPoint = new Vector3(leftBoundX, transform.position.y, currPoint.z);
     }
 }
 
