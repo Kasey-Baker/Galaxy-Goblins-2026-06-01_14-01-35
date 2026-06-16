@@ -66,12 +66,14 @@ public class BossDoublePunch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SafetyCheck();
         DrawLine();
 
         CheckIfAttacking();
 
         if(isActive)
         {
+            gameObject.GetComponent<BossPart>().attackingRightNow = true;
             SynchronizeFists();
 
             switch (currentState)
@@ -157,7 +159,7 @@ public class BossDoublePunch : MonoBehaviour
     {
         if (gameObject.GetComponent<BossPart>().attackingRightNow == true)
         {
-            isActive = true;
+            //isActive = true;
         }
     }
 
@@ -234,6 +236,7 @@ public class BossDoublePunch : MonoBehaviour
     void EndAttack()
     {
         gameObject.GetComponent<BossPart>().attackingRightNow = false;
+        gameObject.GetComponent<BossFistAttackManager>().attackChosen = false;
         isActive = false;
         ResetValues();
         SynchronizeFists();
@@ -243,10 +246,18 @@ public class BossDoublePunch : MonoBehaviour
     {
         if(otherFist != null)
         {
-            otherFist.GetComponent<BossPart>().attackingRightNow = gameObject.GetComponent<BossPart>().attackingRightNow;
+            //otherFist.GetComponent<BossPart>().attackingRightNow = gameObject.GetComponent<BossPart>().attackingRightNow;
+            otherFist.GetComponent<BossDoublePunch>().isActive = gameObject.GetComponent<BossDoublePunch>().isActive;
         }
     }
-
+    void SafetyCheck()
+    {
+        if (gameObject.GetComponent<BossSwipeAttack>().isActive)
+        {
+            isActive = false;
+            //EndAttack();
+        }
+    }
     void ResetValues()
     {
 

@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DashToPoint
   pointToReach: {x: 0, y: 0, z: 0}
   timeToReachPoint: 1
+  myCreator: {fileID: 0}
 --- !u!143 &3022154000261779927
 CharacterController:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.185
+  m_Volume: 0.082
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -348,6 +349,7 @@ MonoBehaviour:
   gunList:
   - {fileID: 11400000, guid: 6d69b212557fa6c4e8c43f74e37f6002, type: 2}
   shootPosition: {fileID: 5174975143494598970}
+  myAudio: {fileID: -7245056999872245579}
   shootSounds:
   - {fileID: 8300000, guid: 1a81941608eac0a4085dca3e9e921188, type: 3}
   - {fileID: 8300000, guid: 0b24b2319477d57409804fccc01a325a, type: 3}
