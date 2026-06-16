@@ -64,7 +64,10 @@ public class BossManager : MonoBehaviour
         TellManagerBossDied();
         if(isFinalBoss)
         {
-            GameManager.instance.GameWon();
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.GameWon();
+            }
         }
     }
 
