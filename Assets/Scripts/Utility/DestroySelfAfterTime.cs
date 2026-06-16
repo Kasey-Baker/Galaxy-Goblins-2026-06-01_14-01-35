@@ -3,7 +3,7 @@ using UnityEngine;
 public class DestroySelfAfterTime : MonoBehaviour
 {
 
-    [SerializeField] float lifetime;
+    public float lifetime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

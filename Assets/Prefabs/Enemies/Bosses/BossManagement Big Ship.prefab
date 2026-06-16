@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6326402787713022627}
   - component: {fileID: 3444257248755992293}
   m_Layer: 7
-  m_Name: BossManagement
+  m_Name: BossManagement Big Ship
   m_TagString: mainBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
