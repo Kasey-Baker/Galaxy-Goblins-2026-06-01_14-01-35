@@ -16,7 +16,7 @@ public class WaveManager : MonoBehaviour
 
 
     [SerializeField] bool spawningActive;
-
+    [SerializeField] GameObject myPlanet;
     [SerializeField] bool bossSpawned;
     [SerializeField] bool bossDefeated;
 
@@ -65,6 +65,10 @@ public class WaveManager : MonoBehaviour
         if(spawningActive && waitTime >= timeBetweenWaves && totalSectionsCleared < numOfLargeSequences)
         {
             SpawnWave();
+            if (myPlanet != null)
+            {
+                myPlanet.GetComponent<PlanetSizeScaler>().growthActive = true;
+            }
         }
         else
         {
@@ -92,6 +96,10 @@ public class WaveManager : MonoBehaviour
             CreateItems();
             itemsPresented = true;
             helpfulText.SetActive(true);
+            if (myPlanet != null)
+            {
+                myPlanet.GetComponent<PlanetSizeScaler>().growthActive = false;
+            }
         }
     }
 
