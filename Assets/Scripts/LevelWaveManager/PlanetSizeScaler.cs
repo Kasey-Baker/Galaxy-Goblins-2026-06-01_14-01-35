@@ -33,10 +33,15 @@ public class PlanetSizeScaler : MonoBehaviour
         transform.localScale += new Vector3(growthSpeed, growthSpeed, growthSpeed) * Time.deltaTime;
     }
 
-    void SetGrowthScaling()
+    public void SetGrowthScaling()
     {
         transform.localScale.Set(planetSizeMin, planetSizeMin, planetSizeMin);
 
         growthSpeed = (planetSizeMax - planetSizeMin) / timeToReachMaxSize;
+    }
+
+    public void SetGrowthTime(float newGrowthTime)
+    {
+        timeToReachMaxSize = newGrowthTime;
     }
 }

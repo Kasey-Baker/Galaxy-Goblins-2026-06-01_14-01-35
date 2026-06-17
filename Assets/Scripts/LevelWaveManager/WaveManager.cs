@@ -50,6 +50,14 @@ public class WaveManager : MonoBehaviour
         waveRangeMin = 0;
         waveRangeMax = waveOptions.Length;
 
+
+        if(myPlanet != null)
+        {
+            float myTime = numOfLargeSequences * numOfWavesPerSequence * timeBetweenWaves;
+            myPlanet.GetComponent<PlanetSizeScaler>().SetGrowthTime(myTime);
+            myPlanet.GetComponent<PlanetSizeScaler>().SetGrowthScaling();
+        }
+
         itemsPresented = false;
         spawningActive = false;
         itemChosen = false;

@@ -48,7 +48,7 @@ MonoBehaviour:
   spawnOnSide: 0
   spawnAreaCoverage: 1
   timeBetweenSpawns: 0.7
-  enemyToSpawn: {fileID: 7315140745424281354, guid: 9fea4e293794fb74a9ee43062d25cef1, type: 3}
+  enemyToSpawn: {fileID: 789679748165650693, guid: 65d62de88c6142f438601444f6f27f86, type: 3}
   spawnNumber: 12
   layerWithBounds:
     serializedVersion: 2
