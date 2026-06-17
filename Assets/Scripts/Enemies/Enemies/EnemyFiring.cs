@@ -9,6 +9,7 @@ public class EnemyFiring : MonoBehaviour
 
     [SerializeField] Transform shootPosition;
 
+    [SerializeField] AudioSource myAudio;
     [SerializeField] AudioClip[] shootSounds;
 
     float shootTimer;
@@ -38,7 +39,7 @@ public class EnemyFiring : MonoBehaviour
         shootTimer = 0;
         for (int i = 0; i < gunList[gunListPosition].bulletsPerShot; i++)
         {
-            GameObject myBullet = Instantiate(gunList[gunListPosition].bullet, shootPosition.position, transform.rotation);
+            GameObject myBullet = Instantiate(gunList[gunListPosition].bullet, shootPosition.position, shootPosition.rotation);
 
             myBullet.GetComponent<damage>().damageAmount = gunList[gunListPosition].shootDamage;
             myBullet.GetComponent<damage>().bulletSpeed = Random.Range(gunList[gunListPosition].bulletSpeedMin, gunList[gunListPosition].bulletSpeedMax);
@@ -49,7 +50,7 @@ public class EnemyFiring : MonoBehaviour
         }
         if (shootSounds.Length > 0)
         {
-            AudioSource.PlayClipAtPoint(shootSounds[0], transform.position);
+            myAudio.PlayOneShot(shootSounds[Random.Range(0, shootSounds.Length)]);
         }
     }
 

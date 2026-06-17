@@ -4,6 +4,7 @@ public class DashToPoint : MonoBehaviour
 {
     [SerializeField] Vector3 pointToReach;
     [SerializeField] float timeToReachPoint;
+    public GameObject myCreator;
 
     Vector3 myInitDirection;
 
@@ -20,6 +21,14 @@ public class DashToPoint : MonoBehaviour
     {
         waitTime = 0;
         moveSet = false;
+
+        if(myCreator != null)
+        {
+            if(myCreator.GetComponent<BossEnemyLaunch>() != null)
+            {
+                myCreator.GetComponent<BossEnemyLaunch>().childrenAlive += 1;
+            }
+        }
 
     }
 
@@ -59,6 +68,11 @@ public class DashToPoint : MonoBehaviour
     {
         transform.rotation = myFinalDirection;
         gameObject.GetComponent<EnemyDashingShip>().SetMoveSpeed(baseMoveSpeed);
+        if(gameObject.GetComponent<FaceTowardsPlayer>() != null)
+        {
+            gameObject.GetComponent<FaceTowardsPlayer>().doBehavior = true;
+        }
+        moveSet = true;
     }
 
     public void SetFinalDirection(Quaternion finalDir)
@@ -69,5 +83,16 @@ public class DashToPoint : MonoBehaviour
     public void CalculateBaseMoveSpeed()
     {
         baseMoveSpeed = gameObject.GetComponent<EnemyDashingShip>().GetMoveSpeed();
+    }
+
+    private void OnDestroy()
+    {
+        if (myCreator != null)
+        {
+            if (myCreator.GetComponent<BossEnemyLaunch>() != null)
+            {
+                myCreator.GetComponent<BossEnemyLaunch>().childrenAlive -= 1;
+            }
+        }
     }
 }

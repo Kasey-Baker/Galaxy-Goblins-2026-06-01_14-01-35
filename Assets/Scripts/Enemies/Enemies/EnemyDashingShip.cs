@@ -18,8 +18,11 @@ public class EnemyDashingShip : MonoBehaviour
     void Update()
     {
         moveDir = transform.forward * moveSpeed;
-        controller.Move(moveDir * Time.deltaTime);
-    }
+        if (controller.enabled == true && moveSpeed != 0)
+        {
+            controller.Move(moveDir * Time.deltaTime);
+        }
+        }
 
     public void SetMoveSpeed(float newSpeed)
     {
