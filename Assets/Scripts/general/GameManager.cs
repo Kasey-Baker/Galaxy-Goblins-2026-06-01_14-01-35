@@ -62,6 +62,9 @@ public class GameManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainMenuButtonSelect);
 
+        float savedMasterVol = PlayerPrefs.GetFloat("MasterVol", 1);
+        float savedMusicVol = PlayerPrefs.GetFloat("MusicVol", 1);
+        float savedSfxVol = PlayerPrefs.GetFloat("SFXVol", 1);
     }
 
     private void MarkPersistentObjects()
