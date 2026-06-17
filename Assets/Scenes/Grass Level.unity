@@ -197,6 +197,10 @@ PrefabInstance:
       value: -12.75
       objectReference: {fileID: 0}
     - target: {fileID: 5539600259629944725, guid: bb059e56fdedf0e49ad710ce7b9a4db6, type: 3}
+      propertyPath: myPlanet
+      value: 
+      objectReference: {fileID: 1451022143}
+    - target: {fileID: 5539600259629944725, guid: bb059e56fdedf0e49ad710ce7b9a4db6, type: 3}
       propertyPath: bossSpawnSpot
       value: 
       objectReference: {fileID: 1200295950}
@@ -277,6 +281,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb059e56fdedf0e49ad710ce7b9a4db6, type: 3}
+--- !u!1001 &956184363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.968426
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -34.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435423337239171342, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_Name
+      value: Grass Planet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
 --- !u!1 &1200295950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6268856904632774815, guid: bb059e56fdedf0e49ad710ce7b9a4db6, type: 3}
@@ -411,6 +472,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1451022143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7435423337239171342, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+  m_PrefabInstance: {fileID: 956184363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1543745007
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3996281823504814499, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7259466309336412053, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_LocalPosition.x
@@ -792,3 +858,4 @@ SceneRoots:
   - {fileID: 776556198}
   - {fileID: 1417996641}
   - {fileID: 346378395728938427}
+  - {fileID: 956184363}
