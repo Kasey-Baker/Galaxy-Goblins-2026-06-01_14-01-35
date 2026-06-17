@@ -68,6 +68,11 @@ public class DashToPoint : MonoBehaviour
     {
         transform.rotation = myFinalDirection;
         gameObject.GetComponent<EnemyDashingShip>().SetMoveSpeed(baseMoveSpeed);
+
+        if(gameObject.GetComponent<EnemySelfDestruct>() != null)
+        {
+            gameObject.GetComponent<EnemySelfDestruct>().AimAtTarget();
+        }
         if(gameObject.GetComponent<FaceTowardsPlayer>() != null)
         {
             gameObject.GetComponent<FaceTowardsPlayer>().doBehavior = true;

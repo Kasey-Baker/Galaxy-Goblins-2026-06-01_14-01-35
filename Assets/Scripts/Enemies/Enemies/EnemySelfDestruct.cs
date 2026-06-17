@@ -7,14 +7,17 @@ public class EnemySelfDestruct : MonoBehaviour
     [SerializeField] GameObject objectToTarget;
     [SerializeField] GameObject myDeathEffect;
     [SerializeField] Vector3 pointDir;
+    public bool attackOnStartup;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         objectToTarget = GameManager.instance.player; //Replace this when game manager integrated
 
-        pointDir = objectToTarget.transform.position - gameObject.transform.position;
-        Quaternion rot = Quaternion.LookRotation(new Vector3(pointDir.x, 0, pointDir.z));
-        transform.rotation = Quaternion.Lerp(transform.rotation, rot, 100f);
+        if(attackOnStartup == true)
+        {
+            AimAtTarget();
+        }
+
     }
 
     // Update is called once per frame
@@ -25,6 +28,16 @@ public class EnemySelfDestruct : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(myDeathEffect, transform.position, Quaternion.identity);
+        if (gameObject.scene.isLoaded)
+        {
+            Instantiate(myDeathEffect, transform.position, Quaternion.identity);
+        }
+    }
+
+    public void AimAtTarget()
+    {
+        pointDir = objectToTarget.transform.position - gameObject.transform.position;
+        Quaternion rot = Quaternion.LookRotation(new Vector3(pointDir.x, 0, pointDir.z));
+        transform.rotation = Quaternion.Lerp(transform.rotation, rot, 100f);
     }
 }
