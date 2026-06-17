@@ -351,6 +351,10 @@ GameObject:
   - component: {fileID: 7097683773125524518}
   - component: {fileID: 4335939900962666765}
   - component: {fileID: 2197449922535388330}
+  - component: {fileID: 4740216683636395928}
+  - component: {fileID: 2565709722316532029}
+  - component: {fileID: 1707609382683120398}
+  - component: {fileID: 6325813502022348440}
   m_Layer: 0
   m_Name: Volcano Planet
   m_TagString: Untagged
@@ -452,6 +456,61 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4740216683636395928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124064523861004766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ac6e14d5a417f47ba1ecdeb8bf53d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateX
+  speed: 12
+--- !u!114 &2565709722316532029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124064523861004766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267b0bc9fe52c8c44b0cfa5d782ed060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotate
+  speed: 9
+--- !u!114 &1707609382683120398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124064523861004766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5785057540fe0d4085576905b79068f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateZ
+  speed: 6
+--- !u!114 &6325813502022348440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124064523861004766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d79ad03751f9114ea643558b83da9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetSizeScaler
+  planetSizeMin: 1
+  planetSizeMax: 20
+  timeToReachMaxSize: 20
+  growthActive: 0
 --- !u!1 &7444828000630099365
 GameObject:
   m_ObjectHideFlags: 0
