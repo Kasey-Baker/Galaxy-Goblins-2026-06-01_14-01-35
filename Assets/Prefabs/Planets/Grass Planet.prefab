@@ -239,6 +239,10 @@ GameObject:
   - component: {fileID: 3159439112058631030}
   - component: {fileID: 2956873739281117267}
   - component: {fileID: 294661994532551474}
+  - component: {fileID: 5782861325060372223}
+  - component: {fileID: 9176077995628301522}
+  - component: {fileID: 2805643894538832621}
+  - component: {fileID: 1476872029700139912}
   m_Layer: 0
   m_Name: Grass Planet
   m_TagString: Untagged
@@ -340,6 +344,61 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5782861325060372223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435423337239171342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d79ad03751f9114ea643558b83da9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetSizeScaler
+  planetSizeMin: 1
+  planetSizeMax: 20
+  timeToReachMaxSize: 20
+  growthActive: 0
+--- !u!114 &9176077995628301522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435423337239171342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ac6e14d5a417f47ba1ecdeb8bf53d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateX
+  speed: 12
+--- !u!114 &2805643894538832621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435423337239171342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267b0bc9fe52c8c44b0cfa5d782ed060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotate
+  speed: 9
+--- !u!114 &1476872029700139912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435423337239171342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5785057540fe0d4085576905b79068f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateZ
+  speed: 6
 --- !u!1 &7749133735169088650
 GameObject:
   m_ObjectHideFlags: 0
