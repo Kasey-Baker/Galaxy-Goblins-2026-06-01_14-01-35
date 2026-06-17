@@ -370,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDashingShip
   controller: {fileID: 8334573309960636315}
   moveSpeed: 15
+  isSlowed: 0
 --- !u!114 &4458820177860702832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +386,7 @@ MonoBehaviour:
   objectToTarget: {fileID: 0}
   myDeathEffect: {fileID: 8785673792354651433, guid: 6c342e8c638667342b9cd1bc95c4634f, type: 3}
   pointDir: {x: 0, y: 0, z: 0}
+  attackOnStartup: 1
 --- !u!114 &-83454611437555331
 MonoBehaviour:
   m_ObjectHideFlags: 0
