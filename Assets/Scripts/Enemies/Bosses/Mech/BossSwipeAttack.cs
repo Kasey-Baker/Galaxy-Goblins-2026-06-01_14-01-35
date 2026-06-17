@@ -126,6 +126,7 @@ public class BossSwipeAttack : MonoBehaviour
         if (gameObject.GetComponent<BossDoublePunch>().isActive)
         {
             isActive = false;
+            //ResetValues();
             //EndAttack();
         }
     }

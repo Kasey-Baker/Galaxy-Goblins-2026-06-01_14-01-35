@@ -31,8 +31,10 @@ public class BossFistAttackManager : MonoBehaviour
             gameObject.GetComponent<BossSwipeAttack>().isActive = true;
         }
 
-
-        gameObject.GetComponent<BossSwipeAttack>().GetOtherFist().GetComponent<BossFistAttackManager>().attackChosen = true;
+        if (gameObject.GetComponent<BossSwipeAttack>().GetOtherFist() != null)
+        {
+            gameObject.GetComponent<BossSwipeAttack>().GetOtherFist().GetComponent<BossFistAttackManager>().attackChosen = true;
+        }
         attackChosen = true;
     }
 

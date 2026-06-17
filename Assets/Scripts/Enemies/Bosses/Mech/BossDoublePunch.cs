@@ -255,6 +255,7 @@ public class BossDoublePunch : MonoBehaviour
         if (gameObject.GetComponent<BossSwipeAttack>().isActive)
         {
             isActive = false;
+            //ResetValues();
             //EndAttack();
         }
     }
@@ -265,6 +266,11 @@ public class BossDoublePunch : MonoBehaviour
         timeToReachPoint = baseTimeToReachPoint;
         timeBetweenPunches = baseTimeBetweenPunches;
         numPunchesCompleted = 0;
+
+        if(otherFist != null && otherFist.GetComponent<BossDoublePunch>().numPunchesCompleted != 0)
+        {
+            otherFist.GetComponent<BossDoublePunch>().ResetValues();
+        }
 
         currentState = PunchStates.AtRest;
         waitForLaunchTime = 0;
