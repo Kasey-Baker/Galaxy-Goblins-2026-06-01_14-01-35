@@ -48,10 +48,11 @@ MonoBehaviour:
   spawnOnSide: 0
   spawnAreaCoverage: 1
   timeBetweenSpawns: 0.5
-  enemyToSpawn: {fileID: 7315140745424281354, guid: 3ff49abf374fc394e90e50a9570a4105, type: 3}
+  enemyToSpawn: {fileID: 8369182096832127691, guid: e0e02a198792cbd41b9cdb2f8c25536a, type: 3}
   spawnNumber: 10
   layerWithBounds:
     serializedVersion: 2
     m_Bits: 64
   leftBoundObj: {fileID: 0}
   rightBoundObj: {fileID: 0}
+  randomizeLocation: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6860295985810186111
+--- !u!1 &8308917358766668837
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,54 +8,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7119861306901064977}
-  - component: {fileID: 3853652247527339898}
-  - component: {fileID: 2394536370835677559}
-  - component: {fileID: 1987057839169371644}
-  - component: {fileID: 5930036305460173310}
-  - component: {fileID: 7212629171976527590}
-  - component: {fileID: 236210862301350264}
-  - component: {fileID: 4391179260227929043}
-  - component: {fileID: 3750119164403548722}
-  - component: {fileID: 2121019000005787636}
-  - component: {fileID: -7986118209847767482}
+  - component: {fileID: 4742651293713537593}
+  - component: {fileID: 6715088284647717536}
+  - component: {fileID: 5371521274028140313}
+  - component: {fileID: 8846401606112238561}
+  - component: {fileID: 7604605840129151231}
+  - component: {fileID: 2450771317360179445}
+  - component: {fileID: 7654819668708921854}
+  - component: {fileID: 3511193629316148594}
+  - component: {fileID: 289882038265327922}
+  - component: {fileID: -2793135985789952615}
+  - component: {fileID: -3157133053677369886}
   m_Layer: 0
-  m_Name: Enemy - Firing Shotgun
+  m_Name: Enemy - Firing RapidFire Old
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7119861306901064977
+--- !u!4 &4742651293713537593
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 15.28377, y: 0, z: -5.26066}
+  m_LocalPosition: {x: 13.53377, y: 0, z: -7.01066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &3853652247527339898
+--- !u!33 &6715088284647717536
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2394536370835677559
+--- !u!23 &5371521274028140313
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -98,81 +98,81 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1987057839169371644
+--- !u!114 &8846401606112238561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ca5aaee8c7b6fc4a843ab07b1a471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTakeDamage
   currHealth: 4
-  rend: {fileID: 2394536370835677559}
+  rend: {fileID: 5371521274028140313}
   pointsOnDeath: 50
   spawnObj: {fileID: 0}
   numToSpawnStart: 0
   spawnedObj: {fileID: 0}
   numToSpawnHit: 0
   numToSpawnDeath: 0
-  myAudio: {fileID: -7986118209847767482}
+  myAudio: {fileID: -3157133053677369886}
   soundsOnHit:
   - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}
   deathSoundMaker: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
   deathSounds:
   - {fileID: 8300000, guid: cac351a8251ff804c8a1ad871c15c94f, type: 3}
---- !u!114 &5930036305460173310
+--- !u!114 &7604605840129151231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efd497b781b07184aa30f712c483727b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMoveBasic
---- !u!114 &7212629171976527590
+--- !u!114 &2450771317360179445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ab354841c451d409cb7d7f44bdf33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDashingShip
-  controller: {fileID: 4391179260227929043}
+  controller: {fileID: 3511193629316148594}
   moveSpeed: 3
---- !u!114 &236210862301350264
+--- !u!114 &7654819668708921854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b2ccb74820408745af684f35bf12774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFiring
   gunList:
-  - {fileID: 11400000, guid: be3939cd9f41e5c4d9a491313f2ac409, type: 2}
-  shootPosition: {fileID: 7119861306901064977}
+  - {fileID: 11400000, guid: 954df2e21adf0af4aad48f5a54b13c63, type: 2}
+  shootPosition: {fileID: 4742651293713537593}
   shootSounds: []
---- !u!143 &4391179260227929043
+--- !u!143 &3511193629316148594
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -191,13 +191,13 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &3750119164403548722
+--- !u!65 &289882038265327922
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -212,13 +212,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2121019000005787636
+--- !u!114 &-2793135985789952615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
@@ -229,19 +229,19 @@ MonoBehaviour:
   damageAmount: 1
   damageRate: 0
   bulletSpeed: 0
-  bulletDestroyTime: 0
+  bulletDestroyTime: 5
   hitEffect: {fileID: 0}
   playerHitSound: {fileID: 0}
   otherHitSound: {fileID: 0}
   ignoredObject: {fileID: 0}
   tagToIgnore: Enemy
---- !u!82 &-7986118209847767482
+--- !u!82 &-3157133053677369886
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6860295985810186111}
+  m_GameObject: {fileID: 8308917358766668837}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3026072702410797236, guid: 2b1f4c874493f324dae09fba5dfc1443, type: 2}
