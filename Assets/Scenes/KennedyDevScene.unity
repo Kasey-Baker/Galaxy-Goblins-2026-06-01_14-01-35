@@ -5751,9 +5751,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 430964439215029813, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b8bb7e469219d01489f09f394893f009, type: 2}
+    - target: {fileID: 996348929108454098, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b8bb7e469219d01489f09f394893f009, type: 2}
     - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.132
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 2190876908187433862, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5791,6 +5799,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3360326473311673298, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664459285583704191, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b8bb7e469219d01489f09f394893f009, type: 2}
     - target: {fileID: 7435423337239171342, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
       propertyPath: m_Name
       value: Grass Planet
