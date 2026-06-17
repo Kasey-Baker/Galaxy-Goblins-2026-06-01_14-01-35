@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera & Boundaries
       objectReference: {fileID: 0}
+    - target: {fileID: 4082859967515189191, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 904cafc8a0193e140aa924c5c8aac309, type: 2}
     - target: {fileID: 6167493279605755819, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -171,6 +175,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6516342948833804963, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dd755c2aef8061a449b6aa18888503ad, type: 3}
+    - target: {fileID: 8254877462983732174, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 904cafc8a0193e140aa924c5c8aac309, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
