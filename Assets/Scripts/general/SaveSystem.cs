@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
-
+/*
 public class SaveSystemB : MonoBehaviour
 {
     public static SaveSystemB instance;
@@ -13,7 +13,7 @@ public class SaveSystemB : MonoBehaviour
     public List<string> savedItemsVector = new List<string>();
 
     private LevelSystem levelSystem;
-    //private PlayerInventory playerInventory; // change this to what the player inventory is
+    private PlayerInventory playerInventory; // change this to what the player inventory is
 
     void Awake()
     {
@@ -31,7 +31,7 @@ public class SaveSystemB : MonoBehaviour
         if (GameManager.instance != null && GameManager.instance.player != null)
         {
             levelSystem = GameManager.instance.player.GetComponent<LevelSystem>();
-           // playerInventory = GameManager.instance.player.GetComponent<PlayerInventory>();
+            playerInventory = GameManager.instance.player.GetComponent<PlayerInventory>();
         }
     }
 
@@ -76,11 +76,11 @@ public class SaveSystemB : MonoBehaviour
             }
         }
 
-        if  (//playerInventory != null)
+        if  (playerInventory != null)
         {
             savedItemsVector.Clear();
 
-            foreach (ItemData item in //playerInventory.ownedItems)
+            foreach (ItemData item in playerInventory.ownedItems)
             {
                 if (item != null)
                 {
@@ -124,7 +124,7 @@ public class SaveSystemB : MonoBehaviour
         if (GameManager.instance.player != null)
         {
             levelSystem = GameManager.instance.player.GetComponent<LevelSystem>();
-           // playerInventory = GameManager.instance.player.GetComponent<PlayerInventory>();
+            playerInventory = GameManager.instance.player.GetComponent<PlayerInventory>();
 
             if (levelSystem != null)
             {
@@ -145,7 +145,7 @@ public class SaveSystemB : MonoBehaviour
                 }
             }
 
-           /* if (playerInventory != null)
+            if (playerInventory != null)
             {
                 string serializedItems = PlayerPrefs.GetString("SavedItems", "");
 
@@ -164,10 +164,11 @@ public class SaveSystemB : MonoBehaviour
                     }
                 }
             }
-            */
+            
         }
 
         GameManager.instance.stateUnpaused();
         Debug.Log("Game Loaded Successfully!");
     }
 }
+*/
