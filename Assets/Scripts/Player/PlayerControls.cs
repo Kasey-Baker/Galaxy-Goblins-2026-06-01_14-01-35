@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class PlayerControls : MonoBehaviour, IDamage
 {
@@ -9,11 +10,21 @@ public class PlayerControls : MonoBehaviour, IDamage
     [SerializeField] GameObject playerSprite;
     [SerializeField] GameObject[] afterEffects;
     [SerializeField] Transform[] afterEffectsBasePos;
+    [SerializeField] float invulnTimeOnHit;
+    [SerializeField] bool isInvuln;
 
     [Header("Visual Effects")]
     [Range(0f, 10f)] [SerializeField] float afterEffectMod;
     [Range(0f, 5f)] [SerializeField] float baseOffset;
     [Range(0f, 45f)] [SerializeField] float tiltAmount;
+
+
+    Color colorOrig;
+
+    Renderer[] allRenders;
+    Color[] allColors;
+    [SerializeField] Renderer rend;
+
     [Header("Player Stats")]
     [SerializeField] float healthCurr;
     [SerializeField] float moveSpeed;
@@ -35,6 +46,7 @@ public class PlayerControls : MonoBehaviour, IDamage
     float healthMax;
 
     float fireWait;
+    float invulnWait;
 
     int currBullet;
     float spriteBaseX;
@@ -64,6 +76,7 @@ public class PlayerControls : MonoBehaviour, IDamage
     {
         healthMax = healthCurr;
         currBullet = 0;
+        isInvuln = false;
 
         spriteBaseX = transform.rotation.x;
         spriteBaseY = transform.rotation.y;
@@ -73,16 +86,37 @@ public class PlayerControls : MonoBehaviour, IDamage
         {
             afterEffectsBasePos[i] = afterEffects[i].transform;
         }
+        colorOrig = rend.material.color;
+        allRenders = GetComponentsInChildren<Renderer>();
+        allColors = new Color[allRenders.Length];
+        for (int i = 0; i < allRenders.Length; i++)
+        {
+            if (allRenders[i].material.HasProperty("_Color"))
+            {
+                allColors[i] = (allRenders[i].material.color);
+            }
+        }
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isInvuln)
+        {
+            invulnWait += Time.deltaTime;
+            if(invulnWait >= invulnTimeOnHit)
+            {
+                isInvuln = false;
+            }
+        }
+
         Movement();
         passiveRegen();
         enemySlowdown();
         SelfRotation();
-        //AfterImage();
+
 
     }
 
@@ -137,6 +171,31 @@ public class PlayerControls : MonoBehaviour, IDamage
         }
     }
 
+    IEnumerator flashOnHit()
+    {
+        if (rend != null)
+        {
+            rend.material.color = Color.red;
+        }
+        for (int i = 0; i < allRenders.Length; i++)
+        {
+            if (allRenders[i] != null)
+            {
+                allRenders[i].material.color = Color.white;
+            }
+        }
+        yield return new WaitForSeconds(invulnTimeOnHit);
+        rend.material.color = colorOrig;
+        for (int i = 0; i < allRenders.Length; i++)
+        {
+            if (allRenders[i] != null)
+            {
+                allRenders[i].material.color = allColors[i];
+            }
+        }
+
+    }
+
     void AfterImage()
     {
         float totalSpeed = (float)(moveSpeed * SlowMove() * afterEffectMod);
@@ -153,20 +212,29 @@ public class PlayerControls : MonoBehaviour, IDamage
 
     public void takeDamage(float amount)
     {
-        healthCurr -= amount;
-        if(myHitSounds.Length > 0)
+        if (!isInvuln || amount < 0)
         {
-            myAudio.PlayOneShot(myHitSounds[Random.Range(0, myHitSounds.Length)]);
-        }
-        updatePlayerUI();
-        if (healthCurr <= 0)
-        {
-            GameManager.instance.YouLose();
-        }
+            healthCurr -= amount;
+            if(amount > 0)
+            {
+                isInvuln = true;
+                invulnWait = 0;
+                StartCoroutine(flashOnHit());
+            }
+            if (myHitSounds.Length > 0)
+            {
+                myAudio.PlayOneShot(myHitSounds[Random.Range(0, myHitSounds.Length)]);
+            }
+            updatePlayerUI();
+            if (healthCurr <= 0)
+            {
+                GameManager.instance.YouLose();
+            }
 
-        if(healthCurr > healthMax)
-        {
-            healthCurr = healthMax;
+            if (healthCurr > healthMax)
+            {
+                healthCurr = healthMax;
+            }
         }
     }
 
