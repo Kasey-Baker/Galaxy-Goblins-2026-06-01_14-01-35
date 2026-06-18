@@ -141,7 +141,10 @@ public class LevelSystem : MonoBehaviour
         {
             mySprites[i].SetActive(false);
         }
-        mySprites[currentLevel - 1].SetActive(true);
+        if (mySprites.Length > currentLevel - 1)
+        {
+            mySprites[currentLevel - 1].SetActive(true);
+        }
     }
 
     private void UpdateShotPattern()
