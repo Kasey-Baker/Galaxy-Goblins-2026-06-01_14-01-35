@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -5,7 +6,14 @@ public class PlayerControls : MonoBehaviour, IDamage
 {
     [Header("Player Config")]
     [SerializeField] CharacterController control;
+    [SerializeField] GameObject playerSprite;
+    [SerializeField] GameObject[] afterEffects;
+    [SerializeField] Transform[] afterEffectsBasePos;
 
+    [Header("Visual Effects")]
+    [Range(0f, 10f)] [SerializeField] float afterEffectMod;
+    [Range(0f, 5f)] [SerializeField] float baseOffset;
+    [Range(0f, 45f)] [SerializeField] float tiltAmount;
     [Header("Player Stats")]
     [SerializeField] float healthCurr;
     [SerializeField] float moveSpeed;
@@ -29,6 +37,9 @@ public class PlayerControls : MonoBehaviour, IDamage
     float fireWait;
 
     int currBullet;
+    float spriteBaseX;
+    float spriteBaseY;
+    float spriteBaseZ;
 
     bool bigState;
     bool fastState;
@@ -44,6 +55,7 @@ public class PlayerControls : MonoBehaviour, IDamage
                 GameManager.instance.player = gameObject;
             }
         }
+
     }
 
 
@@ -52,6 +64,15 @@ public class PlayerControls : MonoBehaviour, IDamage
     {
         healthMax = healthCurr;
         currBullet = 0;
+
+        spriteBaseX = transform.rotation.x;
+        spriteBaseY = transform.rotation.y;
+        spriteBaseZ = transform.rotation.z;
+
+        for(int i = 0; i < afterEffectsBasePos.Length; i++)
+        {
+            afterEffectsBasePos[i] = afterEffects[i].transform;
+        }
     }
 
     // Update is called once per frame
@@ -60,14 +81,8 @@ public class PlayerControls : MonoBehaviour, IDamage
         Movement();
         passiveRegen();
         enemySlowdown();
-        /*
-        fireWait += Time.deltaTime;
-
-        if(fireWait >= firerate && bulletList[currBullet] != null)
-        {
-            ShootBasic(bulletList[currBullet], 0);
-        }
-        */
+        SelfRotation();
+        //AfterImage();
 
     }
 
@@ -82,10 +97,34 @@ public class PlayerControls : MonoBehaviour, IDamage
 
     void Movement()
     {
+        control.enabled = false;
+        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+        control.enabled = true;
         moveDirection = Input.GetAxis("Horizontal") * transform.right + Input.GetAxis("Vertical") * transform.forward;
         control.Move(moveDirection * moveSpeed * SlowMove() * Time.deltaTime);
     }
+    void SelfRotation()
+    {
+        transform.rotation = new Quaternion(spriteBaseX, spriteBaseY, spriteBaseZ, 1);
 
+        if (Mathf.Sign(Input.GetAxis("Horizontal")) == -1 && Input.GetAxis("Horizontal") != 0)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, tiltAmount);
+        }
+        else if (Mathf.Sign(Input.GetAxis("Horizontal")) == 1 && Input.GetAxis("Horizontal") != 0)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, playerSprite.transform.rotation.y, -tiltAmount);
+        }
+
+        if (Mathf.Sign(Input.GetAxis("Vertical")) == 1 && Input.GetAxis("Vertical") != 0)
+        {
+            transform.rotation = Quaternion.Euler(tiltAmount, transform.rotation.y, transform.rotation.z);
+        }
+        else if (Mathf.Sign(Input.GetAxis("Vertical")) == -1 && Input.GetAxis("Vertical") != 0)
+        {
+            transform.rotation = Quaternion.Euler(-tiltAmount, transform.rotation.y, transform.rotation.z);
+        }
+    }
     float SlowMove()
     {
         if(Input.GetButton("SlowMove"))
@@ -96,6 +135,20 @@ public class PlayerControls : MonoBehaviour, IDamage
         {
             return 1;
         }
+    }
+
+    void AfterImage()
+    {
+        float totalSpeed = (float)(moveSpeed * SlowMove() * afterEffectMod);
+        for(int i = 0; i < afterEffects.Length; i++)
+        {
+            //afterEffects[i].transform.position = afterEffectsBasePos[i].transform.position;
+            afterEffects[i].transform.position = new Vector3(afterEffects[i].transform.position.x, transform.position.y - (baseOffset * (i+1) * totalSpeed), afterEffects[i].transform.position.z);
+            
+            //afterEffects[i].transform.rotation = Quaternion.Euler(90, 0f, 0f);
+
+        }
+        //playerSprite.transform.position = new Vector3(transform.position.x, transform.position.y + (baseOffset * afterEffectMod * (3)), transform.position.z);
     }
 
     public void takeDamage(float amount)

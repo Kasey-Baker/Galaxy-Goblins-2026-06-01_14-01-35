@@ -17,6 +17,9 @@ public class LevelSystem : MonoBehaviour
     public int currentLevel = 1;
     public int[] scoreThresholds = { 1000, 2500, 5000 };
 
+    [Header("Player Sprites")]
+    [SerializeField] GameObject[] mySprites;
+
     [Header("Player Stats")]
     public float bulletDamage = 10;
     public int bulletAmount = 1;
@@ -43,13 +46,17 @@ public class LevelSystem : MonoBehaviour
         {
             FetchVariables();
         }
+        for(int i = 0; i < mySprites.Length; i++)
+        {
+            mySprites[i].SetActive(false);
+        }
     }
 
     void Update()
     {
 
         fireWait += Time.deltaTime;
-
+        SetLevelSprites();
 
         if (Input.GetButton("Fire1") && fireWait >= fireRate && bulletPrefab != null)
         {
@@ -126,6 +133,15 @@ public class LevelSystem : MonoBehaviour
         bulletAmount += 1;
 
         UpdateShotPattern();
+    }
+
+    void SetLevelSprites()
+    {
+        for(int i = 0; i < mySprites.Length; i++)
+        {
+            mySprites[i].SetActive(false);
+        }
+        mySprites[currentLevel - 1].SetActive(true);
     }
 
     private void UpdateShotPattern()
