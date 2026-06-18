@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class SaveSystemB : MonoBehaviour
 {
@@ -8,7 +9,11 @@ public class SaveSystemB : MonoBehaviour
     [Header("UI Reference")]
     [SerializeField] private GameObject savePromptMenu;
 
+    [Header("Stored Data Vector")]
+    public List<string> savedItemsVector = new List<string>();
+
     private LevelSystem levelSystem;
+    //private PlayerInventory playerInventory; // change this to what the player inventory is
 
     void Awake()
     {
@@ -18,9 +23,15 @@ public class SaveSystemB : MonoBehaviour
 
     void Start()
     {
+        FetchReferences();
+    }
+
+    private void FetchReferences()
+    {
         if (GameManager.instance != null && GameManager.instance.player != null)
         {
             levelSystem = GameManager.instance.player.GetComponent<LevelSystem>();
+           // playerInventory = GameManager.instance.player.GetComponent<PlayerInventory>();
         }
     }
 
@@ -30,6 +41,15 @@ public class SaveSystemB : MonoBehaviour
         {
             savePromptMenu.SetActive(true);
             if (GameManager.instance != null) GameManager.instance.statePause();
+        }
+    }
+
+    public void CloseSavePrompt()
+    {
+        if (savePromptMenu != null)
+        {
+            savePromptMenu.SetActive(false);
+            if (GameManager.instance != null) GameManager.instance.stateUnpaused();
         }
     }
 
@@ -56,21 +76,28 @@ public class SaveSystemB : MonoBehaviour
             }
         }
 
+        if  (//playerInventory != null)
+        {
+            savedItemsVector.Clear();
+
+            foreach (ItemData item in //playerInventory.ownedItems)
+            {
+                if (item != null)
+                {
+                    savedItemsVector.Add(item.itemName);
+                }
+            }
+
+            string serializedItems = string.Join(",", savedItemsVector);
+            PlayerPrefs.SetString("SavedItems", serializedItems);
+        }
+
         PlayerPrefs.SetInt("SavedSceneIndex", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.SetInt("HasSaveData", 1);
         PlayerPrefs.Save();
 
         Debug.Log("Game Saved Successfully!");
         CloseSavePrompt();
-    }
-
-    public void CloseSavePrompt()
-    {
-        if (savePromptMenu != null)
-        {
-            savePromptMenu.SetActive(false);
-            if (GameManager.instance != null) GameManager.instance.stateUnpaused();
-        }
     }
 
     public void LoadGame()
@@ -97,11 +124,13 @@ public class SaveSystemB : MonoBehaviour
         if (GameManager.instance.player != null)
         {
             levelSystem = GameManager.instance.player.GetComponent<LevelSystem>();
+           // playerInventory = GameManager.instance.player.GetComponent<PlayerInventory>();
+
             if (levelSystem != null)
             {
                 levelSystem.currentLevel = PlayerPrefs.GetInt("SavedLevel", 1);
                 levelSystem.currentScore = PlayerPrefs.GetInt("SavedScore", 0);
-                levelSystem.bulletDamage = PlayerPrefs.GetInt("SavedDamage", 10);
+                levelSystem.bulletDamage = PlayerPrefs.GetFloat("SavedDamage", 10f);
 
                 levelSystem.Invoke("UpdateShotPattern", 0.1f);
             }
@@ -115,6 +144,27 @@ public class SaveSystemB : MonoBehaviour
                     healthField.SetValue(GameManager.instance.playercontrols, savedHP);
                 }
             }
+
+           /* if (playerInventory != null)
+            {
+                string serializedItems = PlayerPrefs.GetString("SavedItems", "");
+
+                savedItemsVector.Clear();
+
+                if (!string.IsNullOrEmpty(serializedItems))
+                {
+                    string[] loadedItemNames = serializedItems.Split(',');
+                    savedItemsVector.AddRange(loadedItemNames);
+
+                    playerInventory.ownedItems.Clear();
+
+                    foreach (string itemName in savedItemsVector)
+                    {
+                        playerInventory.LoadItemByName(itemName);
+                    }
+                }
+            }
+            */
         }
 
         GameManager.instance.stateUnpaused();
