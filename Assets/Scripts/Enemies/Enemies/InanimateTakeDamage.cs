@@ -145,4 +145,9 @@ public class InanimateTakeDamage : MonoBehaviour, IDamage
         GameObject myNoise = Instantiate(deathSoundMaker, transform.position, Quaternion.identity);
         myNoise.GetComponent<PlayDeathSound>().SetSound(deathSounds[Random.Range(0, deathSounds.Length)], myAudio.volume);
     }
+
+    public void SetHealth(float newHP)
+    {
+        currHealth = newHP;
+    }
 }

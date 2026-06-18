@@ -48,7 +48,10 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         allColors = new Color[allRenders.Length];
         for (int i = 0; i < allRenders.Length; i++)
             {
+            if (allRenders[i].material.HasProperty("_Color"))
+            {
                 allColors[i] = (allRenders[i].material.color);
+            }
             }
         
     }

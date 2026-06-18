@@ -111,9 +111,9 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3207163764594474693}
   - {fileID: 4073710874573414085}
   - {fileID: 5444451080353715130}
+  - {fileID: 3207163764594474693}
   m_Father: {fileID: 1142637349098533241}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &8113716778521476650
@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd497b781b07184aa30f712c483727b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMoveBasic
+  spriteOptions: []
 --- !u!135 &6059579342002138261
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.55
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6315745118989021397
 MonoBehaviour:
