@@ -88,7 +88,7 @@ Transform:
   m_GameObject: {fileID: 311904090249934661}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.53, y: 0.56, z: 3.42}
+  m_LocalPosition: {x: -1.53, y: -2.64, z: 3.42}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1133,7 +1133,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5131790311078570258}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1210,7 +1210,8 @@ MonoBehaviour:
   numToSpawnDeath: 0
   myAudio: {fileID: 6005432039274712879}
   soundsOnHit:
-  - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}
+  - {fileID: 8300000, guid: 194969470ccf3c94b872778beec2ea9f, type: 3}
+  - {fileID: 8300000, guid: b927e881a1028604891d2e5a6b9525f1, type: 3}
   deathSoundMaker: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
   deathSounds:
   - {fileID: 8300000, guid: d442d7b6b15a4364d84b7775236bb0dd, type: 3}
@@ -1373,8 +1374,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEnemyLaunchRandomArea
   difficultyMod: 0
-  myAudio: {fileID: 0}
-  mySounds: []
+  myAudio: {fileID: 6005432039274712879}
+  mySounds:
+  - {fileID: 8300000, guid: 718892e0e5c69fd4c97e4976968f3ea2, type: 3}
   isActive: 0
   enemyToSpawn: {fileID: 2961289681117801525, guid: 0f4ee6f1c16561c4993d00aab92ba23b, type: 3}
   numToSpawn: 3
@@ -2107,7 +2109,8 @@ MonoBehaviour:
   numToSpawnDeath: 0
   myAudio: {fileID: 1024205038137933619}
   soundsOnHit:
-  - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}
+  - {fileID: 8300000, guid: 194969470ccf3c94b872778beec2ea9f, type: 3}
+  - {fileID: 8300000, guid: b927e881a1028604891d2e5a6b9525f1, type: 3}
   deathSoundMaker: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
   deathSounds:
   - {fileID: 8300000, guid: d442d7b6b15a4364d84b7775236bb0dd, type: 3}
@@ -2263,8 +2266,9 @@ MonoBehaviour:
   numRepetitions: 2
   timeBetweenRepetitions: 1
   asteroidList: []
-  myAudio: {fileID: 0}
-  mySounds: []
+  myAudio: {fileID: 1024205038137933619}
+  mySounds:
+  - {fileID: 8300000, guid: 0202bf5ae3bb86f41b75706a9eb3d143, type: 3}
   isActive: 0
   currState: 4
 --- !u!143 &4229077161088764615
@@ -2330,8 +2334,12 @@ MonoBehaviour:
   warningDisplayTime: 1
   waitAtPointTime: 0.3
   difficultyMod: 1
-  myAudio: {fileID: 0}
-  mySounds: []
+  myAudio: {fileID: 1024205038137933619}
+  mySounds:
+  - {fileID: 8300000, guid: 1c18b456805b5974787d9545be4da8e1, type: 3}
+  - {fileID: 8300000, guid: 8b01169161039684da8a06acb7579823, type: 3}
+  - {fileID: 8300000, guid: a1960001cd49df340a75214fb6192759, type: 3}
+  - {fileID: 8300000, guid: cb662c6455c557040a02bd1435e520a5, type: 3}
   warningLine: {fileID: 0}
   isActive: 0
   currState: 0
@@ -2527,7 +2535,8 @@ MonoBehaviour:
   numToSpawnDeath: 0
   myAudio: {fileID: 6331447447083626546}
   soundsOnHit:
-  - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}
+  - {fileID: 8300000, guid: 194969470ccf3c94b872778beec2ea9f, type: 3}
+  - {fileID: 8300000, guid: b927e881a1028604891d2e5a6b9525f1, type: 3}
   deathSoundMaker: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
   deathSounds:
   - {fileID: 8300000, guid: d442d7b6b15a4364d84b7775236bb0dd, type: 3}
@@ -2595,8 +2604,12 @@ MonoBehaviour:
   warningDisplayTime: 1
   waitAtPointTime: 0.3
   difficultyMod: 1
-  myAudio: {fileID: 0}
-  mySounds: []
+  myAudio: {fileID: 6331447447083626546}
+  mySounds:
+  - {fileID: 8300000, guid: 1c18b456805b5974787d9545be4da8e1, type: 3}
+  - {fileID: 8300000, guid: 8b01169161039684da8a06acb7579823, type: 3}
+  - {fileID: 8300000, guid: a1960001cd49df340a75214fb6192759, type: 3}
+  - {fileID: 8300000, guid: cb662c6455c557040a02bd1435e520a5, type: 3}
   warningLine: {fileID: 0}
   isActive: 0
   currState: 0
@@ -2751,8 +2764,9 @@ MonoBehaviour:
   numRepetitions: 2
   timeBetweenRepetitions: 1
   asteroidList: []
-  myAudio: {fileID: 0}
-  mySounds: []
+  myAudio: {fileID: 6331447447083626546}
+  mySounds:
+  - {fileID: 8300000, guid: 0202bf5ae3bb86f41b75706a9eb3d143, type: 3}
   isActive: 0
   currState: 4
 --- !u!1 &7825198789999147335

@@ -84,6 +84,10 @@ public class BossEnemyLaunchRandomArea : MonoBehaviour
             if(waitTime >= timeBetweenReps)
             {
                 SummonMinions();
+                if (mySounds.Length > 0)
+                {
+                    myAudio.PlayOneShot(mySounds[Random.Range(0, mySounds.Length)]);
+                }
             }
         }
     }
