@@ -71,6 +71,10 @@ public class BossSwipeAttack : MonoBehaviour
             {
                 SetTravelToNextPoint();
                 DrawWarning();
+                if (mySounds.Length > 0)
+                {
+                    myAudio.PlayOneShot(mySounds[Random.Range(0, mySounds.Length)]);
+                }
             }
             else
             {
