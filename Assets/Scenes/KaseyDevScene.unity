@@ -1625,11 +1625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8536278407578653714, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: m_Name
-      value: BossManagement
+      value: BossManagement Big Mech
       objectReference: {fileID: 0}
     - target: {fileID: 8536278407578653714, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1693,6 +1693,10 @@ PrefabInstance:
     - target: {fileID: 8349183859670225078, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: m_Name
       value: BossManagement Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349183859670225078, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
