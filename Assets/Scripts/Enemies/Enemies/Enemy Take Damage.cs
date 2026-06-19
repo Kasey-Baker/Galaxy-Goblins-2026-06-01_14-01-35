@@ -68,7 +68,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         
         currHealth -= amount;
         MakeGuts(numToSpawnHit);
-        if (soundsOnHit.Length > 0)
+        if (soundsOnHit.Length > 0 && currHealth > 0)
         {
             myAudio.PlayOneShot(soundsOnHit[Random.Range(0, soundsOnHit.Length)]);
         }

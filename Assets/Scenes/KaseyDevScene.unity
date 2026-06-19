@@ -1314,7 +1314,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5685090624466228393, guid: e9d12e0be305cb34baf9d0cf583450db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7002697
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5685090624466228393, guid: e9d12e0be305cb34baf9d0cf583450db, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2211,14 +2211,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossManagement Big Ship
       objectReference: {fileID: 0}
-    - target: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3347876429689615427, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6326402787713022627, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.44738
@@ -2264,6 +2256,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+--- !u!1001 &2101400673
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.922266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000008090092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.612867
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943001687627081995, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903754942911404031, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_Name
+      value: Player and Enemy Death Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903754942911404031, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947308552076800748, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7567c7a03b08904a8f0f851d5ace477, type: 3}
 --- !u!1 &102259372702737086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8536278407578653714, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4908,3 +4965,4 @@ SceneRoots:
   - {fileID: 409046621616667287}
   - {fileID: 1648189925}
   - {fileID: 1799620316128994331}
+  - {fileID: 2101400673}
