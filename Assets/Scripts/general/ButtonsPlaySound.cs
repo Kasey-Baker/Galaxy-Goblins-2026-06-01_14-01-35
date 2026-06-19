@@ -11,6 +11,7 @@ public class ButtonsPlaySound : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(audioSource);
     }
 
     public void PlaySound()
