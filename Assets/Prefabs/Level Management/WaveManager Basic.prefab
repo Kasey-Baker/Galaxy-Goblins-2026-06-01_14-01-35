@@ -122,8 +122,10 @@ MonoBehaviour:
   - {fileID: 3834603431329837524, guid: 30c50fcb76096b641a60864ee1bc5829, type: 3}
   - {fileID: 3834603431329837524, guid: 3ac770f54f1792141a696f7c8a518e91, type: 3}
   bossToSpawn: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+  bossSpawnSpot: {fileID: 7261032196621156747}
   waveSpawnSpot: {fileID: 0}
   spawningActive: 1
+  myPlanet: {fileID: 0}
   bossSpawned: 0
   bossDefeated: 0
   portalSpots:
@@ -134,6 +136,7 @@ MonoBehaviour:
   - {fileID: 2097393060882351431, guid: a5498970b05765d4d9c94ea31b8804c0, type: 3}
   - {fileID: 6594290020442878876, guid: aad0c7d7c02ed2f43a4a01ccb80c5d24, type: 3}
   - {fileID: 487647463440481922, guid: 9961b6571261c4441ac01793e41cf7e7, type: 3}
+  portalsCreated: 0
   itemSpots:
   - {fileID: 2130350063673588522}
   - {fileID: 4760512473164609628}
