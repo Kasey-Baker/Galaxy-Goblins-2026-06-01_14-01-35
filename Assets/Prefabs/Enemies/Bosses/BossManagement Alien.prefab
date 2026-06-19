@@ -1089,8 +1089,10 @@ GameObject:
   - component: {fileID: 7258023576228895080}
   - component: {fileID: 6005432039274712879}
   - component: {fileID: 3947290076079725312}
+  - component: {fileID: 1032876110831101555}
   - component: {fileID: 8445524417687727944}
   - component: {fileID: 2367918944543995579}
+  - component: {fileID: 8398495834547682583}
   m_Layer: 7
   m_Name: Boss Part A
   m_TagString: Enemy
@@ -1357,10 +1359,33 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 1
+  m_Height: 1.4
   m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.05, y: 0, z: 0}
+--- !u!136 &1032876110831101555
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131790311078570258}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.1
+  m_Height: 1.5
+  m_Direction: 0
+  m_Center: {x: -0.05, y: 0, z: 0}
 --- !u!114 &8445524417687727944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,6 +1534,29 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &8398495834547682583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131790311078570258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::damage
+  type: 1
+  rb: {fileID: 0}
+  damageAmount: 1
+  damageRate: 0
+  bulletSpeed: 0
+  bulletDestroyTime: 0
+  hitEffect: {fileID: 0}
+  playerHitSound: {fileID: 0}
+  otherHitSound: {fileID: 0}
+  ignoredObject: {fileID: 0}
+  tagToIgnore: 
 --- !u!1 &5272166847794501574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,6 +2008,7 @@ GameObject:
   - component: {fileID: 5744564533571173864}
   - component: {fileID: 3265245332511427005}
   - component: {fileID: 9021172828436359383}
+  - component: {fileID: 3282000241091144646}
   - component: {fileID: 468018476873373760}
   - component: {fileID: 5097455663905151163}
   - component: {fileID: 5382126905573306281}
@@ -1968,6 +2017,7 @@ GameObject:
   - component: {fileID: 4229077161088764615}
   - component: {fileID: 1557686864324905316}
   - component: {fileID: 357332305515029117}
+  - component: {fileID: 4690111687431597437}
   m_Layer: 7
   m_Name: Boss Part B
   m_TagString: Enemy
@@ -2064,7 +2114,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 392
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -2072,6 +2122,29 @@ CapsuleCollider:
   serializedVersion: 2
   m_Radius: 0.6
   m_Height: 1
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &3282000241091144646
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213728666840649099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 136
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7
+  m_Height: 1.02
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &468018476873373760
@@ -2284,7 +2357,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 392
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -2343,6 +2416,29 @@ MonoBehaviour:
   warningLine: {fileID: 0}
   isActive: 0
   currState: 0
+--- !u!114 &4690111687431597437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213728666840649099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::damage
+  type: 1
+  rb: {fileID: 0}
+  damageAmount: 1
+  damageRate: 0
+  bulletSpeed: 0
+  bulletDestroyTime: 0
+  hitEffect: {fileID: 0}
+  playerHitSound: {fileID: 0}
+  otherHitSound: {fileID: 0}
+  ignoredObject: {fileID: 0}
+  tagToIgnore: 
 --- !u!1 &7332017948338666509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,6 +2490,8 @@ GameObject:
   - component: {fileID: 6331447447083626546}
   - component: {fileID: 853289448895233762}
   - component: {fileID: 2492442107738497572}
+  - component: {fileID: 4177486434574584035}
+  - component: {fileID: 4723028607623431682}
   m_Layer: 7
   m_Name: Boss Part C
   m_TagString: Enemy
@@ -2769,6 +2867,52 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0202bf5ae3bb86f41b75706a9eb3d143, type: 3}
   isActive: 0
   currState: 4
+--- !u!136 &4177486434574584035
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491295792206198030}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 136
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7
+  m_Height: 1.02
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4723028607623431682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491295792206198030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a916362568834a45a86f7da9f515ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::damage
+  type: 1
+  rb: {fileID: 0}
+  damageAmount: 1
+  damageRate: 0
+  bulletSpeed: 0
+  bulletDestroyTime: 0
+  hitEffect: {fileID: 0}
+  playerHitSound: {fileID: 0}
+  otherHitSound: {fileID: 0}
+  ignoredObject: {fileID: 0}
+  tagToIgnore: 
 --- !u!1 &7825198789999147335
 GameObject:
   m_ObjectHideFlags: 0
