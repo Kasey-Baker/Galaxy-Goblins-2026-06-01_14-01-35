@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ButtonFunctions : MonoBehaviour
 {
-    [SerializeField] GameObject loadMenu;
+    [SerializeField] private GameObject loadMenu;
     public void resume()
     {
         GameManager.instance.stateUnpaused();
@@ -43,8 +43,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void LoadLevelName(string levelName)
     {
-        SceneManager.LoadScene(levelName);
-        StartCoroutine(LoadMenu());
+        StartCoroutine(LoadMenu(levelName));
         if (GameManager.instance != null)
         {
             GameManager.instance.stateUnpaused();
@@ -73,10 +72,20 @@ public class ButtonFunctions : MonoBehaviour
         }
     }
 
-    IEnumerator LoadMenu()
+    IEnumerator LoadMenu(string levelName)
     {
         loadMenu.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        loadMenu.SetActive(false);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelName);
+        asyncLoad.allowSceneActivation = false;
+        while (!asyncLoad.isDone)
+        {
+            if (asyncLoad.progress >= 0.9f)
+            {
+                yield return new WaitForSeconds(1f);
+                asyncLoad.allowSceneActivation = true;
+            }
+            yield return null;
+        }
+        
     }
 }
