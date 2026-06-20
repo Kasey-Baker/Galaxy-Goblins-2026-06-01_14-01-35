@@ -25,7 +25,6 @@ public class WaveManager : MonoBehaviour
     [SerializeField] bool spawningActive;
     [SerializeField] GameObject myPlanet;
     [SerializeField] bool bossSpawned;
-    [SerializeField] bool bossDefeated;
 
     [SerializeField] GameObject[] portalSpots;
     [SerializeField] List<GameObject> portals = new List<GameObject>();
@@ -293,7 +292,6 @@ public class WaveManager : MonoBehaviour
     
     public void OnBossDeath()
     {
-        bossDefeated = true;
         CreatePortals();
     }
 

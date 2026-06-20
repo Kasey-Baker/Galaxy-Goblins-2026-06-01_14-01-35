@@ -45,7 +45,6 @@ public class PlayerControls : MonoBehaviour, IDamage
 
     float healthMax;
 
-    float fireWait;
     float invulnWait;
 
     int currBullet;
@@ -126,7 +125,7 @@ public class PlayerControls : MonoBehaviour, IDamage
         if (Input.GetButton("Fire1"))
         {
             Instantiate(bullet, transform.position, Quaternion.Euler(0f, angleMod, 0f));
-            fireWait = 0;
+            //fireWait = 0;
         }
     }
 

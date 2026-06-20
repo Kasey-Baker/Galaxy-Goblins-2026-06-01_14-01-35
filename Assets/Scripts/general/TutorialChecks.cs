@@ -5,14 +5,13 @@ public class TutorialInputChecker : MonoBehaviour
 {
     [SerializeField] private TMP_Text tutorialText;
 
-    private bool pressedW;
-    private bool pressedA;
-    private bool pressedS;
-    private bool pressedD;
-    private bool pressedMouse1;
+    private bool pressedForward;
+    private bool pressedLeft;
+    private bool pressedBackward;
+    private bool pressedRight;
 
     private bool movementComplete;
-    private bool clickComplete;
+    private bool fireComplete;
 
     void Start()
     {
@@ -28,25 +27,25 @@ public class TutorialInputChecker : MonoBehaviour
     {
         if (!movementComplete)
         {
-            if (Input.GetKeyDown(KeyCode.W)) pressedW = true;
-            if (Input.GetKeyDown(KeyCode.A)) pressedA = true;
-            if (Input.GetKeyDown(KeyCode.S)) pressedS = true;
-            if (Input.GetKeyDown(KeyCode.D)) pressedD = true;
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) pressedForward = true;
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) pressedLeft = true;
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) pressedBackward = true;
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) pressedRight = true;
 
-            if (pressedW && pressedA && pressedS && pressedD)
+            if (pressedForward && pressedLeft && pressedBackward && pressedRight)
             {
                 movementComplete = true;
                 UpdateTutorialUI();
             }
         }
 
-        if (!clickComplete && Input.GetMouseButtonDown(0))
+        if (!fireComplete && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Z)))
         {
-            clickComplete = true;
+            fireComplete = true;
             UpdateTutorialUI();
         }
 
-        if (movementComplete && clickComplete)
+        if (movementComplete && fireComplete)
         {
             Invoke("CompleteTutorial", 2f);
         }
@@ -56,11 +55,11 @@ public class TutorialInputChecker : MonoBehaviour
     {
         string text = "";
 
-        if (movementComplete) text += "<color=green>[X] Move with WASD</color>\n";
-        else text += "<color=white>[ ] Move with WASD</color>\n";
+        if (movementComplete) text += "<color=green>[X] Move with WASD / Arrow Keys</color>\n";
+        else text += "<color=white>[ ] Move with WASD / Arrow Keys</color>\n";
 
-        if (clickComplete) text += "<color=green>[X] Press Left Click to Fire</color>";
-        else text += "<color=white>[ ] Press Left Click to Fire</color>";
+        if (fireComplete) text += "<color=green>[X] Press Left Click or Z to Fire</color>";
+        else text += "<color=white>[ ] Press Left Click or Z to Fire</color>";
 
         tutorialText.text = text;
     }

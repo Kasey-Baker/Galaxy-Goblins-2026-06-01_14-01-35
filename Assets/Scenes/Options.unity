@@ -422,7 +422,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 322, y: -110}
-  m_SizeDelta: {x: 350, y: 100}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222062350
 MonoBehaviour:
@@ -2236,7 +2236,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -20, y: -470}
-  m_SizeDelta: {x: 450, y: 100}
+  m_SizeDelta: {x: 260, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681638643
 MonoBehaviour:
@@ -3268,6 +3268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ab24a530023304ca7389a690d896f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFunctions
+  loadMenu: {fileID: 0}
 --- !u!1 &2080628325
 GameObject:
   m_ObjectHideFlags: 0
