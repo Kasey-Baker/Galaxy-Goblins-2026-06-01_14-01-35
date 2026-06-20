@@ -1,0 +1,258 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3951478939092401176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242871807712494369}
+  m_Layer: 0
+  m_Name: Exploder Trios
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1242871807712494369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951478939092401176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.7, y: 0, z: 19.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4711118073303613586}
+  - {fileID: 2408453095914327041}
+  - {fileID: 8626424958877595953}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1213127590477470979
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1242871807712494369}
+    m_Modifications:
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: spawnNumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6002954165021999624, guid: 362acdd40fbef14428160477564f35ee, type: 3}
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: timeBetweenSpawns
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138738561494173791, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_Name
+      value: Spawner - Exploder Trios (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+--- !u!4 &8626424958877595953 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+  m_PrefabInstance: {fileID: 1213127590477470979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2739193782434768032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1242871807712494369}
+    m_Modifications:
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: spawnNumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6002954165021999624, guid: 362acdd40fbef14428160477564f35ee, type: 3}
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: timeBetweenSpawns
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138738561494173791, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_Name
+      value: Spawner - Exploder Trios
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+--- !u!4 &4711118073303613586 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+  m_PrefabInstance: {fileID: 2739193782434768032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5048070650078242867
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1242871807712494369}
+    m_Modifications:
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: spawnNumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6002954165021999624, guid: 362acdd40fbef14428160477564f35ee, type: 3}
+    - target: {fileID: 3791004648792551129, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: timeBetweenSpawns
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138738561494173791, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+      propertyPath: m_Name
+      value: Spawner - Exploder Trios (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+--- !u!4 &2408453095914327041 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7449748550773433394, guid: 6fc9dfcc40f3df44a9d398cc2bad4ea4, type: 3}
+  m_PrefabInstance: {fileID: 5048070650078242867}
+  m_PrefabAsset: {fileID: 0}

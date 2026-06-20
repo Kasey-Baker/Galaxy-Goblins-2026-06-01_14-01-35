@@ -3121,7 +3121,7 @@ MonoBehaviour:
   timeBetweenAttacksBase: 5
   timeBetweenAttacksMod: 1
   waveManager: {fileID: 0}
-  isFinalBoss: 1
+  isFinalBoss: 0
 --- !u!120 &7617536463429023757
 LineRenderer:
   serializedVersion: 3

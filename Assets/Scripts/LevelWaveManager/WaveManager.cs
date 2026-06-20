@@ -54,29 +54,55 @@ public class WaveManager : MonoBehaviour
     {
         if(GameManager.instance != null)
         {
+            //Switches and sets the types of waves to spawn based on current difficulty.
+            //If number of waves to spawn is currently unset, it also sets it.
             switch(GameManager.instance.difficultyLevel)
             {
                 case 1:
 
                     waveOptions = waveOptionsEasy;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 5;
+                        numOfWavesPerSequence = 5;
+                        timeBetweenWaves = 5;
+                    }
 
                     break;
 
                 case 2:
 
                     waveOptions = waveOptionsNormal;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 8;
+                        numOfWavesPerSequence = 6;
+                        timeBetweenWaves = 4;
+                    }
 
                     break;
 
                 case 3:
 
                     waveOptions = waveOptionsHard;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 10;
+                        numOfWavesPerSequence = 7;
+                        timeBetweenWaves = 3;
+                    }
 
                     break;
 
                 default:
 
                     waveOptions = waveOptionsTutorial;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 3;
+                        numOfWavesPerSequence = 4;
+                        timeBetweenWaves = 6;
+                    }
 
                     break;
             }

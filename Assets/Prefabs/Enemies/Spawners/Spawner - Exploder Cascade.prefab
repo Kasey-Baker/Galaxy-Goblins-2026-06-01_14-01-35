@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4229196368196035955
+--- !u!1001 &9182796894772784395
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2497095149790567865, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.9647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2497095149790567865, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2497095149790567865, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2497095149790567865, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,24 +50,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834603431329837524, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
       propertyPath: m_Name
-      value: Spawner - Pistol Wall
+      value: Spawner - Template
       objectReference: {fileID: 0}
-    - target: {fileID: 8167839485412284242, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
-      propertyPath: spawnType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167839485412284242, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
-      propertyPath: spawnNumber
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167839485412284242, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
-      propertyPath: spawnOnSide
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167839485412284242, guid: 7733d9cdf72b7bb48a69b8e0eb2c9f86, type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 5217961511792224960, guid: 77c6468a54768fd48a24c297db1a6654, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

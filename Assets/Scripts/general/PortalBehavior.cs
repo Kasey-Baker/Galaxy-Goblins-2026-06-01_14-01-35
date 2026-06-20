@@ -21,6 +21,7 @@ public class PortalBehavior : MonoBehaviour
         if(other.gameObject == GameManager.instance.player)
         {
             SceneManager.LoadScene(levelToSendTo);
+            GameManager.instance.difficultyLevel += 1;
         }
     }
 }
