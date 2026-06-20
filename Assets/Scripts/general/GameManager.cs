@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             playercontrols = player.GetComponent<PlayerControls>();
         }
         // playerStartPos = GameObject.FindWithTag("playerStartPos");
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         MarkPersistentObjects();
         menuActive = null;
         EventSystem.current.SetSelectedGameObject(null);

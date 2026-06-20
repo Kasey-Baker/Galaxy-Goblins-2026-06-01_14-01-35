@@ -38,7 +38,6 @@ public class TentacleAttack : MonoBehaviour
     Vector3 pointToReach;
     Vector3 myInitDirection;
 
-    float currAngleOffset;
     float waitTime;
     float repsCompleted;
     enum AttackStates { AtRest = 0, FindRandomPoint = 1, DisplayWarning = 2, WaitForLunge = 3, TravelToPointVert = 4, LungeToPointHoriz = 5, WaitAtPoint = 6, ReturnHomeVert = 7, AtHomeVert = 8, ReturnHomeHoriz = 9}
@@ -294,7 +293,6 @@ public class TentacleAttack : MonoBehaviour
 
     void ResetValues()
     {
-        currAngleOffset = 0;
         repsCompleted = 0;
         waitTime = 0;
 
