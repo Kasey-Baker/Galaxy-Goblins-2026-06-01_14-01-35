@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &421260362893938608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -962,6 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &7074690958959943177
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1219,6 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &7839851823908992658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2716,6 +2719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &6864047572269198001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3260,6 +3264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &5423499624600649587
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4006,6 +4011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &8263836754136165149
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4917,6 +4923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &7867341774588443858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6408,6 +6415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
+  mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
 --- !u!222 &940998120682081835
 CanvasRenderer:
   m_ObjectHideFlags: 0
