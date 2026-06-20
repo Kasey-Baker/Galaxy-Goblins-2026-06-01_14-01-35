@@ -9,9 +9,11 @@ public class TutorialInputChecker : MonoBehaviour
     private bool pressedLeft;
     private bool pressedBackward;
     private bool pressedRight;
+    private bool pressedShift;
 
     private bool movementComplete;
     private bool fireComplete;
+    private bool shiftComplete;
 
     void Start()
     {
@@ -39,13 +41,19 @@ public class TutorialInputChecker : MonoBehaviour
             }
         }
 
+        if (!shiftComplete && (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)))
+        {
+            shiftComplete = true;
+            UpdateTutorialUI();
+        }
+
         if (!fireComplete && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Z)))
         {
             fireComplete = true;
             UpdateTutorialUI();
         }
 
-        if (movementComplete && fireComplete)
+        if (movementComplete && shiftComplete && fireComplete)
         {
             Invoke("CompleteTutorial", 2f);
         }
@@ -57,6 +65,9 @@ public class TutorialInputChecker : MonoBehaviour
 
         if (movementComplete) text += "<color=green>[X] Move with WASD / Arrow Keys</color>\n";
         else text += "<color=white>[ ] Move with WASD / Arrow Keys</color>\n";
+
+        if (shiftComplete) text += "<color=green>[X] Press Shift to Slow Down</color>\n";
+        else text += "<color=white>[ ] Press Shift to Slow Down</color>\n";
 
         if (fireComplete) text += "<color=green>[X] Press Left Click or Z to Fire</color>";
         else text += "<color=white>[ ] Press Left Click or Z to Fire</color>";
