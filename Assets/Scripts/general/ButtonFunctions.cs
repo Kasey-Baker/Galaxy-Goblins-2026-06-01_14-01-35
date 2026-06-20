@@ -3,12 +3,14 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class ButtonFunctions : MonoBehaviour
 {
     [SerializeField] private GameObject loadMenu;
     [SerializeField] GameObject selectSfxPlayer;
     [SerializeField] AudioClip selectSfxToPlay;
+    private Button quitbutton;
     public void resume()
     {
         GameManager.instance.stateUnpaused();
@@ -30,6 +32,10 @@ public class ButtonFunctions : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #else
             Application.Quit();
+#endif
+        quitbutton = GetComponent<Button>();
+#if UNITY_WEBGL
+        quitbutton.interactable = false;
 #endif
     }
 
