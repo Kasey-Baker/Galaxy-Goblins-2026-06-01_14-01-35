@@ -99,6 +99,10 @@ public class AsteroidThrow : MonoBehaviour
                 case AttackState.CreatingAsteroids:
 
                     CreateAsteroids();
+                    if (mySounds.Length > 0)
+                    {
+                        myAudio.PlayOneShot(mySounds[Random.Range(0, mySounds.Length)]);
+                    }
 
                     break;
 

@@ -104,7 +104,10 @@ public class BossEnemyLaunch : MonoBehaviour
             //
 
             currPoint.x += distPerSpawn;
-           
+            if (mySounds.Length > 0)
+            {
+                myAudio.PlayOneShot(mySounds[Random.Range(0, mySounds.Length)]);
+            }
 
         }
         waitTime = 0;

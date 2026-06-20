@@ -95,6 +95,7 @@ public class TentacleAttack : MonoBehaviour
                 case AttackStates.DisplayWarning:
 
                     CreateWarning();
+
                     waitTime = 0;
                     currState = AttackStates.WaitForLunge;
 
@@ -106,6 +107,10 @@ public class TentacleAttack : MonoBehaviour
                     if(waitTime >= warningDisplayTime)
                     {
                         currState = AttackStates.LungeToPointHoriz;
+                        if (mySounds.Length > 0)
+                        {
+                            myAudio.PlayOneShot(mySounds[Random.Range(0, mySounds.Length)]);
+                        }
                     }
 
                     break;

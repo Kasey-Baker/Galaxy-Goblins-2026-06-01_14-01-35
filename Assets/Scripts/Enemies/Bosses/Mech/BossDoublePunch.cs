@@ -84,6 +84,10 @@ public class BossDoublePunch : MonoBehaviour
                     if (isActive)
                     {
                         SetupLaunch();
+                        if (mySounds.Length > 0)
+                        {
+                            myAudio.PlayOneShot(mySounds[Random.Range(0, mySounds.Length)]);
+                        }
                     }
 
                     break;

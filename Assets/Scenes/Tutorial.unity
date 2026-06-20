@@ -130,8 +130,9 @@ GameObject:
   - component: {fileID: 222034986}
   - component: {fileID: 222034988}
   - component: {fileID: 222034987}
+  - component: {fileID: 222034989}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TutorialTextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,6 +274,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222034985}
   m_CullTransparentMesh: 1
+--- !u!114 &222034989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222034985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab2cbd997741504f8f27a49766c6f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialInputChecker
+  tutorialText: {fileID: 222034987}
 --- !u!1001 &440250862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,6 +416,10 @@ PrefabInstance:
     - target: {fileID: 694968929222807131, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: 'persistentObjects.Array.data[1]'
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213625718142739545, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7350393062591520126, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: m_Name
@@ -672,6 +690,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 837292905750051220, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2593193076077819149, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
       propertyPath: m_Name
       value: Game Camera & Boundaries
