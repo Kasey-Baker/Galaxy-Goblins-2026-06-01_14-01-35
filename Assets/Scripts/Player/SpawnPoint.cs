@@ -7,7 +7,7 @@ public class SpawnPoint : MonoBehaviour
     {
         if (GameManager.instance != null)
         {
-            if(GameManager.instance.player != null)
+            if(GameManager.instance.playercontrols != null)
             {
                 GameManager.instance.playercontrols.GoToSpawn();
             }
