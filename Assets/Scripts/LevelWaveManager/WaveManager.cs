@@ -56,6 +56,7 @@ public class WaveManager : MonoBehaviour
         {
             //Switches and sets the types of waves to spawn based on current difficulty.
             //If number of waves to spawn is currently unset, it also sets it.
+            difficultyMod = GameManager.instance.difficultyLevel;
             switch(GameManager.instance.difficultyLevel)
             {
                 case 1:

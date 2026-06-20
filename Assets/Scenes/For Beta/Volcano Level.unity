@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 694968929222807131, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: difficultyLevel
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7350393062591520126, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: m_Name
@@ -399,6 +399,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91bf0613ba16b5b47a2f5cc543e00c99, type: 3}
+--- !u!1001 &1010103366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016494567692244146, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909652999092978414, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: difficultyModifer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536278407578653714, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: m_Name
+      value: BossManagement Mech
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
 --- !u!1001 &1072158170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -468,6 +529,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40e97e79c2dbb6845bb39844079f11cc, type: 3}
+--- !u!1 &1173743727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4124064523861004766, guid: 91bf0613ba16b5b47a2f5cc543e00c99, type: 3}
+  m_PrefabInstance: {fileID: 814470257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1288943929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -539,6 +605,14 @@ PrefabInstance:
     - target: {fileID: 8491418249647294272, guid: bf5b43b51b4a8844c97237118036fa12, type: 3}
       propertyPath: m_LocalPosition.z
       value: 11.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141101620250345089, guid: bf5b43b51b4a8844c97237118036fa12, type: 3}
+      propertyPath: myPlanet
+      value: 
+      objectReference: {fileID: 1173743727}
+    - target: {fileID: 9141101620250345089, guid: bf5b43b51b4a8844c97237118036fa12, type: 3}
+      propertyPath: difficultyMod
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9141101620250345089, guid: bf5b43b51b4a8844c97237118036fa12, type: 3}
       propertyPath: spawningActive
@@ -1453,3 +1527,4 @@ SceneRoots:
   - {fileID: 2010891528007758419}
   - {fileID: 3297848531527068497}
   - {fileID: 7129442376911989232}
+  - {fileID: 1010103366}

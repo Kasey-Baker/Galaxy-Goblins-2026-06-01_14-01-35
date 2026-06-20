@@ -14,13 +14,53 @@ public class BossPart : MonoBehaviour
 
     private void Awake()
     {
-        difficultyMod = owner.GetComponent<BossManager>().difficultyModifer;
+       
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //difficultyMod = owner.GetComponent<BossManager>().difficultyModifer;
         attackingRightNow = false;
+    
       
+    }
+
+    public void UpdateHealth()
+    {
+        float newHP;
+        newHP = gameObject.GetComponent<EnemyTakeDamage>().GetHealth();
+        switch (difficultyMod)
+        {
+
+            case 1:
+
+
+                newHP *= 1;
+                gameObject.GetComponent<EnemyTakeDamage>().SetHealth(newHP);
+
+                break;
+
+            case 2:
+
+                newHP *= 4;
+                gameObject.GetComponent<EnemyTakeDamage>().SetHealth(newHP);
+
+                break;
+
+            case 3:
+
+                newHP *= 9;
+                gameObject.GetComponent<EnemyTakeDamage>().SetHealth(newHP);
+
+                break;
+
+            default:
+
+                break;
+
+
+
+        }
     }
 
     // Update is called once per frame

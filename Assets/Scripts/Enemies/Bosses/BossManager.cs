@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class BossManager : MonoBehaviour
 {
@@ -11,10 +12,28 @@ public class BossManager : MonoBehaviour
     [SerializeField] bool isFinalBoss;
     float waitTime;
 
+    private void Awake()
+    {
+        
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (GameManager.instance != null && difficultyModifer == 0)
+        {
+            difficultyModifer = GameManager.instance.difficultyLevel;
+            for(int i = 0; i < bossParts.Count; i++)
+            {
+                bossParts[i].GetComponent<BossPart>().difficultyMod = difficultyModifer;
+                bossParts[i].GetComponent<BossPart>().UpdateHealth();
+            }
+
+        }
+        if (difficultyModifer == 3)
+        {
+            isFinalBoss = true;
+        }
     }
 
     // Update is called once per frame
