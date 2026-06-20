@@ -27,7 +27,6 @@ public class BossSwipeAttack : MonoBehaviour
     int baseNumSwipes;
     float baseSwipeSpeed;
 
-    float waitTime;
     float numSwipesCompleted;
 
     Vector3 homePoint;
@@ -216,7 +215,6 @@ public class BossSwipeAttack : MonoBehaviour
         isTraveling = false;
         isCurrentSwiper = false;
         numSwipesCompleted = 0;
-        waitTime = 0;
 
         numSwipes = baseNumSwipes;
         swipeSpeed = baseSwipeSpeed;
