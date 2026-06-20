@@ -11,6 +11,13 @@ public class GameManager : MonoBehaviour
     [Header("Persistent Objects")]
     public GameObject[] persistentObjects;
 
+    [Header("Game Progression Trackers")]
+    public int difficultyLevel;
+    public bool grassLevelAttempted;
+    public bool waterLevelAttempted;
+    public bool volcanoLevelAttempted;
+
+
     [SerializeField] GameObject menuActive;
     [SerializeField] GameObject menuPause;
     [SerializeField] GameObject menuWin;
@@ -30,7 +37,7 @@ public class GameManager : MonoBehaviour
     // public GameObject playerStartPos;
     public
 
-    int difficultyLevel;
+
     int gameGoalCount;
     int enemyCount;
     //int keyGoalCount;
