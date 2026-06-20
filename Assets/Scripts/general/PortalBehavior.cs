@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class PortalBehavior : MonoBehaviour
 {
     [SerializeField] string levelToSendTo;
+    [SerializeField] AudioClip myPortalTravelSound;
+    [SerializeField] GameObject myDeathSoundPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,6 +50,9 @@ public class PortalBehavior : MonoBehaviour
 
             SceneManager.LoadScene(levelToSendTo);
             GameManager.instance.difficultyLevel += 1;
+            GameObject mySoundPlayer = Instantiate(myDeathSoundPlayer);
+            mySoundPlayer.GetComponent<PlayDeathSound>().SetSound(myPortalTravelSound, 0.5f);
+            mySoundPlayer.GetComponent<PlayDeathSound>().SetAsPersistent();
         }
     }
 }
