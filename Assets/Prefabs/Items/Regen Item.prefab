@@ -126,3 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickups
   itemData: {fileID: 11400000, guid: e5bd2315a6e6515428a5ecefbb7a336f, type: 2}
+  myPickupSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  myPickupSfx: {fileID: 8300000, guid: 183dc0cc68939e8409ca962d9864f719, type: 3}

@@ -23,4 +23,10 @@ public class PlayDeathSound : MonoBehaviour
         mySound = soundToPlay;
         myVolume = audioVolume;
     }
+
+    public void SetAsPersistent()
+    {
+        GameObject.DontDestroyOnLoad(gameObject);
+       
+    }
 }

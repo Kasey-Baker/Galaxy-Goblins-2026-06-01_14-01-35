@@ -6,6 +6,8 @@ public class ItemPickups : MonoBehaviour
    
 
     [SerializeField] private ItemData itemData;
+    [SerializeField] GameObject myPickupSfxPlayer;
+    [SerializeField] AudioClip myPickupSfx;
     private GameObject Model;
     private bool isCollected;
 
@@ -43,6 +45,8 @@ public class ItemPickups : MonoBehaviour
             LevelSystem PlayerGun = player.GetComponent<LevelSystem>();
             if (Player != null)
             {
+                GameObject sfxPlayer = Instantiate(myPickupSfxPlayer);
+                sfxPlayer.GetComponent<PlayDeathSound>().SetSound(myPickupSfx, 0.5f);
                 Player.ApplyEffects(itemData);
                 PlayerGun.FetchVariables();
             }
