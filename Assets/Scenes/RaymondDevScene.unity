@@ -624,6 +624,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 694968929222807131, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
+      propertyPath: loseButtonSelect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 694968929222807131, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: 'persistentObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 1148909814}
@@ -727,6 +731,10 @@ PrefabInstance:
     - target: {fileID: 3525023035580919238, guid: 00400404cd50fb24fa7dc06e00a1747b, type: 3}
       propertyPath: m_Name
       value: Load UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525023035580919238, guid: 00400404cd50fb24fa7dc06e00a1747b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4089564508293968390, guid: 00400404cd50fb24fa7dc06e00a1747b, type: 3}
       propertyPath: m_Pivot.x
