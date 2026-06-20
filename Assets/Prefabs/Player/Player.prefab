@@ -479,7 +479,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b8533974e6ae63f4f9c657570fc95bb9, type: 3}
   currentScore: 0
   currentLevel: 1
-  scoreThresholds: e8030000c409000088130000
+  scoreThresholds: e8030000c4090000
   mySprites:
   - {fileID: 1898167163256464440}
   - {fileID: 8304964188314580761}

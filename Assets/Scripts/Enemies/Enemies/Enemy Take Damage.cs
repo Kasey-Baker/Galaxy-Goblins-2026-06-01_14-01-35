@@ -62,6 +62,16 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         
     }
 
+    public void SetHealth(float newHP)
+    {
+        currHealth = newHP;
+    }
+
+    public float GetHealth()
+    {
+        return currHealth;
+    }
+    
     public void takeDamage(float amount)
     {
 

@@ -15,7 +15,8 @@ public class LevelSystem : MonoBehaviour
     [Header("Level Progress")]
     public int currentScore = 0;
     public int currentLevel = 1;
-    public int[] scoreThresholds = { 1000, 2500, 5000 };
+    //public int[] scoreThresholds = { 1000, 2500, 5000 };
+    public int[] scoreThresholds = { 1000, 2500, };
 
     [Header("Player Sprites")]
     [SerializeField] GameObject[] mySprites;

@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 284776139322954706}
   - component: {fileID: 6276099397518038245}
   - component: {fileID: 4802417921515143842}
+  - component: {fileID: 4920268142897429517}
   m_Layer: 0
   m_Name: Volcano Planet
   m_TagString: Untagged
@@ -296,6 +297,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4920268142897429517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594290020442878876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fa27d372e35f042b67bceceaa32881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PortalBehavior
+  levelToSendTo: Volcano Level
 --- !u!1 &6638065916022599325
 GameObject:
   m_ObjectHideFlags: 0

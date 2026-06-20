@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class WaveManager : MonoBehaviour
 {
@@ -7,8 +9,13 @@ public class WaveManager : MonoBehaviour
     [SerializeField] float timeBetweenWaves;
     public int difficultyMod;
 
-    [SerializeField] GameObject[] waveOptions;
+    [SerializeField] GameObject[] waveOptions; //Use this one for spawning, the rest are pre-sets to choose from
+    [SerializeField] GameObject[] waveOptionsTutorial;
+    [SerializeField] GameObject[] waveOptionsEasy;
+    [SerializeField] GameObject[] waveOptionsNormal;
+    [SerializeField] GameObject[] waveOptionsHard;
 
+    [SerializeField] GameObject[] bossToSpawnOptions;
     [SerializeField] GameObject bossToSpawn;
     [SerializeField] GameObject bossSpawnSpot;
 
@@ -21,7 +28,10 @@ public class WaveManager : MonoBehaviour
     [SerializeField] bool bossDefeated;
 
     [SerializeField] GameObject[] portalSpots;
-    [SerializeField] GameObject[] portals;
+    [SerializeField] List<GameObject> portals = new List<GameObject>();
+    [SerializeField] GameObject grassPortal;
+    [SerializeField] GameObject waterPortal;
+    [SerializeField] GameObject volcanoPortal;
     [SerializeField] bool portalsCreated;
 
 
@@ -46,10 +56,98 @@ public class WaveManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        portals.Clear();
+        SetPortalOptions();
+        if(GameManager.instance != null)
+        {
+            //Switches and sets the types of waves to spawn based on current difficulty.
+            //If number of waves to spawn is currently unset, it also sets it.
+            difficultyMod = GameManager.instance.difficultyLevel;
+            switch(GameManager.instance.difficultyLevel)
+            {
+                case 1:
+
+                    waveOptions = waveOptionsEasy;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 5;
+                        numOfWavesPerSequence = 5;
+                        timeBetweenWaves = 5;
+                    }
+
+                    break;
+
+                case 2:
+
+                    waveOptions = waveOptionsNormal;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 8;
+                        numOfWavesPerSequence = 6;
+                        timeBetweenWaves = 4;
+                    }
+
+                    break;
+
+                case 3:
+
+                    waveOptions = waveOptionsHard;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 10;
+                        numOfWavesPerSequence = 7;
+                        timeBetweenWaves = 3;
+                    }
+
+                    break;
+
+                default:
+
+                    waveOptions = waveOptionsTutorial;
+                    if (numOfLargeSequences == 0)
+                    {
+                        numOfLargeSequences = 3;
+                        numOfWavesPerSequence = 4;
+                        timeBetweenWaves = 6;
+                    }
+
+                    break;
+            }
+        }
         waveSpawnSpot = GameObject.FindWithTag("waveSpawnSpot");
         waveRangeMin = 0;
         waveRangeMax = waveOptions.Length;
 
+        if (bossToSpawn == null)
+        {
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Grass Level":
+
+                    bossToSpawn = bossToSpawnOptions[0];
+
+                    break;
+
+                case "Water Level":
+
+                    bossToSpawn = bossToSpawnOptions[1];
+
+                    break;
+
+                case "Volcano Level":
+
+                    bossToSpawn = bossToSpawnOptions[2];
+
+                    break;
+
+                default:
+
+                    bossToSpawn = null;
+
+                    break;
+
+            }
+        }
 
         if(myPlanet != null)
         {
@@ -65,6 +163,8 @@ public class WaveManager : MonoBehaviour
         bossSpawned = false;
         portalsCreated = false;
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -86,6 +186,25 @@ public class WaveManager : MonoBehaviour
 
 
 
+    }
+
+    void SetPortalOptions()
+    {
+        if (GameManager.instance != null)
+        {
+            if (GameManager.instance.grassLevelAttempted == false)
+            {
+                portals.Add(grassPortal);
+            }
+            if (GameManager.instance.waterLevelAttempted == false)
+            {
+                portals.Add(waterPortal);
+            }
+            if (GameManager.instance.volcanoLevelAttempted == false)
+            {
+                portals.Add(volcanoPortal);
+            }
+        }
     }
 
     void SpawnWave()
@@ -165,7 +284,7 @@ public class WaveManager : MonoBehaviour
 
     void CreatePortals()
     {
-        for(int i = 0; i < portals.Length; i++)
+        for(int i = 0; i < portals.Count; i++)
         {
             Instantiate(portals[i], portalSpots[i].transform.position, Quaternion.identity);
         }
