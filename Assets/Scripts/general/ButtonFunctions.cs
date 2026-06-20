@@ -43,7 +43,10 @@ public class ButtonFunctions : MonoBehaviour
 
     public void LoadLevelName(string levelName)
     {
-        StartCoroutine(LoadMenu(levelName));
+        //StartCoroutine(LoadMenu(levelName));
+
+        loadMenu.SetActive(true);
+        SceneManager.LoadScene(levelName);
         if (GameManager.instance != null)
         {
             GameManager.instance.stateUnpaused();
