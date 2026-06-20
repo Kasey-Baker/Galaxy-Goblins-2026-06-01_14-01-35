@@ -389,10 +389,10 @@ MonoBehaviour:
   baseOffset: 1
   tiltAmount: 30
   rend: {fileID: 919676670468278789}
-  healthCurr: 10
+  healthCurr: 18
   moveSpeed: 20
   slowSpeedMod: 0.4
-  firerate: 0.12
+  firerate: 0.08
   bulletList:
   - {fileID: 8785673792354651433, guid: 121e2be84a7f3784eac212f53d2bff25, type: 3}
   bigBullet: {fileID: 8785673792354651433, guid: 904b3daa293478c4fbec6a2cb69a7510, type: 3}
@@ -480,7 +480,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b8533974e6ae63f4f9c657570fc95bb9, type: 3}
   currentScore: 0
   currentLevel: 1
-  scoreThresholds: e8030000c4090000
+  scoreThresholds: 2823000080380100
   mySprites:
   - {fileID: 1898167163256464440}
   - {fileID: 8304964188314580761}
