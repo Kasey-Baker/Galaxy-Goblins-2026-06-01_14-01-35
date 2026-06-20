@@ -5955,6 +5955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ab24a530023304ca7389a690d896f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFunctions
+  loadMenu: {fileID: 3525023035580919238, guid: 00400404cd50fb24fa7dc06e00a1747b, type: 3}
   loadMenu: {fileID: 0}
 --- !u!1 &7350393062591520126
 GameObject:
