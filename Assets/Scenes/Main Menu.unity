@@ -1709,6 +1709,7 @@ GameObject:
   - component: {fileID: 1508855073}
   - component: {fileID: 1508855072}
   - component: {fileID: 1508855071}
+  - component: {fileID: 1508855074}
   m_Layer: 0
   m_Name: Main Menu Music
   m_TagString: Untagged
@@ -1728,6 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacc7282105de7b4bb5ecfcaaca57270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  targetSceneName: Tutorial
 --- !u!82 &1508855072
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1743,7 +1745,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1840,6 +1842,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1508855074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508855070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3606ec8cd7f36d64fb40681d87814dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMusicPersistanceHandler
+  targetSceneName: Tutorial
 --- !u!1 &1558646924
 GameObject:
   m_ObjectHideFlags: 0
