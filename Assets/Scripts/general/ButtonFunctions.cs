@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ButtonFunctions : MonoBehaviour
 {
+    [SerializeField] GameObject loadMenu;
     public void resume()
     {
         GameManager.instance.stateUnpaused();
@@ -42,6 +44,7 @@ public class ButtonFunctions : MonoBehaviour
     public void LoadLevelName(string levelName)
     {
         SceneManager.LoadScene(levelName);
+        StartCoroutine(LoadMenu());
         if (GameManager.instance != null)
         {
             GameManager.instance.stateUnpaused();
@@ -70,4 +73,10 @@ public class ButtonFunctions : MonoBehaviour
         }
     }
 
+    IEnumerator LoadMenu()
+    {
+        loadMenu.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        loadMenu.SetActive(false);
+    }
 }
