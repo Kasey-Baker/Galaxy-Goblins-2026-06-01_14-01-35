@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class BossManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class BossManager : MonoBehaviour
     [SerializeField] float timeBetweenAttacksBase;
     [SerializeField] float timeBetweenAttacksMod;
     [SerializeField] GameObject waveManager;
+    [SerializeField] GameObject healingPad;
     [SerializeField] bool isFinalBoss;
     float waitTime;
 
@@ -81,6 +83,12 @@ public class BossManager : MonoBehaviour
     private void OnDestroy()
     {
         TellManagerBossDied();
+        if (healingPad != null && SceneManager.GetActiveScene().isLoaded != false)
+        {
+            Vector3 newPos = transform.position;
+            newPos.z -= 10;
+            Instantiate(healingPad, newPos, healingPad.transform.rotation);
+        }
         if(isFinalBoss)
         {
             if (GameManager.instance != null)

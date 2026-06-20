@@ -250,6 +250,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd5e4b5872aeba47976eed0ab8ebfd1, type: 3}
+--- !u!1001 &358059900
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5286127320361001386, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_Name
+      value: Healing Pad (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286127320361001386, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.350197
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000002981251
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.758783
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370121048995872195, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
 --- !u!1001 &431719797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1625,6 +1686,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947342082887880090, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_Name
       value: BossManagement Big Ship
@@ -1632,6 +1697,14 @@ PrefabInstance:
     - target: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909509700401862820, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021159824587530552, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+      propertyPath: currHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6326402787713022627, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1791,6 +1864,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7962941643618129044, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8355811965257870357, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408682955139268579, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8536278407578653714, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: m_Name
       value: BossManagement Big Mech
@@ -1812,6 +1897,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4091518742207826569, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341721360514708200, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097455663905151163, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
+      propertyPath: currHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7310629894257064697, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.44738
@@ -1873,10 +1970,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2325687511771093492, guid: c1abba314d138b2468b39da46275d269, type: 3}
-      propertyPath: firerate
-      value: 0.12
-      objectReference: {fileID: 0}
     - target: {fileID: 3996281823504814499, guid: c1abba314d138b2468b39da46275d269, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2294,3 +2387,4 @@ SceneRoots:
   - {fileID: 41931571}
   - {fileID: 1957081589}
   - {fileID: 868677032}
+  - {fileID: 358059900}

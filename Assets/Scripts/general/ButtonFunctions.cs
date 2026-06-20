@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class ButtonFunctions : MonoBehaviour
 {
     [SerializeField] private GameObject loadMenu;
+    [SerializeField] GameObject selectSfxPlayer;
+    [SerializeField] AudioClip selectSfxToPlay;
     public void resume()
     {
         GameManager.instance.stateUnpaused();
@@ -92,4 +96,6 @@ public class ButtonFunctions : MonoBehaviour
         }
         
     }
+
+
 }

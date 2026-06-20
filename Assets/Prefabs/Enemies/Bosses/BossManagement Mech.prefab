@@ -3121,6 +3121,7 @@ MonoBehaviour:
   timeBetweenAttacksBase: 5
   timeBetweenAttacksMod: 1
   waveManager: {fileID: 0}
+  healingPad: {fileID: 5286127320361001386, guid: 5b4293ab3173fb846853c3f476d63262, type: 3}
   isFinalBoss: 0
 --- !u!120 &7617536463429023757
 LineRenderer:

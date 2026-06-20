@@ -40,6 +40,7 @@ public class PlayerControls : MonoBehaviour, IDamage
     [Header("Audio")]
     [SerializeField] AudioSource myAudio;
     [SerializeField] AudioClip[] myHitSounds;
+    [SerializeField] AudioClip myHealSound;
 
     Vector3 moveDirection;
 
@@ -220,12 +221,20 @@ public class PlayerControls : MonoBehaviour, IDamage
                 isInvuln = true;
                 invulnWait = 0;
                 StartCoroutine(flashOnHit());
+                if (myHitSounds.Length > 0)
+                {
+                    myAudio.PlayOneShot(myHitSounds[Random.Range(0, myHitSounds.Length)]);
+                }
             }
-            if (myHitSounds.Length > 0)
+            else if(amount < 0)
             {
-                myAudio.PlayOneShot(myHitSounds[Random.Range(0, myHitSounds.Length)]);
+                if (myHealSound != null)
+                {
+                    myAudio.PlayOneShot(myHealSound);
+                }
             }
-            updatePlayerUI();
+
+                updatePlayerUI();
             if (healthCurr <= 0)
             {
                 GameManager.instance.YouLose();

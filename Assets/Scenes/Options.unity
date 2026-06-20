@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9354084}
   - component: {fileID: 9354083}
+  - component: {fileID: 9354085}
   m_Layer: 5
   m_Name: SFX slider
   m_TagString: Untagged
@@ -233,6 +234,20 @@ RectTransform:
   m_AnchoredPosition: {x: 319, y: -1}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9354085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9354082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &115227087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,6 +1105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFunctions
   loadMenu: {fileID: 3525023035580919238, guid: 00400404cd50fb24fa7dc06e00a1747b, type: 3}
+  selectSfxPlayer: {fileID: 0}
+  selectSfxToPlay: {fileID: 0}
 --- !u!224 &961984902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2032,6 +2049,7 @@ GameObject:
   - component: {fileID: 1356626058}
   - component: {fileID: 1356626061}
   - component: {fileID: 1356626057}
+  - component: {fileID: 1356626062}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -2264,6 +2282,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1356626062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356626055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &1399838068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,6 +2965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885082627}
   - component: {fileID: 1885082628}
+  - component: {fileID: 1885082629}
   m_Layer: 5
   m_Name: master slider
   m_TagString: Untagged
@@ -3037,6 +3070,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1885082629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885082626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &1911950650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3188,6 +3235,7 @@ GameObject:
   - component: {fileID: 1999427828}
   - component: {fileID: 1999427827}
   - component: {fileID: 1999427826}
+  - component: {fileID: 1999427831}
   m_Layer: 5
   m_Name: Return To Main Menu
   m_TagString: Untagged
@@ -3432,6 +3480,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonsPlaySound
   buttonSound: {fileID: 8300000, guid: b27f0ef4904f7ad4e9d230bce2b4654c, type: 3}
   mySfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+--- !u!114 &1999427831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999427824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &2124316288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,6 +3504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124316289}
   - component: {fileID: 2124316290}
+  - component: {fileID: 2124316291}
   m_Layer: 5
   m_Name: volume slider
   m_TagString: Untagged
@@ -3546,6 +3609,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2124316291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124316288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

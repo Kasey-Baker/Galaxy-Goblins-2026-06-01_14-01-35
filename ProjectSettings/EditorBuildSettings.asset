@@ -30,10 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Options.unity
     guid: f942432167db4e44c83e669a3d3b6f62
   - enabled: 0
-    path: Assets/Scenes/Options - Broken 2.unity
+    path: Assets/Scenes/PLEASE DO NOT TOUCH/SERIOUSLY PLEASE DO NOT TOUCH/Options
+      - Broken 2.unity
     guid: dcea46177c324b4438fae483ac96c219
   - enabled: 0
-    path: Assets/Scenes/Options - Broken.unity
+    path: Assets/Scenes/PLEASE DO NOT TOUCH/SERIOUSLY PLEASE DO NOT TOUCH/Options
+      - Broken.unity
     guid: 525452da074d50e45a6180dd948b6651
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

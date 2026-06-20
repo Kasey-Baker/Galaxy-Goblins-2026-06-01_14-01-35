@@ -392,7 +392,7 @@ MonoBehaviour:
   healthCurr: 10
   moveSpeed: 20
   slowSpeedMod: 0.4
-  firerate: 0.08
+  firerate: 0.12
   bulletList:
   - {fileID: 8785673792354651433, guid: 121e2be84a7f3784eac212f53d2bff25, type: 3}
   bigBullet: {fileID: 8785673792354651433, guid: 904b3daa293478c4fbec6a2cb69a7510, type: 3}
@@ -401,6 +401,7 @@ MonoBehaviour:
   myAudio: {fileID: 6334858315247252571}
   myHitSounds:
   - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}
+  myHealSound: {fileID: 8300000, guid: fcb5bf76c2a198841acbf63a316fce42, type: 3}
 --- !u!114 &-4333097180302294556
 MonoBehaviour:
   m_ObjectHideFlags: 0

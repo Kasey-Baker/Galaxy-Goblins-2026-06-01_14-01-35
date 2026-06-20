@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7976658783824153139}
   - component: {fileID: 1819365455840325862}
   - component: {fileID: 5158325013789769291}
+  - component: {fileID: 2838536360055149866}
   m_Layer: 5
   m_Name: Respawn
   m_TagString: Untagged
@@ -258,6 +259,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2838536360055149866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255844613301015112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &321717868995856807
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +938,7 @@ GameObject:
   - component: {fileID: 3739136002043600216}
   - component: {fileID: 1843874196820532182}
   - component: {fileID: 8857062219533400486}
+  - component: {fileID: 3308926864362514461}
   m_Layer: 5
   m_Name: Return to Main Menu
   m_TagString: Untagged
@@ -1167,6 +1183,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3308926864362514461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726492405351606297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &1907734230410093474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,6 +2451,7 @@ GameObject:
   - component: {fileID: 5456880291645810310}
   - component: {fileID: 8468607891586867041}
   - component: {fileID: 869621232120214792}
+  - component: {fileID: 1023242866974998994}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -2665,6 +2696,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1023242866974998994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431772305459031952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &4636644131855704943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,6 +2874,7 @@ GameObject:
   - component: {fileID: 87674857464891753}
   - component: {fileID: 1504949789616910484}
   - component: {fileID: 6724764419510193194}
+  - component: {fileID: 4304659983459354626}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -3073,6 +3119,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4304659983459354626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086055820916500368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &5452338436702817575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,6 +4150,7 @@ GameObject:
   - component: {fileID: 3479835498171825665}
   - component: {fileID: 5165109403755793000}
   - component: {fileID: 8021756164824562092}
+  - component: {fileID: 2393668828970175194}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -4334,6 +4395,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2393668828970175194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775187524784622786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fab18ff23bd788429ecd4d0e8927c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonNavigationNoise
+  selectSfxPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  selectSfxToPlay: {fileID: 8300000, guid: e81bb52324dd87347bb5cb28223dd626, type: 3}
 --- !u!1 &6785745386052105758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5024,6 +5099,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFunctions
   loadMenu: {fileID: 3525023035580919238, guid: 00400404cd50fb24fa7dc06e00a1747b, type: 3}
+  selectSfxPlayer: {fileID: 0}
+  selectSfxToPlay: {fileID: 0}
 --- !u!1 &7350393062591520126
 GameObject:
   m_ObjectHideFlags: 0
