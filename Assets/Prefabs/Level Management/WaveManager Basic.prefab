@@ -121,7 +121,11 @@ MonoBehaviour:
   - {fileID: 3834603431329837524, guid: acc682dccc0fff142bc97d8e7e19f942, type: 3}
   - {fileID: 3834603431329837524, guid: 30c50fcb76096b641a60864ee1bc5829, type: 3}
   - {fileID: 3834603431329837524, guid: 3ac770f54f1792141a696f7c8a518e91, type: 3}
-  bossToSpawn: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+  bossToSpawnOptions:
+  - {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
+  - {fileID: 8349183859670225078, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
+  - {fileID: 8536278407578653714, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
+  bossToSpawn: {fileID: 0}
   bossSpawnSpot: {fileID: 7261032196621156747}
   waveSpawnSpot: {fileID: 0}
   spawningActive: 1

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
@@ -7,8 +8,13 @@ public class WaveManager : MonoBehaviour
     [SerializeField] float timeBetweenWaves;
     public int difficultyMod;
 
-    [SerializeField] GameObject[] waveOptions;
+    [SerializeField] GameObject[] waveOptions; //Use this one for spawning, the rest are pre-sets to choose from
+    [SerializeField] GameObject[] waveOptionsTutorial;
+    [SerializeField] GameObject[] waveOptionsEasy;
+    [SerializeField] GameObject[] waveOptionsNormal;
+    [SerializeField] GameObject[] waveOptionsHard;
 
+    [SerializeField] GameObject[] bossToSpawnOptions;
     [SerializeField] GameObject bossToSpawn;
     [SerializeField] GameObject bossSpawnSpot;
 
@@ -46,10 +52,69 @@ public class WaveManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if(GameManager.instance != null)
+        {
+            switch(GameManager.instance.difficultyLevel)
+            {
+                case 1:
+
+                    waveOptions = waveOptionsEasy;
+
+                    break;
+
+                case 2:
+
+                    waveOptions = waveOptionsNormal;
+
+                    break;
+
+                case 3:
+
+                    waveOptions = waveOptionsHard;
+
+                    break;
+
+                default:
+
+                    waveOptions = waveOptionsTutorial;
+
+                    break;
+            }
+        }
         waveSpawnSpot = GameObject.FindWithTag("waveSpawnSpot");
         waveRangeMin = 0;
         waveRangeMax = waveOptions.Length;
 
+        if (bossToSpawn == null)
+        {
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Grass Level":
+
+                    bossToSpawn = bossToSpawnOptions[0];
+
+                    break;
+
+                case "Water Level":
+
+                    bossToSpawn = bossToSpawnOptions[1];
+
+                    break;
+
+                case "Volcano Level":
+
+                    bossToSpawn = bossToSpawnOptions[2];
+
+                    break;
+
+                default:
+
+                    bossToSpawn = null;
+
+                    break;
+
+            }
+        }
 
         if(myPlanet != null)
         {

@@ -28,8 +28,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public PlayerControls playercontrols;
     // public GameObject playerStartPos;
-    public 
+    public
 
+    int difficultyLevel;
     int gameGoalCount;
     int enemyCount;
     //int keyGoalCount;
