@@ -312,6 +312,7 @@ MonoBehaviour:
   levelToSendTo: Grass Level
   myPortalTravelSound: {fileID: 8300000, guid: 9abe9fbc81d403b47a2be462e705f1c2, type: 3}
   myDeathSoundPlayer: {fileID: 3865953507425281186, guid: 6cf7c4659e7b47d4f873807d29a4f631, type: 3}
+  loadingScreen: {fileID: 3525023035580919238, guid: 00400404cd50fb24fa7dc06e00a1747b, type: 3}
 --- !u!1 &5293295971572299666
 GameObject:
   m_ObjectHideFlags: 0

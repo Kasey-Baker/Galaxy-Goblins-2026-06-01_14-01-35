@@ -45,7 +45,8 @@ public class ButtonFunctions : MonoBehaviour
     {
         //StartCoroutine(LoadMenu(levelName));
 
-        loadMenu.SetActive(true);
+        //loadMenu.SetActive(true);
+        Instantiate(loadMenu);
         SceneManager.LoadScene(levelName);
         if (GameManager.instance != null)
         {

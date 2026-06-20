@@ -6,6 +6,7 @@ public class PortalBehavior : MonoBehaviour
     [SerializeField] string levelToSendTo;
     [SerializeField] AudioClip myPortalTravelSound;
     [SerializeField] GameObject myDeathSoundPlayer;
+    [SerializeField] GameObject loadingScreen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,7 +48,10 @@ public class PortalBehavior : MonoBehaviour
                     break;
             }
 
-
+            if (loadingScreen != null)
+            {
+                Instantiate(loadingScreen);
+            }
             SceneManager.LoadScene(levelToSendTo);
             GameManager.instance.difficultyLevel += 1;
             GameObject mySoundPlayer = Instantiate(myDeathSoundPlayer);
