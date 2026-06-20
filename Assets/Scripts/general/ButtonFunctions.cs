@@ -28,15 +28,18 @@ public class ButtonFunctions : MonoBehaviour
 
     public void quit()
     {
+
+#if UNITY_WEBGL
+        quitbutton.interactable = false;
+        return;
+#endif
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
             Application.Quit();
 #endif
         quitbutton = GetComponent<Button>();
-#if UNITY_WEBGL
-        quitbutton.interactable = false;
-#endif
+
     }
 
     public void playerRespawn()
