@@ -2916,7 +2916,7 @@ MonoBehaviour:
   timeBetweenSwipes: 0
   otherFist: {fileID: 1568788920849712452}
   difficultyMod: 0
-  myAudio: {fileID: 3507899371679980064}
+  myAudio: {fileID: 313199783047239876}
   mySounds:
   - {fileID: 8300000, guid: 1c18b456805b5974787d9545be4da8e1, type: 3}
   - {fileID: 8300000, guid: 8b01169161039684da8a06acb7579823, type: 3}
