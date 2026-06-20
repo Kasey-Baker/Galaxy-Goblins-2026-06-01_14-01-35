@@ -65,6 +65,7 @@ public class PlayerControls : MonoBehaviour, IDamage
             if (GameManager.instance.player == null)
             {
                 GameManager.instance.player = gameObject;
+                GameManager.instance.playercontrols = gameObject.GetComponent<PlayerControls>();
             }
         }
 
