@@ -20,6 +20,32 @@ public class PortalBehavior : MonoBehaviour
     {
         if(other.gameObject == GameManager.instance.player)
         {
+            switch (levelToSendTo)
+            {
+                case "Grass Level":
+
+                    GameManager.instance.grassLevelAttempted = true;
+
+                    break;
+
+                case "Water Level":
+
+                    GameManager.instance.waterLevelAttempted = true;
+
+                    break;
+
+                case "Volcano Level":
+
+                    GameManager.instance.volcanoLevelAttempted = true;
+
+                    break;
+
+                default:
+
+                    break;
+            }
+
+
             SceneManager.LoadScene(levelToSendTo);
             GameManager.instance.difficultyLevel += 1;
         }

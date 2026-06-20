@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class WaveManager : MonoBehaviour
 {
@@ -27,7 +28,10 @@ public class WaveManager : MonoBehaviour
     [SerializeField] bool bossDefeated;
 
     [SerializeField] GameObject[] portalSpots;
-    [SerializeField] GameObject[] portals;
+    [SerializeField] List<GameObject> portals = new List<GameObject>();
+    [SerializeField] GameObject grassPortal;
+    [SerializeField] GameObject waterPortal;
+    [SerializeField] GameObject volcanoPortal;
     [SerializeField] bool portalsCreated;
 
 
@@ -52,6 +56,8 @@ public class WaveManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        portals.Clear();
+        SetPortalOptions();
         if(GameManager.instance != null)
         {
             //Switches and sets the types of waves to spawn based on current difficulty.
@@ -158,6 +164,8 @@ public class WaveManager : MonoBehaviour
         portalsCreated = false;
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
@@ -178,6 +186,25 @@ public class WaveManager : MonoBehaviour
 
 
 
+    }
+
+    void SetPortalOptions()
+    {
+        if (GameManager.instance != null)
+        {
+            if (GameManager.instance.grassLevelAttempted == false)
+            {
+                portals.Add(grassPortal);
+            }
+            if (GameManager.instance.waterLevelAttempted == false)
+            {
+                portals.Add(waterPortal);
+            }
+            if (GameManager.instance.volcanoLevelAttempted == false)
+            {
+                portals.Add(volcanoPortal);
+            }
+        }
     }
 
     void SpawnWave()
@@ -257,7 +284,7 @@ public class WaveManager : MonoBehaviour
 
     void CreatePortals()
     {
-        for(int i = 0; i < portals.Length; i++)
+        for(int i = 0; i < portals.Count; i++)
         {
             Instantiate(portals[i], portalSpots[i].transform.position, Quaternion.identity);
         }
