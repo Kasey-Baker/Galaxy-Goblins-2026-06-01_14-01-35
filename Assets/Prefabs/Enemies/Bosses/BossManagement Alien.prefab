@@ -3151,7 +3151,7 @@ MonoBehaviour:
   - {fileID: 5131790311078570258}
   - {fileID: 7213728666840649099}
   - {fileID: 7491295792206198030}
-  difficultyModifer: 1
+  difficultyModifer: 0
   timeBetweenAttacksBase: 5
   timeBetweenAttacksMod: 1
   waveManager: {fileID: 0}
