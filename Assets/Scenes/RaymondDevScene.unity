@@ -624,10 +624,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 694968929222807131, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
-      propertyPath: loseButtonSelect
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 694968929222807131, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: 'persistentObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 1148909814}
@@ -714,10 +710,6 @@ PrefabInstance:
     - target: {fileID: 7701188714332630846, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9135586772575000860, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
