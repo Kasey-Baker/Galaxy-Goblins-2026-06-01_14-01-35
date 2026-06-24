@@ -562,6 +562,18 @@ PrefabInstance:
       propertyPath: 'persistentObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1450357425097503881, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 756
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440967303612432396, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685279573556949519, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4213625718142739545, guid: 4992dd4d989c55f4cbbc6d6ebc4dbff4, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
