@@ -167,7 +167,6 @@ MonoBehaviour:
   spawningActive: 1
   myPlanet: {fileID: 0}
   bossSpawned: 0
-  bossDefeated: 0
   portalSpots:
   - {fileID: 7751170336941483887}
   - {fileID: 8799224076682954206}
@@ -182,9 +181,10 @@ MonoBehaviour:
   - {fileID: 4760512473164609628}
   - {fileID: 1365144087095797066}
   itemList:
-  - {fileID: 5231728600944249131, guid: b7ad8b732e4fb0544a750dbd471ea372, type: 3}
-  - {fileID: 7434426874144756810, guid: 4a8f8d1544707934490e938caa8cc043, type: 3}
-  - {fileID: 5733605306999436672, guid: 1b8a56505ea6f44489761bb10cbef5c7, type: 3}
+  - {fileID: 4655258457232874278, guid: 3dda289e6f326bb4796774c46a8c3433, type: 3}
+  - {fileID: 9081180926844476062, guid: 06bc2fd11c88d6a4b878746925fe529a, type: 3}
+  - {fileID: 3153659662629555637, guid: 6dc54ebee4e29094188f95ca4cb3e734, type: 3}
+  - {fileID: 5347167445476771472, guid: c1d0c70018a1aa049930f1581434c8bf, type: 3}
   itemsPresented: 0
   itemChosen: 0
   waveRangeMax: 0
