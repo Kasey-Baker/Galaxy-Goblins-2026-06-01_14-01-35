@@ -37,10 +37,13 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
 
     Renderer[] allRenders;
     Color[] allColors;
+
+    float maxHealth;
+
     void Start()
     {
 
-
+        maxHealth = currHealth;
         MakeGuts(numToSpawnStart, spawnObj);
         colorOrig = rend.material.color;
         GameManager.instance.updateEnemyCount(1);
@@ -119,6 +122,11 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
             if (allRenders[i] != null)
             {
                 allRenders[i].material.color = allColors[i];
+                Color newColor = allColors[i];
+                //newColor.r = newColor.r * (currHealth / maxHealth);
+                newColor.g = newColor.g * (currHealth / maxHealth);
+                newColor.b = newColor.b * (currHealth / maxHealth);
+                allRenders[i].material.color = newColor;
             }
         }
         

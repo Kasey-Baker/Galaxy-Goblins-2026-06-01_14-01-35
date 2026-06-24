@@ -2187,15 +2187,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4091518742207826569, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4341721360514708200, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5097455663905151163, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7310629894257064697, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: m_LocalPosition.x
