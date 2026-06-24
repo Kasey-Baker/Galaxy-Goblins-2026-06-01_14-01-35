@@ -1,4 +1,5 @@
 
+using TMPro;
 using UnityEngine;
 
 public class ItemPickups : MonoBehaviour
@@ -8,6 +9,8 @@ public class ItemPickups : MonoBehaviour
     [SerializeField] private ItemData itemData;
     [SerializeField] GameObject myPickupSfxPlayer;
     [SerializeField] AudioClip myPickupSfx;
+    //[SerializeField] TextMeshPro myText;
+    [SerializeField] TextMeshProUGUI myText;
     private GameObject Model;
     private bool isCollected;
 
@@ -23,6 +26,11 @@ public class ItemPickups : MonoBehaviour
         if(itemData.modelPrefab != null)
         {
             Model = Instantiate(itemData.modelPrefab, transform.position, transform.rotation, transform);
+            Model.GetComponent<Renderer>().material = gameObject.GetComponent<Renderer>().material;
+            if (myText != null)
+            {
+                myText.text = itemData.itemName;
+            }
         }
     }
     private void OnTriggerEnter(Collider other)

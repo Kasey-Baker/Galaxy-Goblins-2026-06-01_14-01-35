@@ -59,9 +59,12 @@ public class LevelSystem : MonoBehaviour
         fireWait += Time.deltaTime;
         SetLevelSprites();
 
-        if (Input.GetButton("Fire1") && fireWait >= fireRate && bulletPrefab != null)
+        if (Time.timeScale != 0)
         {
-            HandlePatternShooting();
+            if (Input.GetButton("Fire1") && fireWait >= fireRate && bulletPrefab != null)
+            {
+                HandlePatternShooting();
+            }
         }
     }
 
