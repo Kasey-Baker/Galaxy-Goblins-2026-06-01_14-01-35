@@ -358,9 +358,9 @@ MonoBehaviour:
   pointsOnDeath: 50
   spawnObj: {fileID: 0}
   numToSpawnStart: 0
-  spawnedObj: {fileID: 0}
+  spawnedObj: {fileID: 6903754942911404031, guid: f6be7a07c964ff14e9235262701b33ac, type: 3}
   numToSpawnHit: 0
-  numToSpawnDeath: 0
+  numToSpawnDeath: 8
   myAudio: {fileID: -6658842025631717238}
   soundsOnHit:
   - {fileID: 8300000, guid: 6b63236069222b64ebe9b7c472ca0664, type: 3}

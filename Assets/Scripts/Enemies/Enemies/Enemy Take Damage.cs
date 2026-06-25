@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 //HOW TO USE:
 /*
@@ -88,7 +89,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         if(currHealth <= 0)
         {
             GameManager.instance.AddPoints(pointsOnDeath);
-            MakeGuts(numToSpawnDeath);
+
             Destroy(gameObject);
             if (deathSounds.Length > 0)
             {
@@ -135,6 +136,10 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     private void OnDestroy()
     {
         //When the game manager is set up, add pointsOnDeath to gamemanager points value
+        if (SceneManager.GetActiveScene().isLoaded)
+        {
+            MakeGuts(numToSpawnDeath);
+        }
         GameManager.instance.updateEnemyCount(-1);
 
     }
