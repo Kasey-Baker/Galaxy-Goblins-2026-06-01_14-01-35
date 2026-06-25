@@ -21,6 +21,7 @@ public class BossEnemyLaunch : MonoBehaviour
     //Spawn location finding stuff
     [Header ("Spawn Location Bounding")]
     [SerializeField] float distInFrontTargetZ;
+    [SerializeField] float distIfPlayerBehindZ;
     [SerializeField] float distInFrontTargetZMod;
     [SerializeField] GameObject leftBoundObj;
     [SerializeField] GameObject rightBoundObj;
@@ -89,6 +90,10 @@ public class BossEnemyLaunch : MonoBehaviour
 
     void SummonMinions()
     {
+        if(currPoint.z < GameManager.instance.player.transform.position.z)
+        {
+            currPoint.z += distIfPlayerBehindZ;
+        }
         for(int i = 0; i < numToSpawn; i++)
         {
             GameObject myMinion = Instantiate(enemyToSpawn, transform.position, transform.rotation);
