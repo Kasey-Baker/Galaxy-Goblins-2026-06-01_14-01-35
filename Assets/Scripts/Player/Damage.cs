@@ -60,7 +60,11 @@ public class damage : MonoBehaviour
             {
                 if (hitEffect != null)
                 {
-                    Instantiate(hitEffect, transform.position, Quaternion.identity);
+                    //Only play hit effect if the thing you hit wants to play it
+                    if (other.gameObject.CompareTag("NoHitSfx") == false)
+                    {
+                        Instantiate(hitEffect, transform.position, Quaternion.identity);
+                    }
                 }
 
                 Destroy(gameObject);

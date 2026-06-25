@@ -2150,7 +2150,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 947342082887880090, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_Name
@@ -2158,15 +2158,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1267104962048756968, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3909509700401862820, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6021159824587530552, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6326402787713022627, guid: 3ff9cf93a651f9f47a730bf7e1b65021, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2328,7 +2328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7962941643618129044, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8355811965257870357, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: currHealth
@@ -2417,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8349183859670225078, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

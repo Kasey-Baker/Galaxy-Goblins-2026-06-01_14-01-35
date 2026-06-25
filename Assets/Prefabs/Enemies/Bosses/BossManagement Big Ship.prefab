@@ -5115,6 +5115,7 @@ GameObject:
   - component: {fileID: 7605835354816077784}
   - component: {fileID: 3323827144324814164}
   - component: {fileID: 11664487394852856}
+  - component: {fileID: 7264617705608954070}
   m_Layer: 7
   m_Name: Boss Part C
   m_TagString: Enemy
@@ -5428,6 +5429,29 @@ CapsuleCollider:
   m_Height: 6
   m_Direction: 2
   m_Center: {x: -0.5, y: 0, z: 0}
+--- !u!136 &7264617705608954070
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2660794237037336740}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 4
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: -2}
 --- !u!1 &2949099250086574860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5768,6 +5792,7 @@ GameObject:
   - component: {fileID: 5128313218337075633}
   - component: {fileID: 6591788968215238796}
   - component: {fileID: 5806373930169431945}
+  - component: {fileID: 7792175905543189460}
   m_Layer: 7
   m_Name: Boss Part A
   m_TagString: Enemy
@@ -6080,6 +6105,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &7792175905543189460
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347876429689615427}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 4
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: -4}
 --- !u!1 &3955433974805749787
 GameObject:
   m_ObjectHideFlags: 0
@@ -6954,6 +7002,7 @@ GameObject:
   - component: {fileID: 7352307348381152268}
   - component: {fileID: 135805238336356428}
   - component: {fileID: 4017885590042989178}
+  - component: {fileID: 1217061720386155504}
   m_Layer: 7
   m_Name: Boss Part B
   m_TagString: Enemy
@@ -7263,6 +7312,29 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &1217061720386155504
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812268668990507735}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 4
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: -2}
 --- !u!1 &8841479964632952399
 GameObject:
   m_ObjectHideFlags: 0
