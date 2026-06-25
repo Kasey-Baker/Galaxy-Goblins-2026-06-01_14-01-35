@@ -83,7 +83,7 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
         MakeGuts(numToSpawnHit);
         if (soundsOnHit.Length > 0 && currHealth > 0)
         {
-            myAudio.PlayOneShot(soundsOnHit[Random.Range(0, soundsOnHit.Length)]);
+            SetupHitSound();
         }
         if(currHealth <= 0)
         {
@@ -163,5 +163,11 @@ public class EnemyTakeDamage : MonoBehaviour, IDamage
     {
         GameObject myNoise = Instantiate(deathSoundMaker, transform.position, Quaternion.identity);
         myNoise.GetComponent<PlayDeathSound>().SetSound(deathSounds[Random.Range(0, deathSounds.Length)], myAudio.volume);
+    }
+
+    void SetupHitSound()
+    {
+        GameObject myNoise = Instantiate(deathSoundMaker, transform.position, Quaternion.identity);
+        myNoise.GetComponent<PlayDeathSound>().SetSound(soundsOnHit[Random.Range(0, soundsOnHit.Length)], myAudio.volume);
     }
 }
