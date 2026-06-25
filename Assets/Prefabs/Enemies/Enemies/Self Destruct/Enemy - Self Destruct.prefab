@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 4458820177860702832}
   - component: {fileID: -83454611437555331}
   - component: {fileID: -6658842025631717238}
+  - component: {fileID: 2073579727594808942}
   m_Layer: 7
   m_Name: Enemy - Self Destruct
   m_TagString: Enemy
@@ -607,6 +608,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2073579727594808942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002954165021999624}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 392
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2, y: 1.4, z: 2}
+  m_Center: {x: 0.05, y: 0, z: -0.2}
 --- !u!1 &7646391544259082760
 GameObject:
   m_ObjectHideFlags: 0

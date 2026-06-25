@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: -7245056999872245579}
   - component: {fileID: -3487176025281209076}
   - component: {fileID: 1126667592565159238}
+  - component: {fileID: 1938893068824422330}
+  - component: {fileID: 8007631130142649227}
   m_Layer: 7
   m_Name: Enemy - Mech Minion
   m_TagString: Enemy
@@ -373,6 +375,48 @@ MonoBehaviour:
   pointToReach: {x: 0, y: 0, z: 0}
   myInitDirection: {x: 0, y: 0, z: 0}
   doBehavior: 0
+--- !u!65 &1938893068824422330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809079198274110816}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 392
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.3}
+--- !u!65 &8007631130142649227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809079198274110816}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 392
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 2}
+  m_Center: {x: 0, y: 0, z: 0.4}
 --- !u!1 &4852353189118776376
 GameObject:
   m_ObjectHideFlags: 0
