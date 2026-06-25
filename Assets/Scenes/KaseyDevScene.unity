@@ -2332,11 +2332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8355811965257870357, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8408682955139268579, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: currHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8536278407578653714, guid: f1765dbd922a3b24c8dc2caa74fcf88e, type: 3}
       propertyPath: m_Name
