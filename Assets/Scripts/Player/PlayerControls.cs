@@ -83,7 +83,13 @@ public class PlayerControls : MonoBehaviour, IDamage
         spriteBaseY = transform.rotation.y;
         spriteBaseZ = transform.rotation.z;
 
-        for(int i = 0; i < afterEffectsBasePos.Length; i++)
+
+
+    }
+
+    public void GatherSprites()
+    {
+        for (int i = 0; i < afterEffectsBasePos.Length; i++)
         {
             afterEffectsBasePos[i] = afterEffects[i].transform;
         }
@@ -97,8 +103,6 @@ public class PlayerControls : MonoBehaviour, IDamage
                 allColors[i] = (allRenders[i].material.color);
             }
         }
-
-
     }
 
     // Update is called once per frame
@@ -182,7 +186,8 @@ public class PlayerControls : MonoBehaviour, IDamage
         {
             if (allRenders[i] != null)
             {
-                allRenders[i].material.color = Color.white;
+                Color newColor = allColors[i];
+                allRenders[i].material.color = Color.crimson;
             }
         }
         yield return new WaitForSeconds(invulnTimeOnHit);

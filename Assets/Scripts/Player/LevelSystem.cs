@@ -46,6 +46,7 @@ public class LevelSystem : MonoBehaviour
         if (playerControls != null)
         {
             FetchVariables();
+            playerControls.GatherSprites();
         }
         for(int i = 0; i < mySprites.Length; i++)
         {
