@@ -1548,6 +1548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Firing Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 5217961511792224960, guid: 77c6468a54768fd48a24c297db1a6654, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7406911009962479694, guid: 77c6468a54768fd48a24c297db1a6654, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.932991
@@ -1951,6 +1955,10 @@ PrefabInstance:
     - target: {fileID: 7315140745424281354, guid: e9d12e0be305cb34baf9d0cf583450db, type: 3}
       propertyPath: m_Name
       value: Enemy - Dashing
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315140745424281354, guid: e9d12e0be305cb34baf9d0cf583450db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2409,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8349183859670225078, guid: bd7eee6ac60de9640be9ab2b2dbf909a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
