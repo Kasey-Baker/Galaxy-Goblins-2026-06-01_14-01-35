@@ -7,6 +7,10 @@ public class PortalBehavior : MonoBehaviour
     [SerializeField] AudioClip myPortalTravelSound;
     [SerializeField] GameObject myDeathSoundPlayer;
     [SerializeField] GameObject loadingScreen;
+
+
+    bool hasTeleported;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,42 +25,45 @@ public class PortalBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == GameManager.instance.player)
+        if (hasTeleported == false)
         {
-            switch (levelToSendTo)
+            if (other.gameObject == GameManager.instance.player)
             {
-                case "Grass Level":
+                switch (levelToSendTo)
+                {
+                    case "Grass Level":
 
-                    GameManager.instance.grassLevelAttempted = true;
+                        GameManager.instance.grassLevelAttempted = true;
 
-                    break;
+                        break;
 
-                case "Water Level":
+                    case "Water Level":
 
-                    GameManager.instance.waterLevelAttempted = true;
+                        GameManager.instance.waterLevelAttempted = true;
 
-                    break;
+                        break;
 
-                case "Volcano Level":
+                    case "Volcano Level":
 
-                    GameManager.instance.volcanoLevelAttempted = true;
+                        GameManager.instance.volcanoLevelAttempted = true;
 
-                    break;
+                        break;
 
-                default:
+                    default:
 
-                    break;
+                        break;
+                }
+                if (loadingScreen != null)
+                {
+                    Instantiate(loadingScreen);
+                }
+                SceneManager.LoadScene(levelToSendTo);
+                GameManager.instance.difficultyLevel += 1;
+                GameObject mySoundPlayer = Instantiate(myDeathSoundPlayer);
+                mySoundPlayer.GetComponent<PlayDeathSound>().SetSound(myPortalTravelSound, 0.5f);
+                mySoundPlayer.GetComponent<PlayDeathSound>().SetAsPersistent();
+                hasTeleported = true;
             }
-
-            if (loadingScreen != null)
-            {
-                Instantiate(loadingScreen);
-            }
-            SceneManager.LoadScene(levelToSendTo);
-            GameManager.instance.difficultyLevel += 1;
-            GameObject mySoundPlayer = Instantiate(myDeathSoundPlayer);
-            mySoundPlayer.GetComponent<PlayDeathSound>().SetSound(myPortalTravelSound, 0.5f);
-            mySoundPlayer.GetComponent<PlayDeathSound>().SetAsPersistent();
         }
     }
 }
